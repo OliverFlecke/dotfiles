@@ -10,7 +10,6 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/projects/setup/scripts:$PATH
 #export PATH=/opt/homebrew/Cellar/python@3.10/3.10.1/bin/:$PATH
 #export PATH=$PATH:$(go env GOPATH)/bin
 #export PATH=$PATH:/home/oliver/.dotnet
-export LC_ALL=en_US.UTF-8
 export APPDATA=/mnt/c/Users/olive/AppData/Roaming
 export EDITOR=nvim
 
@@ -40,6 +39,8 @@ plugins=(
 	ripgrep
 	macos
 	nix-zsh-completions
+	
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -54,15 +55,6 @@ alias today='date -u +"%Y-%m-%d"'
 alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
 alias vim='nvim'
-
-_dotnet_zsh_complete()
-{
-    local completions=("$(dotnet complete "$words")")
-    reply=( "${(ps:\n:)completions}" )
-}
-
-compctl -K _dotnet_zsh_complete dotnet
-#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export GPG_TTY=$(tty)
 

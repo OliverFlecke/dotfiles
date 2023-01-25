@@ -4,7 +4,7 @@ if not null_ls_status_ok then
 end
 
 local formatting = null_ls.builtins.formatting
-local diagnosticts = null_ls.builtins.diagnosticts
+-- local diagnosticts = null_ls.builtins.diagnosticts
 local code_actions = null_ls.builtins.code_actions
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 

@@ -1,5 +1,6 @@
 [user]
 	name = Oliver Fleckenstein
+	email = oliverfl@live.dk
 	useConfigOnly = true
 [color]
 	status = always
