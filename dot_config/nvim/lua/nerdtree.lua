@@ -1,0 +1,4 @@
+
+require 'paq' {
+ 'preservim/nerdtree';
+}
