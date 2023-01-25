@@ -1,0 +1,85 @@
+[user]
+	name = Oliver Fleckenstein
+	useConfigOnly = true
+[color]
+	status = always
+	ui = true
+[core]
+	editor = vim
+	autocrlf = false
+	attributesfile = ~/.gitattributes
+	eol = lf
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = default-mergetool
+[mergetool "default-mergetool"]
+	cmd = code --wait $MERGED
+[alias]
+	co	 = checkout
+	sw	 = switch
+	cm	 = commit
+	st	 = status
+	br	 = branch
+	last = log -n 1
+	ldiff = diff HEAD~1 HEAD
+
+	cmreset = commit --amend --reset-author --no-edit
+
+	dl	 = diff HEAD^ HEAD
+	di	 = "diff --word-diff=color --minimal --word-diff-regex='([0-9@A-Za-z]+|[^0-9@A-Za-z()]+|[()])'"
+	pp	 = "!func(){ git pull && git push; };"
+	pom  = pull origin master
+	pomp = "!func(){ git pull origin master && git push; };"
+	cmpp = "!func(){ git add -u && git commit -m $1 && git pull && git push; }; func"
+
+	# Set the upstream of the current branch
+	track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+	branch-name = rev-parse --abbrev-ref HEAD
+
+	short-description = "!git config branch.$(git branch-name).description"
+	description = "!git branch --edit-description $(git branch-name)"
+
+	publish = "!git push -u origin $(git branch-name)"
+	unpublish = "!git push origin :$(git branch-name)"
+
+	ls	= log --graph --pretty=format:'%Cred%h%Creset %Cgreen%>(16)%cr%Creset - %<(80,trunc)%s %C(yellow)%d%Creset' --abbrev-commit --date=relative
+
+	vs	= !git ls $1..$(git branch-name)
+
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
+	hidden = ! git ls-files -v | grep '^h' | cut -c3-
+
+	clean-branches = "!git branch | grep -v master | xargs git branch -d"
+	open = !git remote get-url origin | xargs open "$1"
+[hub]
+	protocol = https
+[credential]
+	helper = cache
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
