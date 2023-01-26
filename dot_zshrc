@@ -30,7 +30,6 @@ plugins=(
 	rust
 	ripgrep
 	macos
-	nix-zsh-completions
 	
 	zsh-autosuggestions
 )
