@@ -1,0 +1,30 @@
+theme = "ayu_dark"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "position-percentage",
+  "total-line-numbers",
+  "separator",
+  "file-encoding",
+  "file-line-ending",
+]
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
