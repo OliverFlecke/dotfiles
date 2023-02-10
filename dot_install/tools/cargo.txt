@@ -1,0 +1,5 @@
+fd-find
+bat
+ripgrep
+exa
+taplo-cli --locked --features lsp

@@ -7,4 +7,4 @@ RUN apt clean \
 
 RUN sh -c "$(curl -fsLS get.chezmoi.io)"
 
-CMD ["sh", "-c", "date && chezmoi apply &&  /root/.install/zsh.sh"]
+CMD ["sh", "-c", "chezmoi apply && ~/.install/zsh.sh"]
