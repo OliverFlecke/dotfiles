@@ -36,7 +36,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias tre='tree -I "bin|obj|wwwroot|node_modules"'
+alias tre='tree -I "bin|obj|wwwroot|node_modules|target"'
 alias ll='exa -l'
 alias curltime="curl -w \"@$HOME/tools/.curl-format.txt\" -o NUL -s "
 alias c='clipcopy'
