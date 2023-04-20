@@ -57,6 +57,8 @@
 	unhide = update-index --no-assume-unchanged
 	hidden = ! git ls-files -v | grep '^h' | cut -c3-
 
+	# Iterate through local branches and interactively delete them.
+	delete-branches = "!func() { for b in $(git branch | grep -v master); do printf \"Delete $b? [y/n] \"; read -r choice; [ \"$choice\" = \"y\" ] && git branch -D $b; done }; func"
 	clean-branches = "!git branch | grep -v master | xargs git branch -d"
 	open = !git remote get-url origin | xargs open "$1"
 [hub]
@@ -86,3 +88,8 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
