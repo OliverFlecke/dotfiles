@@ -47,6 +47,9 @@ alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
 alias vim='nvim'
 
+# Docker aliases
+alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\""
+
 export GPG_TTY=$(tty)
 
 export NVM_DIR="$HOME/.nvm"
