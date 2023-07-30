@@ -1,0 +1,43 @@
+[[language]]
+name = "rust"
+
+[[language]]
+name = "python"
+# language-server = { command = "ruff-lsp" }
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "json"] }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "css"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+auto-format = true
