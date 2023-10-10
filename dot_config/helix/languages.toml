@@ -1,5 +1,17 @@
 [[language]]
 name = "rust"
+[language.config]
+diagnostics.disabled = ["inactive-code"]
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "sql"
+formatter = { command = "sqlfluff", args = ["fix", "--dialect", "postgres"]}
 
 [[language]]
 name = "python"
@@ -9,35 +21,70 @@ auto-format = true
 
 [[language]]
 name = "html"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "html"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "html",
+] }
 auto-format = true
 
 [[language]]
 name = "json"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "json"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "json",
+] }
 auto-format = true
 
 [[language]]
 name = "css"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "css"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "css",
+] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "typescript",
+] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "typescript",
+] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "typescript",
+] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-formatter = { command = 'npx prettier', args = ["--write", ".", "--parser", "typescript"] }
+formatter = { command = 'npx prettier', args = [
+  "--write",
+  ".",
+  "--parser",
+  "typescript",
+] }
 auto-format = true
