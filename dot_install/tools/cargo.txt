@@ -6,3 +6,4 @@ taplo-cli --locked --features lsp
 udeps
 expand
 bunyan
+rewrk

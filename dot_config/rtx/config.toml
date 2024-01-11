@@ -1,7 +1,0 @@
-[tools]
-python = ["latest"]
-node = "lts"
-chezmoi = "latest"
-dotnet = "latest"
-github-cli = "latest"
-pre-commit = "latest"
