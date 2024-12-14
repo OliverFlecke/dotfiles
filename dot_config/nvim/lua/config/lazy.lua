@@ -25,14 +25,15 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
-		{ 'williamboman/mason.nvim' },
-		{ 'williamboman/mason-lspconfig.nvim' },
-		{ 'neovim/nvim-lspconfig' },
 		{ 'hrsh7th/cmp-nvim-lsp' },
+		{ 'hrsh7th/cmp-path' },
+		{ 'hrsh7th/cmp-cmdline' },
+		{ 'hrsh7th/cmp-buffer' },
 		{ 'hrsh7th/nvim-cmp' },
 		{ 'numToStr/Comment.nvim' },
-		{ 'vim-airline/vim-airline' },
-		{ 'vim-airline/vim-airline-themes' },
+		{ 'ayu-theme/ayu-vim' },
+		-- { 'vim-airline/vim-airline' },
+		-- { 'vim-airline/vim-airline-themes' },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.

@@ -1,6 +1,7 @@
 vim.opt.signcolumn = 'yes'
 
-local lspconfig_defaults = require('lspconfig').util.default_config
+local lspconfig = require('lspconfig')
+local lspconfig_defaults = lspconfig.util.default_config
 lspconfig_defaults.capabilities = vim.tbl_deep_extend(
 	'force',
 	lspconfig_defaults.capabilities,
@@ -60,11 +61,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
+	ensure_installed = {
+		'ts_ls',
+		'eslint',
+		'html',
+		'cssls',
+	},
 	handlers = {
-		function(server_name)
-			require('lspconfig')[server_name].setup({})
+		function(server)
+			lspconfig[server].setup({
+				capabilities = lsp_capabilities,
+			})
 		end,
 	},
 })
@@ -81,3 +92,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		end
 	end
 })
+
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+-- 	pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
+-- 	command = 'silent! EslintFixAll',
+-- 	group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
+-- })

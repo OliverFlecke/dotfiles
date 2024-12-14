@@ -1,2 +1,2 @@
-require("oliverflecke")
 require("config.lazy")
+require("oliverflecke")
