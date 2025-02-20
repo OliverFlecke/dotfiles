@@ -1,0 +1,38 @@
+{
+	"Create AoC template": {
+		"prefix": "aoc",
+		"description": "Create a simple setup for AoC problems",
+		"body": [
+			"#r \"nuget: FSharp.Data\"",
+			"#r \"../src/AdventOfCode/bin/Release/net6.0/AdventOfCode.dll\"",
+			"",
+			"open AdventOfCode.Core",
+			"open AdventOfCode.Types",
+			"open AdventOfCode.Utils",
+			"",
+			"let data = input $1 $2"
+		]
+	},
+	"Create AoC interface template": {
+		"prefix": "iaoc",
+		"description": "Creates a setup for AoC problems that can be run and executed collectively with others",
+		"body": [
+			"namespace AdventOfCode.Solutions",
+			"",
+			"open AdventOfCode",
+			"open AdventOfCode.Utils",
+			"",
+			"type Year$1Day$2() =",
+			"    interface ISolution with",
+			"        member _.year = $1",
+			"        member _.day = $2",
+			"",
+			"        member _.testA = seq [ ]",
+			"        member _.testB = seq [ ]",
+			"",
+			"        member _.solveA input = Int 0",
+			"",
+			"        member _.solveB input = Int 0"
+		]
+	}
+}

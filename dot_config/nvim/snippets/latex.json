@@ -1,0 +1,95 @@
+{
+    "set": {
+        "prefix": "set",
+        "body": "\\Set{$1}{$2}",
+        "description": "Set of numbers from start to end"
+    },
+    "inline equation": {
+        "prefix": "lneq",
+        "body": [
+            "\\[",
+            "    $0",
+            "\\]"
+        ],
+        "description": "Line equation"
+    },
+    "Minted escape": {
+        "prefix": "mm",
+        "body": "|$1|$0",
+        "description": "Escape mode in minted"
+    },
+    "LaTeX Notes": {
+        "prefix": "latexnotes",
+        "body": [
+            "\\documentclass[english]{scrartcl}",
+            "\\usepackage[utf8]{inputenc}",
+            "\\usepackage{flecken}",
+            "",
+            "\\setkomafont{disposition}{\\normalfont\\bfseries}",
+            "",
+            "\\title{$1}",
+            "\\subtitle{Notes$2}",
+            "\\date{$3}",
+            "\\author{Oliver Fleckenstein}",
+            "",
+            "\\begin{document}",
+            "",
+            "\\maketitle",
+            "",
+            "$0",
+            "",
+            "\\end{document}",
+        ]
+    },
+    "Template for mandatory assignments in Algorithms for Massive Data Sets": {
+        "prefix": "algo_man",
+        "body": [
+            "\\documentclass[11pt]{article}",
+            "\\usepackage{fullpage}",
+            "\\usepackage{amsmath, amsfonts}",
+            "\\usepackage[utf8]{inputenc}",
+            "\\usepackage{flecken}",
+            "",
+            "\\begin{document}",
+            "\\begin{center}",
+            "{{\\Large \\sc Algorithms for Massive Data Sets}}",
+            "\\end{center}",
+            "\\rule{\\textwidth}{1pt}",
+            "\\begin{description}",
+            "\\item[Student name and id:] Oliver Fleckenstein (s144472)",
+            "\\item[Collaborator name(s) and id(s):] Helge Hatteland (s144457) and Thomas Pethick (s144448) ",
+            "\\item[Hand-in for week:] $1",
+            "\\end{description}",
+            "\\rule{\\textwidth}{1pt}",
+            "",
+            "\\section*{$2}",
+            "",
+            "    $0",
+            "",
+            "\\end{document}",
+        ],
+        "description": "Template for mandatory assignments in Algorithms for Massive Data Sets"
+    },
+    "Algorithmic exercise outline": {
+        "prefix": "algo_ex",
+        "body": [
+            "\\paragraph{Content}",
+            "",
+            "\\paragraph{Build}",
+            "",
+            "\\paragraph{Query}",
+            "",
+            "\\paragraph{Correctness}",
+            "",
+            "\\paragraph{Space Complexity}",
+            "",
+            "\\paragraph{Time Complexity}"
+        ],
+        "description": "Outline for the structure to describe an algorithm and its data structure"
+    },
+    "Double Square Brackets": {
+        "prefix": "dbracket",
+        "body": "\\dbracket{$1}$0",
+        "description": "Insert double square brackets"
+    }
+}

@@ -1,0 +1,173 @@
+{
+	"Create xunit fact": {
+		"prefix": "fact",
+		"body": [
+			"[Fact]",
+			"public void $1_Test()",
+			"{",
+			"\t// Arrange",
+			"\t$2",
+			"\t// Act",
+			"\t$3",
+			"\t// Assert",
+			"}"
+		]
+	},
+	"Create async xunit fact": {
+		"prefix": "afact",
+		"body": [
+			"[Fact]",
+			"public async Task $1_Test()",
+			"{",
+			"\t// Arrange",
+			"\t$2",
+			"\t// Act",
+			"\t$3",
+			"\t// Assert",
+			"}"
+		]
+	},
+	"Create async xunit fact to test connection with SQLite": {
+		"prefix": "factsql",
+		"body": [
+			"[Fact]",
+			"public async Task $1_Test()",
+			"{",
+			"\t// Arrange",
+			"\tvar connection = DbUtils.GetSqliteConnection();",
+			"$0",
+			"\ttry",
+			"\t{",
+			"",
+			"\t}",
+			"\tfinally",
+			"\t{",
+			"\t\tawait connection.CloseAsync();",
+			"\t}",
+			"}"
+		]
+	},
+	"Create xunit theory": {
+		"prefix": "theory",
+		"body": [
+			"[Theory]",
+			"public void $1_Test()",
+			"{",
+			"\t// Arrange",
+			"\t$2",
+			"\t// Act",
+			"\t$3",
+			"\t// Assert",
+			"}"
+		]
+	},
+	"Create async xunit theory": {
+		"prefix": "atheory",
+		"body": [
+			"[Theory]",
+			"public async Task $1_Test()",
+			"{",
+			"\t// Arrange",
+			"\t$2",
+			"\t// Act",
+			"\t$3",
+			"\t// Assert",
+			"}"
+		]
+	},
+	"Summary": {
+		"prefix": "summary",
+		"description": "Add a summary",
+		"body": "/// <summary>$1.</summary>"
+	},
+	"Summary with value": {
+		"prefix": "sumval",
+		"description": "Add a summary and value field, often used for properties.",
+		"body": [
+			"/// <summary>$1.</summary>",
+			"/// <value>$2.</value>"
+		]
+	},
+	"Remarks": {
+		"prefix": "rem",
+		"body": "<remarks>$1</remarks>"
+	},
+	"Disable nullable": {
+		"prefix": "disnull",
+		"body": [
+			"#pragma warning disable CS8618 // Consider declaring the property as nullable.",
+			"#pragma warning restore CS8618 // Consider declaring the property as nullable."
+		]
+	},
+	"Disable warning": {
+		"prefix": "dis",
+		"body": [
+			"#pragma warning disable $1",
+			"#pragma warning restore $1"
+		]
+	},
+	"Constructor instatiate doc string": {
+		"prefix": "initdoc",
+		"body": "Initializes a new instance of the <see cref=\"$1\"/> class."
+	},
+	"SQL lite database context": {
+		"prefix": "usql",
+		"body": [
+			"using (var context = _db.GetDbContext())",
+			"{",
+			"\t$1",
+			"}"
+		]
+	},
+	"Inherit docs": {
+		"prefix": "indoc",
+		"body": "/// <inheritdoc/>"
+	},
+	"Example docs": {
+		"prefix": "docex",
+		"body": "<example>$1</example>$0"
+	},
+	"Response docs": {
+		"prefix": "docresp",
+		"body": "<response code=\"$1\">$2</response>$0"
+	},
+	"Integration test template": {
+		"prefix": "inttest",
+		"body": [
+			"namespace $1;",
+			"",
+			"public class $2 : XunitContextBase, IDisposable",
+			"{",
+			"\treadonly TestWebApplicationFactory<Program> _factory;",
+			"",
+			"\tpublic $2(ITestOutputHelper output) : base(output)",
+			"\t{",
+			"\t\t_factory = new();",
+			"\t}",
+			"",
+			"\tpublic override void Dispose()",
+			"\t{",
+			"\t\tbase.Dispose();",
+			"\t\t_factory.Dispose();",
+			"\t}",
+			"\t$0",
+			"}"
+		]
+	},
+	"API controller template": {
+		"prefix": "apicontroller",
+		"body": [
+			"using Asp.Versioning;",
+			"using Microsoft.AspNetCore.Mvc;",
+			"",
+			"namespace $2.Controllers;",
+			"",
+			"[ApiController]",
+			"[ApiVersion(1)]",
+			"[Route(\"api/v{v:apiVersion}/$3\")]",
+			"public class $1 : ControllerBase",
+			"{",
+			"}"
+		]
+	}
+}

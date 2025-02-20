@@ -1,0 +1,46 @@
+{
+	"Snapshot test": {
+		"prefix": "snaptest",
+		"body": [
+			"import React from 'react';",
+			"import renderer from 'react-test-renderer';",
+			"",
+			"describe('$1', () => {",
+			"\ttest('$2', () => {",
+			"\t\tconst tree = renderer.create($3);",
+			"\t\texpect(tree.toJSON()).toMatchSnapshot();",
+			"\t});",
+			"});"
+		]
+	},
+	"Functional component with props": {
+		"prefix": "funccomp",
+		"body": [
+			"interface $1Props {",
+			"",
+			"}",
+			"",
+			"export default function $1({ }: Readonly<$1Props>) {",
+			"\treturn <>$0</>;",
+			"}"
+		]
+	},
+	"Pure functional component": {
+		"prefix": "funcpure",
+		"body": [
+			"export default function $1() {",
+			"\treturn <>$0</>;",
+			"}"
+		]
+	},
+	"Cypress component": {
+		"prefix": "cycom",
+		"body": [
+			"describe(\"$1\", () => {",
+			"\tit(\"$2\", () => {",
+			"\t\tcy.mount(<$1 />);",
+			"\t});",
+			"});"
+		]
+	}
+}

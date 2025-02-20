@@ -24,14 +24,33 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
+		{ "LazyVim/LazyVim",      import = "lazyvim.plugins", enabled = false },
+		-- { import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "plugins" },
 		{ 'hrsh7th/cmp-nvim-lsp' },
-		{ 'hrsh7th/cmp-path' },
+		-- { 'hrsh7th/cmp-path' },
 		{ 'hrsh7th/cmp-cmdline' },
 		{ 'hrsh7th/cmp-buffer' },
 		{ 'hrsh7th/nvim-cmp' },
 		{ 'numToStr/Comment.nvim' },
 		{ 'ayu-theme/ayu-vim' },
+		{
+			'stevearc/conform.nvim',
+			optional = true,
+			opts = function(_, opts)
+				opts.formatters_by_ft = opts.formatters_by_ft or {}
+				for _, ft in ipairs(supported) do
+					opts.formatters_by_ft[ft] = opts.formatters_by_ft[ft] or {}
+					table.insert(opts.formatters_by_ft[ft], "biome")
+				end
+
+				opts.formatters = opts.formatters or {}
+				opts.formatters.biome = {
+					require_cwd = true,
+				}
+			end,
+		},
+
 		-- { 'vim-airline/vim-airline' },
 		-- { 'vim-airline/vim-airline-themes' },
 	},
@@ -39,5 +58,8 @@ require("lazy").setup({
 	-- colorscheme that will be used when installing plugins.
 	--install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = {
+		enabled = true,
+		notify = false,
+	},
 })

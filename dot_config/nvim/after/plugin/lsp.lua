@@ -10,16 +10,20 @@ lspconfig_defaults.capabilities = vim.tbl_deep_extend(
 
 local cmp = require('cmp')
 cmp.setup({
-	sources = {
-		{ name = 'nvim_lsp' },
-	},
+	sources = cmp.config.sources({
+			{ name = 'nvim_lsp' },
+			{ name = 'luasnip' },
+		},
+		{
+			{ name = "buffer" },
+		}),
 	mapping = cmp.mapping.preset.insert({
 		-- Navigate between completion items
 		['<C-p>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
 		['<C-n>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
 
 		-- `Enter` key to confirm completion
-		['<Tab>'] = cmp.mapping.confirm({ select = false }),
+		['<Tab>'] = cmp.mapping.confirm({ select = true }),
 
 		-- Ctrl+Space to trigger completion menu
 		['<C-Space>'] = cmp.mapping.complete(),
@@ -30,7 +34,8 @@ cmp.setup({
 	}),
 	snippet = {
 		expand = function(args)
-			vim.snippet.expand(args.body)
+			-- vim.snippet.expand(args.body)
+			require('luasnip').lsp_expand(args.body)
 		end,
 	},
 })
@@ -67,9 +72,10 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		'ts_ls',
-		'eslint',
+		-- 'eslint',
 		'html',
 		'cssls',
+		'biome',
 	},
 	handlers = {
 		function(server)
@@ -80,21 +86,31 @@ require('mason-lspconfig').setup({
 	},
 })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-	callback = function()
-		local mode = vim.api.nvim_get_mode().mode
-		if vim.bo.modified == true and mode == 'n' then
-			local save_cursor = vim.fn.getpos(".")
-			vim.cmd([[%s/\s\+$//e]])
-			vim.cmd('lua vim.lsp.buf.format()')
-			vim.fn.setpos(".", save_cursor)
-		else
-		end
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("lsp", { clear = true }),
+	callback = function(args)
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = args.buf,
+			callback = function()
+				vim.lsp.buf.format { async = false, id = args.data.client_id }
+			end,
+		})
 	end
 })
 
--- vim.api.nvim_create_autocmd('BufWritePre', {
--- 	pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
--- 	command = 'silent! EslintFixAll',
--- 	group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
--- })
+for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
+	local default_diagnostic_handler = vim.lsp.handlers[method]
+	vim.lsp.handlers[method] = function(err, result, context, config)
+		if err ~= nil and err.code == -32802 then
+			return
+		end
+		return default_diagnostic_handler(err, result, context, config)
+	end
+end
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "sql",
+	callback = function()
+		vim.bo.commentstring = "-- %s"
+	end
+})

@@ -1,5 +1,6 @@
 vim.opt.guicursor = ""
 
+vim.opt.autoread = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -10,7 +11,7 @@ vim.opt.expandtab = false
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -31,7 +32,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
-vim.opt.listchars = { space = '·', tab = '| ', trail = '-' }
+vim.opt.listchars = { space = ' ', tab = '| ', trail = '-' }
 vim.opt.list = true
 vim.opt.formatoptions = { n = true, j = true, t = true }
 vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules' }

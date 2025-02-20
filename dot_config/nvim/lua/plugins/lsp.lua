@@ -1,17 +1,17 @@
 return {
 	'neovim/nvim-lspconfig',
-	-- opts = {
-	-- 	servers = { eslint = {} },
-	-- 	setup = {
-	-- 		eslint = function()
-	-- 			require("lazyvim.util").lsp.on_attach(function(client)
-	-- 				if client.name == "eslint" then
-	-- 					client.server_capabilities.documentFormattingProvider = true
-	-- 				elseif client.name == "ts_ls" then
-	-- 					client.server_capabilities.documentFormattingProvider = false
-	-- 				end
-	-- 			end)
-	-- 		end,
-	-- 	},
+	opt = {
+		servers = {
+			biome = {},
+		},
+	},
+	-- {
+	-- 	"nvimtools/none-ls.nvim",
+	-- 	opts = function(_, opts)
+	-- 		local nls = require("null-ls").builtins
+	-- 		opts.sources = vim.list_extend(opts.sources or {}, {
+	-- 			nls.formatting.biome,
+	-- 		})
+	-- 	end,
 	-- },
 }
