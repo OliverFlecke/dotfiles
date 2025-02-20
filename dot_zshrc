@@ -18,15 +18,15 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
 	git
 	gh
-	gitignore
-	git-lfs
-	cp
+	# gitignore
+	# git-lfs
+	# cp
 	autojump
 	direnv
 	dotnet
 	docker
 	docker-compose
-	emoji
+	# emoji
 	rust
 	ripgrep
 	macos
@@ -36,10 +36,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias tre='tree -I "bin|obj|wwwroot|node_modules|target"'
-alias ll='exa -l'
+alias tre='tree -I "bin|obj|wwwroot|node_modules|target|venv|__pycache__|out"'
+alias ll='eza -l'
 alias curltime="curl -w \"@$HOME/tools/.curl-format.txt\" -o NUL -s "
-alias c='clipcopy'
 alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias copyip="curl -L ipecho.net/plain | clipcopy"
 alias today='date -u +"%Y-%m-%d"'
@@ -47,14 +46,22 @@ alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
 alias vim='nvim'
 
+alias c='clipcopy'
+alias k=kubectl
+alias t=tmux
+alias z=zellij
+
 # Docker aliases
 alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\""
 
 export GPG_TTY=$(tty)
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm ba
+path+=(~/.rustup/toolchains/stable-aarch64-apple-darwin/bin)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+source <(kubectl completion zsh)
+source <(flux completion zsh)
+

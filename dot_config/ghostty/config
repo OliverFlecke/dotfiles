@@ -1,0 +1,6 @@
+#font-family = Fira Code Retina
+font-family = Hack Regular
+
+theme = ayu
+background-opacity = 0.90
+background-blur-radius = 20
