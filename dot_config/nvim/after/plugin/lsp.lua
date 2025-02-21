@@ -74,7 +74,7 @@ require('mason-lspconfig').setup({
 		'ts_ls',
 		-- 'eslint',
 		'html',
-		'cssls',
+		-- 'cssls',
 		'biome',
 	},
 	handlers = {
