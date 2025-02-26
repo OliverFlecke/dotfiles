@@ -63,7 +63,7 @@ return {
 				vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 				vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
 				vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-				vim.keymap.set('n', '<C-R>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+				-- vim.keymap.set('n', '<C-R>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 				vim.keymap.set({ 'n', 'x' }, '<leader>vcf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
 
 				vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
@@ -83,7 +83,7 @@ return {
 				'ts_ls',
 				-- 'eslint',
 				'html',
-				-- 'cssls',
+				'cssls',
 				'biome',
 			},
 			handlers = {
@@ -95,17 +95,17 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("LspAttach", {
-			group = vim.api.nvim_create_augroup("lsp", { clear = true }),
-			callback = function(args)
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = args.buf,
-					callback = function()
-						vim.lsp.buf.format { async = false, id = args.data.client_id }
-					end,
-				})
-			end
-		})
+		-- vim.api.nvim_create_autocmd("LspAttach", {
+		-- 	group = vim.api.nvim_create_augroup("lsp", { clear = true }),
+		-- 	callback = function(args)
+		-- 		vim.api.nvim_create_autocmd("BufWritePre", {
+		-- 			buffer = args.buf,
+		-- 			callback = function()
+		-- 				vim.lsp.buf.format { async = false, id = args.data.client_id }
+		-- 			end,
+		-- 		})
+		-- 	end
+		-- })
 
 		for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
 			local default_diagnostic_handler = vim.lsp.handlers[method]
