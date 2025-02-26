@@ -2,25 +2,93 @@
 	name = Oliver Fleckenstein
 	email = oliverfl@live.dk
 	useConfigOnly = true
-[include]
-	path = ~/.local.gitconfig
-[color]
-	status = always
-	ui = true
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = false
 	attributesfile = ~/.gitattributes
 	eol = lf
 	pager = diff-so-fancy | less --tabs=4 -RFX
+
+	# Usefull to monitor changes in a repo, but should be set on a repository level
+	# fsmonitor = true
+	# untrackedCache = true
+	# git config core.fsmonitor true
+	# git config core.untrackedCache true
+[include]
+	path = ~/.local.gitconfig
+[init]
+	defaultBranch = main
+[color]
+	status = always
+	ui = true
 [diff]
 	tool = default-difftool
-[difftool "default-difftool"]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[interative]
+	# diffFilter = diff-so-fancy --patch [difftool "default-difftool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	tool = default-mergetool
+	conflictstyle = zdiff3
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 [mergetool "default-mergetool"]
 	cmd = code --wait $MERGED
+[hub]
+	protocol = https
+[credential]
+	helper = cache
+[commit]
+	gpgsign = true
+	verbose = true
+[gpg]
+	program = gpg
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[column]
+	ui = auto
+[help]
+	autocorrect = prompt
+[rerere]
+	enable = true
+	autoupdate = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [alias]
 	co	 = checkout
 	sw	 = switch
@@ -49,7 +117,14 @@
 	publish = "!git push -u origin $(git branch-name)"
 	unpublish = "!git push origin :$(git branch-name)"
 
-	ls	= log --graph --pretty=format:'%Cred%h%Creset %Cgreen%>(16)%cr%Creset - %<(80,trunc)%s %C(yellow)%d%Creset' --abbrev-commit --date=relative
+	ls-linear = log --pretty=format:'%Cred%h%Creset %Cgreen%>(16)%cr%Creset - %<(80,trunc)%s %<(30,trunc)%ae %C(yellow)%d%Creset' --abbrev-commit --date=relative
+	ls = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%>(16)%cr%Creset - %<(80,trunc)%s %<(30,trunc)%ae %C(yellow)%d%Creset' --abbrev-commit --date=relative
+	ls-change = log --pretty=format:'- %<(80,trunc)%s%Creset' --abbrev-commit --date=relative --reverse main..HEAD
+
+	# Command to help generate release notes
+	ls-release = log --graph --pretty=format:'%s %C(yellow)%d%Creset' --abbrev-commit --date=relative --perl-regexp --author="^(?!dependabot)"
+
+	change = "!func(){ git log --pretty=format:'- %<(80,trunc)%s%Creset' --abbrev-commit --date=relative --reverse $1..HEAD; }; func"
 
 	vs	= !git ls $1..$(git branch-name)
 
@@ -58,40 +133,8 @@
 	hidden = ! git ls-files -v | grep '^h' | cut -c3-
 
 	# Iterate through local branches and interactively delete them.
-	delete-branches = "!func() { for b in $(git branch | grep -v master); do printf \"Delete $b? [y/n] \"; read -r choice; [ \"$choice\" = \"y\" ] && git branch -D $b; done }; func"
-	clean-branches = "!git branch | grep -v master | xargs git branch -d"
+	delete-branches = "!func() { for b in $(git branch | grep -v main); do printf \"Delete $b? [y/n] \"; read -r choice; [ \"$choice\" = \"y\" ] && git branch -D $b; done }; func"
+	clean-branches = "!git branch | grep -v main | xargs git branch -d"
 	open = !git remote get-url origin | xargs open "$1"
-[hub]
-	protocol = https
-[credential]
-	helper = cache
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[push]
-	autoSetupRemote = true
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+	fame = !python -m gitfame
