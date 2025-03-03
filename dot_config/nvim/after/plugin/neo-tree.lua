@@ -1,2 +1,0 @@
--- vim.keymap.set("n", "<leader>/", vim.cmd.Neotreetoggle)
--- vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
