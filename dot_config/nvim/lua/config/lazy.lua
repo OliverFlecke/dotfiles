@@ -34,6 +34,14 @@ require("lazy").setup({
 		{ 'hrsh7th/nvim-cmp' },
 		{ 'numToStr/Comment.nvim' },
 		{ 'ayu-theme/ayu-vim' },
+		{
+			'rebelot/kanagawa.nvim',
+			config = function()
+				require('kanagawa').setup({
+					transparent = true,
+				})
+			end
+		},
 
 		-- { 'vim-airline/vim-airline' },
 		-- { 'vim-airline/vim-airline-themes' },

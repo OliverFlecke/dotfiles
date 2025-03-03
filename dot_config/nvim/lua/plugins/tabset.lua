@@ -7,8 +7,11 @@ return {
 				expandtab = false,
 			},
 			languages = {
+				yaml = {
+					expandtab = true
+				},
 				lua = {
-					tabwidth = 2,
+					tabwidth = 4,
 				},
 				{
 					filetypes = {
