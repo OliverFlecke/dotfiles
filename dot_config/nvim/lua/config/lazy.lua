@@ -24,31 +24,30 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ "LazyVim/LazyVim",      import = "lazyvim.plugins", enabled = false },
+		{ "LazyVim/LazyVim", import = "lazyvim.plugins", enabled = false },
 		-- { import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "plugins" },
-		{ 'hrsh7th/cmp-nvim-lsp' },
-		-- { 'hrsh7th/cmp-path' },
-		{ 'hrsh7th/cmp-cmdline' },
-		{ 'hrsh7th/cmp-buffer' },
-		{ 'hrsh7th/nvim-cmp' },
-		{ 'numToStr/Comment.nvim' },
-		{ 'ayu-theme/ayu-vim' },
-		{
-			'rebelot/kanagawa.nvim',
-			config = function()
-				require('kanagawa').setup({
-					transparent = true,
-				})
-			end
-		},
+
+		-- Themes
+		-- { 'ayu-theme/ayu-vim' },
+		-- {
+		-- 	'rebelot/kanagawa.nvim',
+		-- 	config = function()
+		-- 		require('kanagawa').setup({
+		-- 			transparent = true,
+		-- 		})
+		-- 	end
+		-- },
 
 		-- { 'vim-airline/vim-airline' },
 		-- { 'vim-airline/vim-airline-themes' },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	--install = { colorscheme = { "habamax" } },
+	-- install = {
+	-- 	colorscheme = { "tokionight" }
+	-- },
+
 	-- automatically check for plugin updates
 	checker = {
 		enabled = true,

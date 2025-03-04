@@ -95,18 +95,6 @@ return {
 			},
 		})
 
-		-- vim.api.nvim_create_autocmd("LspAttach", {
-		-- 	group = vim.api.nvim_create_augroup("lsp", { clear = true }),
-		-- 	callback = function(args)
-		-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-		-- 			buffer = args.buf,
-		-- 			callback = function()
-		-- 				vim.lsp.buf.format { async = false, id = args.data.client_id }
-		-- 			end,
-		-- 		})
-		-- 	end
-		-- })
-
 		for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
 			local default_diagnostic_handler = vim.lsp.handlers[method]
 			vim.lsp.handlers[method] = function(err, result, context, config)
