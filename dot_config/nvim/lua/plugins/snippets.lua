@@ -5,7 +5,7 @@ return {
 	build = "make install_jsregexp",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		'saadparwaiz1/cmp_luasnip',
+		-- 'saadparwaiz1/cmp_luasnip',
 	},
 
 	config = function()

@@ -35,6 +35,6 @@ vim.g.mapleader = " "
 vim.opt.listchars = { space = ' ', tab = '| ', trail = '-' }
 vim.opt.list = true
 vim.opt.formatoptions = { n = true, j = true, t = true }
-vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules' }
+vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin', 'obj' }
 
 -- vim.opt.spelllang = "en-us"
