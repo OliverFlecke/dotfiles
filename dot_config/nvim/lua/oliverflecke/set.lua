@@ -38,3 +38,9 @@ vim.opt.formatoptions = { n = true, j = true, t = true }
 vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin', 'obj' }
 
 -- vim.opt.spelllang = "en-us"
+
+vim.filetype.add({
+	extension = {
+		ftl = 'html',
+	},
+})

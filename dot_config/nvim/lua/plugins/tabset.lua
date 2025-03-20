@@ -11,10 +11,11 @@ return {
 					expandtab = true
 				},
 				lua = {
-					tabwidth = 4,
+					tabwidth = 2,
 				},
 				{
 					filetypes = {
+						"html",
 						"javascript",
 						"typescript",
 						"javascriptreact",

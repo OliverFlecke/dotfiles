@@ -8,15 +8,8 @@ return {
 		},
 	},
 
-	config = function(_, opts)
+	config = function()
 		vim.opt.signcolumn = 'yes'
-
-		local lspconfig = require('lspconfig')
-
-		for server, config in pairs(opts.servers) do
-			config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-			lspconfig[server].setup(config)
-		end
 
 		-- This is where you enable features that only work
 		-- if there is a language server active in the file
@@ -44,6 +37,8 @@ return {
 			end,
 		})
 
+		local lspconfig = require('lspconfig')
+		local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 		require('mason').setup({})
 		require('mason-lspconfig').setup({
 			ensure_installed = {
@@ -53,7 +48,22 @@ return {
 				'cssls',
 				'biome',
 			},
+			handlers = {
+				function(server)
+					lspconfig[server].setup({
+						capabilities = lsp_capabilities,
+					})
+				end,
+			},
 		})
+
+		lspconfig.harper_ls.setup {
+			settings = {
+				["harper_ls"] = {
+					filetypes = { "gitcommit", "markdown" }
+				}
+			}
+		}
 
 		-- Define comment string for SQL file types
 		vim.api.nvim_create_autocmd("FileType", {

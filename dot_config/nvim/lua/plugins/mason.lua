@@ -10,7 +10,7 @@ return {
 				"shfmt",
 				'css-lsp',
 				'css-variables-language-server',
-				-- 'harper-ls',
+				'harper-ls',
 			},
 		},
 	},
