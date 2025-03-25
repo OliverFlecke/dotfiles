@@ -6,6 +6,7 @@
 	editor = nvim
 	autocrlf = false
 	attributesfile = ~/.gitattributes
+	excludesFile = ~/.gitignore
 	eol = lf
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
@@ -29,7 +30,7 @@
 	renames = true
 [interative]
 	# diffFilter = diff-so-fancy --patch [difftool "default-difftool"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+	; cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	tool = default-mergetool
 	conflictstyle = zdiff3
@@ -57,7 +58,7 @@
 [fetch]
 	prune = true
 	pruneTags = true
-	all = true
+	all = false
 [branch]
 	sort = -committerdate
 [tag]

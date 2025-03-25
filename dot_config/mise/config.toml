@@ -1,9 +1,10 @@
 [tools]
 python = "latest"
-node = "20.10"
+node = "22"
 chezmoi = "latest"
 # dotnet = "latest"
 github-cli = "latest"
 pre-commit = "latest"
 go = "1.21"
 glab = "latest"
+zellij = "0.42.1"

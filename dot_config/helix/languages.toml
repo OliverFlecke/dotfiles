@@ -1,17 +1,26 @@
 [[language]]
 name = "rust"
-[language.config]
-diagnostics.disabled = ["inactive-code"]
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[[languages]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
 
 [[language]]
 name = "sql"
-formatter = { command = "sqlfluff", args = ["fix", "--dialect", "postgres"]}
+formatter = { command = "sqlfluff", args = [
+  "fix",
+  "--dialect",
+  "postgres",
+  "--force",
+] }
 
 [[language]]
 name = "python"
@@ -78,6 +87,7 @@ formatter = { command = 'npx prettier', args = [
   "typescript",
 ] }
 auto-format = true
+file-types = ["tsx"]
 
 [[language]]
 name = "jsx"
@@ -88,3 +98,10 @@ formatter = { command = 'npx prettier', args = [
   "typescript",
 ] }
 auto-format = true
+
+[language-server.phpactor]
+command = "phpactor"
+args = ["language-server"]
+[[language]]
+name = "php"
+language-servers = ["phpactor"]

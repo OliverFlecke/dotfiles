@@ -1,8 +1,13 @@
+# Configuration file for Ghostty.
+# See https://ghostty.org/docs/config/reference
+
+auto-update = download
+
 #font-family = Fira Code Retina
 font-family = Hack Regular
 
 theme = ayu
-background-opacity = 0.90
+background-opacity = 1.00
 background-blur-radius = 20
 
 macos-option-as-alt = true
@@ -10,3 +15,6 @@ macos-titlebar-style = tabs
 macos-icon = official
 
 clipboard-trim-trailing-spaces = true
+
+mouse-hide-while-typing = true
+

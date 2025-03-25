@@ -44,12 +44,14 @@ alias copyip="curl -L ipecho.net/plain | clipcopy"
 alias today='date -u +"%Y-%m-%d"'
 alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
-alias vim='nvim'
+alias vim=nvim
 
-alias c='clipcopy'
+alias c=clipcopy
 alias k=kubectl
 alias t=tmux
 alias z=zellij
+alias lg=lazygit
+alias ld=lazydocker
 
 # Docker aliases
 alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\""
@@ -65,3 +67,11 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 source <(kubectl completion zsh)
 source <(flux completion zsh)
 
+
+# pnpm
+export PNPM_HOME="/Users/oliver/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -1,4 +1,4 @@
-theme = "ayu_dark"
+theme = "ayu_evolve"
 
 [editor]
 line-number = "relative"
@@ -33,3 +33,9 @@ tab = "all"
 [editor.indent-guides]
 render = true
 skip-levels = 1
+
+[editor.lsp]
+# Disable automatically popups of signature parameter help
+auto-signature-help = false
+# Show LSP messages in the status line
+display-messages = true
