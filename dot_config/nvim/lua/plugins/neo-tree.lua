@@ -7,16 +7,15 @@ return {
 		"MunifTanjim/nui.nvim",
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
-	config = function()
-		require("neo-tree").setup({
-			hijack_netrw_behavior = "open_default",
-			window = {
-				position = "current",
-			},
-		})
-
-		vim.keymap.set("n", "<leader>pt", "<Cmd>Neotree toggle right<CR>")
-		vim.keymap.set("n", "<leader>pe", "<Cmd>Neotree focus right<CR>")
-		vim.keymap.set("n", "<leader>pv", "<Cmd>Neotree toggle current reveal<CR>")
-	end
+	opts = {
+		hijack_netrw_behavior = "open_default",
+		window = {
+			position = "current",
+		},
+	},
+	keys = {
+		{ "<leader>pt", "<cmd>Neotree toggle right<CR>" },
+		{ "<leader>pe", "<cmd>Neotree focus right<CR>" },
+		{ "<leader>pv", "<cmd>Neotree toggle current reveal<CR>" },
+	},
 }

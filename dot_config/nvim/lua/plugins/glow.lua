@@ -1,6 +1,6 @@
 return {
 	"ellisonleao/glow.nvim",
-	enable = false,
+	enabled = false,
 	config = true,
 	cmd = "Glow",
 }

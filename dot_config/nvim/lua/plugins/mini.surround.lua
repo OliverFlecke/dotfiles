@@ -1,15 +1,13 @@
 return {
 	'echasnovski/mini.surround',
 	version = false,
-	config = function()
-		require("mini.surround").setup()
+	config = true,
 
-		-- Shortcuts:
-		-- add `sa`
-		-- delete `sd`
-		-- replace `sr`
-		-- find `sf` or `sF`
-		-- highlight `sh`
-		-- change number of neighor lines `sn`
-	end
+	-- Shortcuts:
+	-- add `sa`
+	-- delete `sd`
+	-- replace `sr`
+	-- find `sf` or `sF`
+	-- highlight `sh`
+	-- change number of neighbor lines `sn`
 }

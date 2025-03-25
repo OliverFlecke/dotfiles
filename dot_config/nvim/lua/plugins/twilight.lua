@@ -3,4 +3,7 @@ return {
 	opts = {
 		context = 15,
 	},
+	keys = {
+		{ "<leader>ppt", vim.cmd.Twilight },
+	},
 }
