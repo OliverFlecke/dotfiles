@@ -1,11 +1,13 @@
 return {
 	'saghen/blink.cmp',
-	-- optional: provides snippets for the snippet source
+	-- Optional: provides snippets for the snippet source
 	dependencies = 'rafamadriz/friendly-snippets',
-	version = "0.13.1",
+	version = "1.0.0",
 	enabled = true,
 
 	opts = {
+		signature = { enabled = true },
+
 		keymap = {
 			preset = 'default',
 			['<Tab>'] = { 'accept', 'fallback' },
