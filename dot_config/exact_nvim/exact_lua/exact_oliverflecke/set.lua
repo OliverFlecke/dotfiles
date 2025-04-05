@@ -35,7 +35,9 @@ vim.g.mapleader = " "
 vim.opt.listchars = { space = ' ', tab = '| ', trail = '-' }
 vim.opt.list = true
 vim.opt.formatoptions = { n = true, j = true, t = true }
-vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin', 'obj' }
+vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin/*', 'obj/*' }
+
+vim.opt.signcolumn = 'yes'
 
 -- vim.opt.spelllang = "en-us"
 
@@ -43,4 +45,12 @@ vim.filetype.add({
 	extension = {
 		ftl = 'html',
 	},
+})
+
+-- Define comment string for SQL file types
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "sql",
+	callback = function()
+		vim.bo.commentstring = "-- %s"
+	end
 })

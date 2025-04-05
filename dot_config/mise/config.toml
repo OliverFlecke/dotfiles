@@ -1,10 +1,20 @@
 [tools]
 python = "latest"
 node = "22"
-chezmoi = "latest"
-# dotnet = "latest"
-github-cli = "latest"
+chezmoi = "2.61"
 pre-commit = "latest"
 go = "1.21"
-glab = "latest"
 zellij = "0.42.1"
+"asdf:neovim" = "ref:v0.11.0"
+pnpm = "10"
+gh = "2.69"
+neovim = "0.11"
+lazygit = "latest"
+
+[settings]
+
+[settings.aqua]
+slsa = false
+
+[settings.python]
+compile = false

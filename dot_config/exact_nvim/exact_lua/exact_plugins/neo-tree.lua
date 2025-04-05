@@ -16,6 +16,6 @@ return {
 	keys = {
 		{ "<leader>pt", "<cmd>Neotree toggle right<CR>" },
 		{ "<leader>pe", "<cmd>Neotree focus right<CR>" },
-		{ "<leader>pv", "<cmd>Neotree toggle current reveal<CR>" },
+		{ "<leader>pV", "<cmd>Neotree toggle current reveal<CR>" },
 	},
 }

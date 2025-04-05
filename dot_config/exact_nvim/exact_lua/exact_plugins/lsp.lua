@@ -1,16 +1,9 @@
 return {
 	'neovim/nvim-lspconfig',
 	dependencies = { 'saghen/blink.cmp' },
-	opts = {
-		servers = {
-			biome = {},
-			lua_ls = {},
-		},
-	},
+	opts = {},
 
 	config = function()
-		vim.opt.signcolumn = 'yes'
-
 		-- This is where you enable features that only work
 		-- if there is a language server active in the file
 		vim.api.nvim_create_autocmd('LspAttach', {
@@ -64,13 +57,5 @@ return {
 				}
 			}
 		}
-
-		-- Define comment string for SQL file types
-		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "sql",
-			callback = function()
-				vim.bo.commentstring = "-- %s"
-			end
-		})
 	end
 }

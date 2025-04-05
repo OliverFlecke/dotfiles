@@ -1,8 +1,9 @@
 return {
 	'echasnovski/mini.sessions',
 	version = false,
+	enabled = false,
 	opts = {
-		autoread = true,
+		autoread = false,
 		file = 'session.vim',
 	},
 }
