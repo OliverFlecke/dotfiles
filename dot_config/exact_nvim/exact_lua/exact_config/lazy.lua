@@ -25,22 +25,8 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
 	spec = {
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins", enabled = false },
-		-- { import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "plugins" },
 
-		-- Themes
-		-- { 'ayu-theme/ayu-vim' },
-		-- {
-		-- 	'rebelot/kanagawa.nvim',
-		-- 	config = function()
-		-- 		require('kanagawa').setup({
-		-- 			transparent = true,
-		-- 		})
-		-- 	end
-		-- },
-
-		-- { 'vim-airline/vim-airline' },
-		-- { 'vim-airline/vim-airline-themes' },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.

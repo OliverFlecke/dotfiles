@@ -4,6 +4,7 @@ return {
 	'stevearc/oil.nvim',
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	keys = {
+		{ "-",          "<cmd>Oil<CR>", desc = "Toggle Oil" },
 		{ "<leader>pv", "<cmd>Oil<CR>", desc = "Toggle Oil" },
 	},
 	opts = {

@@ -39,6 +39,7 @@ return {
 					action = function() Snacks.gitbrowse() end,
 				},
 				function()
+					print(os.execute("git remote"))
 					local in_git = Snacks.git.get_root() ~= nil
 					local cmds = {
 						{
