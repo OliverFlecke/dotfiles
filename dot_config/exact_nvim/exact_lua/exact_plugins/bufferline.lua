@@ -2,7 +2,8 @@ return {
 	'akinsho/bufferline.nvim',
 	version = "*",
 	enabled = true,
-	event = "BufReadPre",
+	lazy = false,
+	-- event = "BufReadPre",
 	dependencies = 'nvim-tree/nvim-web-devicons',
 	keys = {
 		{ '<Tab>',   '<Cmd>BufferLineCycleNext<CR>', desc = "Next buffer" },

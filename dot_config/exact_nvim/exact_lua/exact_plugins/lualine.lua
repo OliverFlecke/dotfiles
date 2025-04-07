@@ -4,6 +4,11 @@ return {
 	opts = {
 		options = {
 			theme = "ayu_mirage",
+			section_separators = { left = '', right = '' },
+			component_separators = { left = '', right = '' },
 		},
+		extensions = {
+			"oil"
+		}
 	},
 }

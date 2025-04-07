@@ -16,5 +16,33 @@ return {
 			},
 		},
 	},
-	{ 'williamboman/mason-lspconfig.nvim' },
+	{
+		'williamboman/mason-lspconfig.nvim',
+		dependencies = { 'saghen/blink.cmp' },
+		opts = {
+			ensure_installed = {
+				'ts_ls',
+				-- 'eslint',
+				'html',
+				'cssls',
+				'biome',
+			}
+		},
+
+		config = function(_, opts)
+			local lspconfig = require('lspconfig')
+			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
+
+			require('mason-lspconfig').setup({
+				opts.ensure_installed,
+				handlers = {
+					function(server)
+						lspconfig[server].setup({
+							capabilities = lsp_capabilities,
+						})
+					end,
+				},
+			})
+		end
+	},
 }
