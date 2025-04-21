@@ -3,13 +3,14 @@
 local with_virtual_lines_config = {
 	virtual_text = {
 		severity = {
-			max = vim.diagnostic.severity.WARN,
+			-- max = vim.diagnostic.severity.WARN,
+			min = vim.diagnostic.severity.WARN,
 		},
 	},
 	virtual_lines = {
 		current_line = true,
 		severity = {
-			min = vim.diagnostic.severity.ERROR,
+			min = vim.diagnostic.severity.INFO,
 		},
 	},
 }

@@ -29,10 +29,15 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = { 80, 120 }
+vim.opt.colorcolumn = { 80 }
 
 vim.g.mapleader = " "
-vim.opt.listchars = { space = ' ', tab = '| ', trail = '-' }
+vim.opt.listchars = {
+	space = ' ',
+	tab = '» ',
+	trail = '-',
+	-- eol = "↲",
+}
 vim.opt.list = true
 vim.opt.formatoptions = { n = true, j = true, t = true }
 vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin/*', 'obj/*' }

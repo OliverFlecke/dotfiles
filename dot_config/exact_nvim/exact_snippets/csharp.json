@@ -1,9 +1,34 @@
 {
+	"API endpoint": {
+		"prefix": "apiget",
+		"body": [
+			"[HttpGet(\"$1\", Name = \"$2\")]",
+			"[Produces(Application.Json)]",
+			"[ProducesResponseType(StatusCodes.Status200OK)]",
+			"public async Task<IActionResult> $2()",
+			"{",
+			"\treturn Ok();",
+			"}"
+		]
+	},
+	"API POST endpoint": {
+		"prefix": "apipost",
+		"body": [
+			"[HttpPost(\"$1\", Name = \"$2\")]",
+			"[Produces(Application.Json)]",
+			"[Consumes(Application.Json)]",
+			"[ProducesResponseType(StatusCodes.Status200OK)]",
+			"public async Task<IActionResult> $2()",
+			"{",
+			"\treturn Ok();",
+			"}"
+		]
+	},
 	"Create xunit fact": {
 		"prefix": "fact",
 		"body": [
 			"[Fact]",
-			"public void $1_Test()",
+			"public void $1()",
 			"{",
 			"\t// Arrange",
 			"\t$2",
@@ -17,7 +42,7 @@
 		"prefix": "afact",
 		"body": [
 			"[Fact]",
-			"public async Task $1_Test()",
+			"public async Task $1()",
 			"{",
 			"\t// Arrange",
 			"\t$2",
@@ -31,7 +56,7 @@
 		"prefix": "factsql",
 		"body": [
 			"[Fact]",
-			"public async Task $1_Test()",
+			"public async Task $1()",
 			"{",
 			"\t// Arrange",
 			"\tvar connection = DbUtils.GetSqliteConnection();",
@@ -51,7 +76,7 @@
 		"prefix": "theory",
 		"body": [
 			"[Theory]",
-			"public void $1_Test()",
+			"public void $1()",
 			"{",
 			"\t// Arrange",
 			"\t$2",
@@ -65,7 +90,7 @@
 		"prefix": "atheory",
 		"body": [
 			"[Theory]",
-			"public async Task $1_Test()",
+			"public async Task $1()",
 			"{",
 			"\t// Arrange",
 			"\t$2",
@@ -74,6 +99,10 @@
 			"\t// Assert",
 			"}"
 		]
+	},
+	"Prop with init": {
+		"prefix": "pi",
+		"body": "public required ${1:int} ${2:MyProperty} { get; init; }"
 	},
 	"Summary": {
 		"prefix": "summary",

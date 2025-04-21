@@ -8,6 +8,10 @@ return {
 		{ "<leader>pv", "<cmd>Oil<CR>", desc = "Toggle Oil" },
 	},
 	opts = {
+		view_options = {
+			show_hidden = true,
+		},
+		skip_confirm_for_simple_edits = true,
 		keymaps = {
 			["gd"] = {
 				desc = "Toggle file detail view",

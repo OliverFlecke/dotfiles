@@ -5,9 +5,9 @@ return {
 	opts = {
 		transparent = true,
 		style = "night",
-		on_highlights = function(hl, colors)
+		on_highlights = function(hl, _)
 			hl.ColorColumn = {
-				bg = colors.dark5
+				bg = "#091f2c"
 			}
 		end,
 	},
