@@ -56,7 +56,7 @@ return {
 							action = function()
 								vim.fn.jobstart("gh pr list --web", { detach = true })
 							end,
-							height = 7,
+							height = 10,
 						},
 						{
 							title = "Open Issues",
@@ -66,7 +66,7 @@ return {
 								vim.fn.jobstart("gh issue list --web", { detach = true })
 							end,
 							icon = " ",
-							height = 7,
+							height = 15,
 						},
 						{
 							icon = " ",

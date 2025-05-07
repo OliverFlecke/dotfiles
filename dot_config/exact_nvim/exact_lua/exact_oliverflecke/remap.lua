@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Copy line down and comment current
+vim.keymap.set("n", "ycc", '"yy" . v:count1 . "gcc\']p"',
+	{ remap = true, expr = true, desc = "Duplicate and comment lines" })
