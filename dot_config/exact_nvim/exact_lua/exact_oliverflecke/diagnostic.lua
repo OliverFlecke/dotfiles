@@ -1,5 +1,25 @@
 -- Configuration for showing diagnostics
 
+vim.diagnostic.config({
+	update_in_insert = true,
+	underline = true,
+	-- severity_sort = false,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = '',
+			[vim.diagnostic.severity.WARN] = '',
+			[vim.diagnostic.severity.HINT] = '',
+			[vim.diagnostic.severity.INFO] = '',
+		},
+	},
+	float = {
+		border = 'rounded',
+		source = 'always',
+		header = '',
+		prefix = '',
+	},
+})
+
 local with_virtual_lines_config = {
 	virtual_text = {
 		severity = {
@@ -16,7 +36,11 @@ local with_virtual_lines_config = {
 }
 
 local no_virtual_lines_config = {
-	virtual_text = true,
+	virtual_text = {
+		severity = {
+			min = vim.diagnostic.severity.WARN,
+		}
+	},
 	virtual_lines = false,
 }
 local use_virtual_lines = false
