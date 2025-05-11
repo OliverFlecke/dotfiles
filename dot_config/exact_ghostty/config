@@ -6,7 +6,8 @@ auto-update = download
 #font-family = Fira Code Retina
 font-family = Hack Regular
 
-theme = ayu
+theme = light:rose-pine-dawn,dark:ayu
+# theme = ayu
 background-opacity = 1.00
 background-blur-radius = 20
 
@@ -17,4 +18,8 @@ macos-icon = official
 clipboard-trim-trailing-spaces = true
 
 mouse-hide-while-typing = true
+
+# Keybindings
+keybind = cmd+d=unbind
+keybind = cmd+shift+d=unbind
 
