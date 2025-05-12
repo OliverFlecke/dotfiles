@@ -1,3 +1,5 @@
+local mode = { "n", "v" }
+
 return {
 	"chenasraf/text-transform.nvim",
 	tag          = "stable",
@@ -7,13 +9,13 @@ return {
 	},
 	opts         = {},
 	keys         = {
-		{ "<leader>ts", ":TtSnake<cr>",     mode = { "n", "v", }, desc = "Transform text to snake_case",           silent = true },
-		{ "<leader>tS", ":TtConst<cr>",     mode = { "n", "v", }, desc = "Transform text to SCREAMING_SNAKE_CASE", silent = true },
-		{ "<leader>tc", ":TtCamel<cr>",     mode = { "n", "v", }, desc = "Transform text to camelCase",            silent = true },
-		{ "<leader>tp", ":TtPascal<cr>",    mode = { "n", "v", }, desc = "Transform text to PascalCase",           silent = true },
-		{ "<leader>tk", ":TtKebab<cr>",     mode = { "n", "v", }, desc = "Transform text to kebab-case",           silent = true },
-		{ "<leader>td", ":TtDot<cr>",       mode = { "n", "v", }, desc = "Transform text to dot.case",             silent = true },
-		{ "<leader>tT", ":TtTitle<cr>",     mode = { "n", "v", }, desc = "Transform text to Title Case",           silent = true },
-		{ "<leader>tt", ":TtTelescope<cr>", mode = { "n", "v", }, desc = "Transform text",                         silent = true },
+		{ "<leader>Ts", ":TtSnake<cr>",     mode, desc = "Transform text to snake_case",           silent = true },
+		{ "<leader>TS", ":TtConst<cr>",     mode, desc = "Transform text to SCREAMING_SNAKE_CASE", silent = true },
+		{ "<leader>Tc", ":TtCamel<cr>",     mode, desc = "Transform text to camelCase",            silent = true },
+		{ "<leader>Tp", ":TtPascal<cr>",    mode, desc = "Transform text to PascalCase",           silent = true },
+		{ "<leader>Tk", ":TtKebab<cr>",     mode, desc = "Transform text to kebab-case",           silent = true },
+		{ "<leader>Td", ":TtDot<cr>",       mode, desc = "Transform text to dot.case",             silent = true },
+		{ "<leader>TT", ":TtTitle<cr>",     mode, desc = "Transform text to Title Case",           silent = true },
+		{ "<leader>Tt", ":TtTelescope<cr>", mode, desc = "Transform text",                         silent = true },
 	}
 }

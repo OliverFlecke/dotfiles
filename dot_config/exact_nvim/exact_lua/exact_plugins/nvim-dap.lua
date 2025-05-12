@@ -11,7 +11,7 @@ return {
 		keys = {
 			{ "<leader>rr", "<cmd>DapNew<CR>" },
 			{ "<leader>rx", "<cmd>DapTerminate<CR>" },
-			{ "<leader>rt", function() require("dap").run_last() end },
+			-- { "<leader>rt", function() require("dap").run_last() end },
 
 			{ "<leader>rb", "<cmd>DapToggleBreakpoint<CR>" },
 			{ "<leader>rc", "<cmd>DapContinue<CR>" },
@@ -65,6 +65,9 @@ return {
 					end,
 				},
 			}
+
+			vim.fn.sign_define('DapBreakpoint', { text = '🟥', texthl = '', linehl = '', numhl = '' })
+			vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
 		end
 	},
 	{
