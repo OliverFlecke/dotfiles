@@ -26,13 +26,5 @@ return {
 				vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
 			end,
 		})
-
-		-- lspconfig.harper_ls.setup {
-		-- 	settings = {
-		-- 		["harper_ls"] = {
-		-- 			filetypes = { "gitcommit", "markdown" }
-		-- 		}
-		-- 	}
-		-- }
 	end
 }

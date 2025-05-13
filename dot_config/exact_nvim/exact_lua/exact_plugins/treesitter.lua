@@ -43,7 +43,10 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		event = "BufReadPre",
-		opts = {},
+		opts = {
+			-- max_lines = 3,
+			multiline_threshold = 1,
+		},
 		keys = {
 			{ "<leader>ct", "<cmd>TSContextToggle<CR>", desc = "Toggle lang context" }
 		}

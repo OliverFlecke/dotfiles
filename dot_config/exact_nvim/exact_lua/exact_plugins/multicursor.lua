@@ -21,8 +21,8 @@ return {
 		{ "<right>",      function() require("multicursor-nvim").prevCursor() end,         mode, desc = "Rotate cursor prev" },
 		{ "<leader>d",    function() require("multicursor-nvim").deleteCursor() end,       mode, desc = "Delete main cursor" },
 
-		{ "<leader>gv",   function() require("multicursor-nvim").restoreCursors() end,     mode, desc = "Restore cursors" },
-		{ "<leader>a",    function() require("multicursor-nvim").alignCursors() end,       mode, desc = "Align cursors" },
+		{ "<leader>cr",   function() require("multicursor-nvim").restoreCursors() end,     mode, desc = "Restore cursors" },
+		{ "<leader>ca",   function() require("multicursor-nvim").alignCursors() end,       mode, desc = "Align cursors" },
 
 		{
 			"<esc>",
