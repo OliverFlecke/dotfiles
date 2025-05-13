@@ -39,5 +39,13 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 		})
-	end
+	end,
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "BufReadPre",
+		opts = {},
+		keys = {
+			{ "<leader>ct", "<cmd>TSContextToggle<CR>", desc = "Toggle lang context" }
+		}
+	}
 }

@@ -1,5 +1,10 @@
 return {
 	"danymat/neogen",
 	version = "*",
-	opts = {},
+	opts = {
+		snippet_engine = "luasnip",
+	},
+	keys = {
+		{ "<leader>nf", "<cmd>Neogen<CR>" }
+	}
 }

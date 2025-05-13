@@ -13,7 +13,7 @@ return {
 			{ "<leader>rx", "<cmd>DapTerminate<CR>" },
 			-- { "<leader>rt", function() require("dap").run_last() end },
 
-			{ "<leader>rb", "<cmd>DapToggleBreakpoint<CR>" },
+			{ "<leader>b",  "<cmd>DapToggleBreakpoint<CR>" },
 			{ "<leader>rc", "<cmd>DapContinue<CR>" },
 			{ "<leader>ri", "<cmd>DapStepInto<CR>" },
 			{ "<leader>ro", "<cmd>DapStepOver<CR>" },
