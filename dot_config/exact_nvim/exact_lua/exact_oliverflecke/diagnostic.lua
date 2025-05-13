@@ -56,6 +56,18 @@ vim.keymap.set("n", "gK", function()
 		or no_virtual_lines_config)
 end, { desc = "Toggle diagnostic virtual_lines" })
 
-local goto_next_error = { severity = vim.diagnostic.severity.ERROR, wrap = true }
-vim.keymap.set("n", "]g", function() vim.diagnostic.goto_next(goto_next_error) end)
-vim.keymap.set("n", "[g", function() vim.diagnostic.goto_prev(goto_next_error) end)
+vim.keymap.set("n", "]g",
+	function()
+		vim.diagnostic.jump({
+			severity = vim.diagnostic.severity.ERROR,
+			count = -1,
+			wrap = true
+		})
+	end)
+vim.keymap.set("n", "[g", function()
+	vim.diagnostic.jump({
+		severity = vim.diagnostic.severity.ERROR,
+		count = 1,
+		wrap = true
+	})
+end)

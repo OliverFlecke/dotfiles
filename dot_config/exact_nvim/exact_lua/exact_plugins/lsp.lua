@@ -21,8 +21,8 @@ return {
 				vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
 				vim.keymap.set({ 'n', 'x' }, '<leader>vcf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
 
-				vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
-				vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
+				vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1 }) end, opts)
+				vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1 }) end, opts)
 				vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
 			end,
 		})
