@@ -14,8 +14,8 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>pt", "<cmd>Neotree toggle right<CR>" },
-		{ "<leader>pe", "<cmd>Neotree focus right<CR>" },
-		{ "<leader>pV", "<cmd>Neotree toggle current reveal<CR>" },
+		{ "<leader>pt", "<cmd>Neotree toggle right<CR>",          desc = "Neotree toggle" },
+		{ "<leader>pe", "<cmd>Neotree focus right<CR>",           desc = "Neotree focus" },
+		{ "<leader>pV", "<cmd>Neotree toggle current reveal<CR>", desc = "Neotree full screen" },
 	},
 }

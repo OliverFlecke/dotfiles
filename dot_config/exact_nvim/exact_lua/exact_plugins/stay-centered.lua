@@ -6,7 +6,7 @@ return {
 		{
 			'<leader>st',
 			function() require('stay-centered').toggle() end,
-			desc = 'Toggle stay-centered.nvim',
+			desc = 'Toggle stay-centered',
 			mode = { 'n', 'v' },
 		},
 	},
