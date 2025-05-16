@@ -45,7 +45,13 @@ return {
 				border = 'single',
 				-- Draw the index of each completion item
 				draw = {
-					columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
+					columns = {
+						{ 'item_idx' },
+						{ 'kind_icon' },
+						{ 'label',      'label_description', gap = 1 },
+						{ 'source_name' },
+						-- { 'kind' }
+					},
 					components = {
 						item_idx = {
 							text = function(ctx)

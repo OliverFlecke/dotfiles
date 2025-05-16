@@ -1,7 +1,6 @@
 return {
 	{
 		'williamboman/mason.nvim',
-		---@class MasonSettings
 		opts = {
 			ensure_installed = {
 				"biome",
@@ -13,6 +12,9 @@ return {
 				'css-variables-language-server',
 				'harper-ls',
 				'roslyn',
+				-- Typst LSP and formatter
+				'typstyle',
+				'tinymist',
 			},
 			registries = {
 				"github:Crashdummyy/mason-registry",
@@ -38,7 +40,8 @@ return {
 			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
 			require('mason-lspconfig').setup({
-				opts.ensure_installed,
+				ensure_installed = opts.ensure_installed,
+				automatic_enable = {},
 				handlers = {
 					function(server)
 						lspconfig[server].setup({

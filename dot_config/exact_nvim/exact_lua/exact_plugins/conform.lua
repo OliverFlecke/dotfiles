@@ -8,6 +8,7 @@ return
 			typescript = { "biome", stop_after_first = true },
 			typescriptreact = { "biome", stop_after_first = true },
 			css = { "biome", stop_after_first = true },
+			typst = { "typstyle", stop_after_first = true },
 		},
 		format_on_save = {
 			timeout_ms = 500,

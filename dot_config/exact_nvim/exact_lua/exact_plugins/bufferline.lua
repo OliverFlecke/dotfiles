@@ -6,8 +6,8 @@ return {
 	-- event = "BufReadPre",
 	dependencies = 'nvim-tree/nvim-web-devicons',
 	keys = {
-		{ '<Tab>',   '<Cmd>BufferLineCycleNext<CR>', desc = "Next buffer" },
-		{ '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', desc = "Prev buffer" },
+		{ '<M-Tab>',   '<Cmd>BufferLineCycleNext<CR>', desc = "Next buffer" },
+		{ '<M-S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', desc = "Prev buffer" },
 	},
 	opts = {
 		options = {
