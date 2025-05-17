@@ -1,8 +1,8 @@
 zsh-autosuggestions
 hub
+mise
 neovim
 cmake
-cocoapods
 bat
 exa
 procs
@@ -10,4 +10,3 @@ tokei
 brandwhich
 diff-so-fancy
 httpie
-mise
