@@ -1,10 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-# make sure it's executable with:
-# chmod +x ~/.config/sketchybar/plugins/aerospace.sh
-
-if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --set $NAME background.drawing=on
+if [[ -z "${FOCUSED_WORKSPACE}" ]]; then
+	sketchybar --set space label=$(aerospace list-workspaces --focused)
 else
-    sketchybar --set $NAME background.drawing=off
+	sketchybar --set space label="$FOCUSED_WORKSPACE"
 fi
+
