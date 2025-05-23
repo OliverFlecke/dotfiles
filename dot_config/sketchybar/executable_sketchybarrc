@@ -89,7 +89,7 @@ spotify=(
 )
 sketchybar --add event spotify_change $SPOTIFY_EVENT \
 	--add item spotify e --set spotify "${spotify[@]}" \
-	--subscribe spotify spotify_change mouse.clicked
+	--subscribe spotify spotify_change mouse.clicked volume_change
 
 ##### Adding Right Items #####
 clock=(
@@ -100,6 +100,9 @@ clock=(
 )
 volume=(
 	script="$PLUGIN_DIR/volume.sh"
+)
+wifi=(
+	script="$PLUGIN_DIR/wifi.sh"
 )
 battery=(
 	update_freq=120
@@ -113,6 +116,8 @@ slack=(
 
 sketchybar \
 	--add item clock right --set clock "${clock[@]}" \
+	--add item wifi right --set wifi "${wifi[@]}" \
+	--subscribe wifi wifi_change \
 	--add item volume right --set volume "${volume[@]}" \
 	--subscribe volume volume_change \
 	--add item battery right --set battery "${battery[@]}" \
