@@ -5,6 +5,7 @@ auto-update = download
 
 #font-family = Fira Code Retina
 font-family = Hack Regular
+# font-family = NeoSpleen Nerd Font
 
 theme = light:rose-pine-dawn,dark:ayu
 # theme = ayu

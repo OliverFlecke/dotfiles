@@ -67,8 +67,9 @@ inner.horizontal = 4
 inner.vertical = 4
 outer.left = 0
 outer.bottom = 0
-outer.top = 0
 outer.right = 0
+# Adding gap to external monitors to match with sketchybar
+outer.top = [{ monitor."^built-in retina display$" = 0 }, 38]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

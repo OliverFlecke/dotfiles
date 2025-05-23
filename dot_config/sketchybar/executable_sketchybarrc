@@ -7,26 +7,16 @@ LABEL_COLOR=0xffffffff
 ICON_COLOR=0xffffffff
 
 ##### Bar Appearance #####
-# Configuring the general appearance of the bar.
-# These are only some of the options available. For all options see:
-# https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
-
 bar=(
 	color=$BAR_COLOR
-	height=40
+	height=38
 	blur_radius=40
 	notch_width=220
+	sticky=on
 )
 sketchybar --bar "${bar[@]}"
 
 ##### Changing Defaults #####
-# We now change some default values, which are applied to all further items.
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
-
-
 default=(
 	padding_left=4
 	padding_right=4
@@ -68,7 +58,7 @@ sketchybar \
 ###### Left of notch
 aerospace=(
 	script="$PLUGIN_DIR/aerospace.sh"
-	icon=
+	icon=󱁐
 )
 weather=(
 	script="$PLUGIN_DIR/weather.sh"

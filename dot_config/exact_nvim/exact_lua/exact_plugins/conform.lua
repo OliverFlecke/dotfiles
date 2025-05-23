@@ -1,6 +1,5 @@
-return
-{
-	'stevearc/conform.nvim',
+return {
+	"stevearc/conform.nvim",
 	-- optional = true,
 	opts = {
 		formatters_by_ft = {
@@ -9,6 +8,8 @@ return
 			typescriptreact = { "biome", stop_after_first = true },
 			css = { "biome", stop_after_first = true },
 			typst = { "typstyle", stop_after_first = true },
+			-- lua = { "stylua" },
+			toml = { "taplo", stop_after_first = true },
 		},
 		format_on_save = {
 			timeout_ms = 500,

@@ -1,6 +1,6 @@
 return {
 	{
-		'williamboman/mason.nvim',
+		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
 				"biome",
@@ -8,40 +8,39 @@ return {
 				"stylua",
 				"shellcheck",
 				"shfmt",
-				'css-lsp',
-				'css-variables-language-server',
-				'harper-ls',
-				'roslyn',
+				"css-lsp",
+				"css-variables-language-server",
+				"harper-ls",
+				"roslyn",
 				-- Typst LSP and formatter
-				'typstyle',
-				'tinymist',
+				"typstyle",
+				"tinymist",
 			},
 			registries = {
 				"github:Crashdummyy/mason-registry",
 				"github:mason-org/mason-registry",
-			}
+			},
 		},
 	},
 	{
-		'williamboman/mason-lspconfig.nvim',
-		dependencies = { 'saghen/blink.cmp' },
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "saghen/blink.cmp" },
 		opts = {
 			ensure_installed = {
-				'ts_ls',
+				"ts_ls",
 				-- 'eslint',
-				'html',
-				'cssls',
-				'biome',
-			}
+				"html",
+				"cssls",
+				"biome",
+			},
 		},
 
 		config = function(_, opts)
-			local lspconfig = require('lspconfig')
-			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
+			local lspconfig = require("lspconfig")
+			local lsp_capabilities = require("blink.cmp").get_lsp_capabilities()
 
-			require('mason-lspconfig').setup({
+			require("mason-lspconfig").setup({
 				ensure_installed = opts.ensure_installed,
-				automatic_enable = {},
 				handlers = {
 					function(server)
 						lspconfig[server].setup({
@@ -50,6 +49,6 @@ return {
 					end,
 				},
 			})
-		end
+		end,
 	},
 }

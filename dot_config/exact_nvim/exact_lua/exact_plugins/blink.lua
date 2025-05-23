@@ -21,7 +21,8 @@ return {
 	opts = {
 		keymap = {
 			preset = 'default',
-			['<Tab>'] = { 'accept', 'fallback' },
+			-- ['<Tab>'] = { 'accept', 'fallback' },
+			['<C-f>'] = { 'select_and_accept' },
 			['<A-1>'] = { function(cmp) cmp.accept({ index = 1 }) end },
 			['<A-2>'] = { function(cmp) cmp.accept({ index = 2 }) end },
 			['<A-3>'] = { function(cmp) cmp.accept({ index = 3 }) end },
