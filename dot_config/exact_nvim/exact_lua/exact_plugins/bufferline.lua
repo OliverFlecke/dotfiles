@@ -1,7 +1,7 @@
 return {
 	'akinsho/bufferline.nvim',
 	version = "*",
-	enabled = true,
+	enabled = false,
 	lazy = false,
 	-- event = "BufReadPre",
 	dependencies = 'nvim-tree/nvim-web-devicons',
@@ -11,10 +11,11 @@ return {
 	},
 	opts = {
 		options = {
+			themable = true,
 			show_buffer_close_icons = false,
 			show_close_icon = false,
 			color_icons = true,
-			-- separator_style = 'slant',
+			separator_style = 'thin',
 		}
 	},
 }

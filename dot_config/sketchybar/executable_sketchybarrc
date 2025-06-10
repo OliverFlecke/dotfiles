@@ -1,7 +1,7 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 
-BAR_COLOR=0x80000000
+BAR_COLOR=0x00000000
 BORDER_COLOR=0xfff5a97f
 LABEL_COLOR=0xffffffff
 ICON_COLOR=0xffffffff
@@ -31,7 +31,7 @@ default=(
 	icon.padding_right=4
 
 	background.height=28
-	background.color=0xff363944
+	background.color=0xaa363944
 	background.border_width=2
 	background.corner_radius=8
 )

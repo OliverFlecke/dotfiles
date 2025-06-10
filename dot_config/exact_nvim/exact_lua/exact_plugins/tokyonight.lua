@@ -7,7 +7,7 @@ return {
 		style = "night",
 		on_highlights = function(hl, _)
 			hl.ColorColumn = {
-				bg = "#091f2c"
+				bg = "#16161e"
 			}
 		end,
 	},

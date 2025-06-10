@@ -64,12 +64,12 @@ case ${WEATHER_CODE} in
 	"113") # Sunny
 	;&
 	*) # Default to sunny
-	
+	WEATHER_ICON=
 	;;
 esac
 
 sketchybar --set $NAME \
-	label="$LOCATION $WEATHER_ICON $TEMPERATURE℃  $UV_INDEX $MOON_ICON" \
+	label="$TEMPERATURE℃ $WEATHER_ICON $UV_INDEX $MOON_ICON" \
 	icon.drawing=off \
 	label.padding_left=8 \
 	label.drawing=on

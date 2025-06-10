@@ -3,14 +3,15 @@
 
 auto-update = download
 
-#font-family = Fira Code Retina
 font-family = Hack Regular
+#font-family = Fira Code Retina
 # font-family = NeoSpleen Nerd Font
 
-theme = light:rose-pine-dawn,dark:ayu
-# theme = ayu
-background-opacity = 1.00
-background-blur-radius = 20
+# theme = light:rose-pine-dawn,dark:ayu
+theme = light:rose-pine-dawn,dark:tokyonight
+
+background-opacity = 0.85
+background-blur-radius = 15
 
 macos-option-as-alt = true
 macos-titlebar-style = tabs
