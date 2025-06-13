@@ -15,6 +15,7 @@ return {
 			{
 				filetypes = {
 					"html",
+					"mjml", -- Template language for emails
 					"javascript",
 					"typescript",
 					"javascriptreact",

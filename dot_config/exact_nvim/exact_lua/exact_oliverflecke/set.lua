@@ -47,6 +47,7 @@ vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin/*', 'ob
 vim.filetype.add({
 	extension = {
 		ftl = 'html',
+		mjml = 'mjml',
 	},
 })
 

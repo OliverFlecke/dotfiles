@@ -20,10 +20,10 @@ layout {
 			mode_normal  "#[bg=#1f2335] "
 			// mode_tmux    "#[bg=#ffc387] "
 
-			tab_normal   "#[fg=#394b70] {name} "
-			tab_active   "#[fg=#c53b53,bold,italic] {name} "
+			tab_normal   "#[bg=#ffc777,fg=#1f2335] {index} #[bg=#1f2335,fg=#bb9af7] {name} #[bg=none] "
+			tab_active   "#[bg=#ffc777,fg=#1f2335] {index} #[bg=#1f2335,fg=#c53b53] {name} #[bg=none] "
 			tab_sync_indicator       " "
-			tab_fullscreen_indicator " 󰊓" 
+			tab_fullscreen_indicator " 󰊓"
 			tab_floating_indicator   " 󰹙"
 
 			// command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
