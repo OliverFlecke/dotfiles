@@ -7,8 +7,8 @@ return {
 	},
 
 	keys = {
-		{ '<leader>pf', require('telescope.builtin').find_files, desc = 'Telescope find files' },
-		{ '<C-p>',      require('telescope.builtin').git_files,  desc = 'Telescope find files' },
+		-- { '<leader>pf', require('telescope.builtin').find_files, desc = 'Telescope find files' },
+		{ '<C-p>', require('telescope.builtin').git_files, desc = 'Telescope find files' },
 		{
 			'<leader>ps',
 			function()
