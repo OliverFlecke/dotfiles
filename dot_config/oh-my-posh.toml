@@ -1,0 +1,81 @@
+version = 3
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[secondary_prompt]
+	template = '❯❯'
+	foreground = 'magenta'
+	background = 'transparent'
+
+[transient_prompt]
+	template = "> "
+	background = 'transparent'
+	foreground_templates = [
+		'{{if gt .Code 0}}red{{end}}',
+		'{{if eq .Code 0}}magenta{{end}}',
+	]
+
+[[blocks]]
+	type = 'prompt'
+	alignment = 'left'
+	newline = true
+
+	[[blocks.segments]]
+		template = '{{ .Path }}'
+		foreground = 'blue'
+		background = 'transparent'
+		type = 'path'
+		style = 'plain'
+
+		[blocks.segments.properties]
+			style = 'full'
+
+	[[blocks.segments]]
+		template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+		foreground = 'p:grey'
+		background = 'transparent'
+		type = 'git'
+		style = 'plain'
+
+		[blocks.segments.properties]
+			branch_icon = ''
+			commit_icon = '@'
+			fetch_status = true
+			fetch_upstream_icon = true
+
+			[blocks.segments.properties.mapped_branches]
+				"feat/*" = "🚀/"
+				"bug/*" = "🐛/"
+				"fix/*" = "🐛/"
+
+[[blocks]]
+	type = 'rprompt'
+	overflow = 'hidden'
+
+	[[blocks.segments]]
+		template = '{{ .FormattedMs }}'
+		foreground = 'yellow'
+		background = 'transparent'
+		type = 'executiontime'
+		style = 'plain'
+
+		[blocks.segments.properties]
+			threshold = 500
+
+[[blocks]]
+	type = 'prompt'
+	alignment = 'left'
+	newline = true
+
+	[[blocks.segments]]
+		template = '❯'
+		background = 'transparent'
+		type = 'text'
+		style = 'plain'
+		foreground_templates = [
+			'{{if gt .Code 0}}red{{end}}',
+			'{{if eq .Code 0}}magenta{{end}}',
+		]
+
+[schema]
+	path = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
