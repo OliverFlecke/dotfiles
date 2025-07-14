@@ -4,6 +4,7 @@ return {
 	opts = {},
 	keys = {
 		{ '<leader>vci', '<cmd>!pnpm biome lint --write --only=correctness/noUnusedImports<cr>', desc = "TS remove unused imports" },
+		{ '<D-.>',       vim.lsp.buf.code_action,                                                desc = "Code action" },
 	},
 	config = function()
 		-- This is where you enable features that only work

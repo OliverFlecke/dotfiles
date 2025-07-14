@@ -8,21 +8,28 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 	background = 'transparent'
 
 [transient_prompt]
-	template = "> "
+	template = '❯ '
+	foreground = 'magenta'
 	background = 'transparent'
 	foreground_templates = [
-		'{{if gt .Code 0}}red{{end}}',
+		'{{if gt .Code 0}}p:red{{end}}',
 		'{{if eq .Code 0}}magenta{{end}}',
 	]
 
 [[blocks]]
 	type = 'prompt'
 	alignment = 'left'
-	newline = true
+	newline = false
 
 	[[blocks.segments]]
-		template = '{{ .Path }}'
-		foreground = 'blue'
+		type = "os"
+		style = "plain"
+		foreground = "p:blue"
+		template = "{{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+
+	[[blocks.segments]]
+		template = '  {{ .Path }}'
+		foreground = 'p:blue'
 		background = 'transparent'
 		type = 'path'
 		style = 'plain'
@@ -31,8 +38,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 			style = 'full'
 
 	[[blocks.segments]]
-		template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
-		foreground = 'p:grey'
+		template = ' {{ .UpstreamIcon }}  {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ .BranchStatus }}'
+		foreground = 'p:green'
 		background = 'transparent'
 		type = 'git'
 		style = 'plain'
@@ -43,18 +50,18 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 			fetch_status = true
 			fetch_upstream_icon = true
 
-			[blocks.segments.properties.mapped_branches]
-				"feat/*" = "🚀/"
-				"bug/*" = "🐛/"
-				"fix/*" = "🐛/"
+			# [blocks.segments.properties.mapped_branches]
+			# 	"feat/*" = "🚀/"
+			# 	"bug/*" = "🐛/"
+			# 	"fix/*" = "🐛/"
 
 [[blocks]]
 	type = 'rprompt'
 	overflow = 'hidden'
 
 	[[blocks.segments]]
-		template = '{{ .FormattedMs }}'
-		foreground = 'yellow'
+		template = ' {{ .FormattedMs }}'
+		foreground = 'p:yellow'
 		background = 'transparent'
 		type = 'executiontime'
 		style = 'plain'
@@ -73,9 +80,16 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 		type = 'text'
 		style = 'plain'
 		foreground_templates = [
-			'{{if gt .Code 0}}red{{end}}',
+			'{{if gt .Code 0}}p:red{{end}}',
 			'{{if eq .Code 0}}magenta{{end}}',
 		]
+
+[palette]
+	red = "#ff007c"
+	blue = "#7aa2f7"
+	orange = "#ff9e64"
+	yellow = "#ffc777"
+	green = "#4fd6be"
 
 [schema]
 	path = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"

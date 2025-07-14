@@ -10,7 +10,7 @@ font-family = Hack Regular
 # theme = light:rose-pine-dawn,dark:ayu
 theme = light:rose-pine-dawn,dark:tokyonight
 
-background-opacity = 0.85
+background-opacity = 1
 background-blur-radius = 15
 
 macos-option-as-alt = true
@@ -18,7 +18,7 @@ macos-titlebar-style = tabs
 macos-icon = official
 
 clipboard-trim-trailing-spaces = true
-
+ 
 mouse-hide-while-typing = true
 
 # Keybindings
