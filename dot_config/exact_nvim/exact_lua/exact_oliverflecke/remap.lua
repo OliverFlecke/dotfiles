@@ -32,5 +32,5 @@ vim.keymap.set("n", "ycc", '"yy" . v:count1 . "gcc\']p"',
 vim.keymap.set("n", "<leader>pf", function()
 	local filename = vim.fn.expand("%:t:r")
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
-	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { filename })
+	vim.api.nvim_buf_set_text(0, row - 1, col + 1, row - 1, col + 1, { filename })
 end)

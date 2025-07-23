@@ -194,7 +194,7 @@
 			"[ApiController]",
 			"[ApiVersion(1)]",
 			"[Route(\"api/v{v:apiVersion}/$3\")]",
-			"public class $1 : ControllerBase",
+			"public class ${1:$TM_FILENAME_BASE} : ControllerBase",
 			"{",
 			"}"
 		]

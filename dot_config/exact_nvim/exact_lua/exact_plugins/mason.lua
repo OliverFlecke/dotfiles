@@ -1,30 +1,31 @@
 return {
 	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"biome",
-				"pyright",
-				"stylua",
-				"shellcheck",
-				"shfmt",
-				"css-lsp",
-				"css-variables-language-server",
-				"harper-ls",
-				"roslyn",
-				-- Typst LSP and formatter
-				"typstyle",
-				"tinymist",
-			},
-			registries = {
-				"github:Crashdummyy/mason-registry",
-				"github:mason-org/mason-registry",
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = { "saghen/blink.cmp",
+			{
+				"mason-org/mason.nvim",
+				opts = {
+					ensure_installed = {
+						"biome",
+						"pyright",
+						"stylua",
+						"shellcheck",
+						"shfmt",
+						"css-lsp",
+						"css-variables-language-server",
+						"harper-ls",
+						"roslyn",
+						-- Typst LSP and formatter
+						"typstyle",
+						"tinymist",
+					},
+					registries = {
+						"github:Crashdummyy/mason-registry",
+						"github:mason-org/mason-registry",
+					},
+				},
 			},
 		},
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "saghen/blink.cmp" },
 		opts = {
 			ensure_installed = {
 				"ts_ls",
@@ -40,6 +41,7 @@ return {
 			local lsp_capabilities = require("blink.cmp").get_lsp_capabilities()
 
 			require("mason-lspconfig").setup({
+				automatic_enable = true,
 				ensure_installed = opts.ensure_installed,
 				handlers = {
 					function(server)
