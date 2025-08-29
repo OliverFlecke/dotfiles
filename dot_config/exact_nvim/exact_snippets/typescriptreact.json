@@ -16,11 +16,11 @@
 	"Functional component with props": {
 		"prefix": "funccomp",
 		"body": [
-			"interface ${1:Component}Props {",
+			"interface Props {",
 			"",
 			"}",
 			"",
-			"export default function ${1:Component}({ }: Readonly<$1Props>) {",
+			"export default function ${1:Component}({ }: Readonly<Props>) {",
 			"\treturn <>$0</>;",
 			"}"
 		]
