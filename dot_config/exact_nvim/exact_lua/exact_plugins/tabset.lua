@@ -12,6 +12,9 @@ return {
 			lua = {
 				tabwidth = 2,
 			},
+			python = {
+				expandtab = true,
+			},
 			{
 				filetypes = {
 					"html",

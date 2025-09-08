@@ -9,6 +9,7 @@ return {
 			css = { "biome", stop_after_first = true },
 			typst = { "typstyle", stop_after_first = true },
 			-- lua = { "stylua" },
+			json = { "biome", stop_after_first = true },
 			toml = { "taplo", stop_after_first = true },
 		},
 		format_on_save = {
