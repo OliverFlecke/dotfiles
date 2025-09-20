@@ -15,7 +15,8 @@ return {
 			},
 		},
 	},
-	version = "1.0.0",
+	-- commit = "b56a1701f3043ee6d52471bb2c5362c1aaacb1c9", -- Version without NULL error on completion
+	version = "1.*",
 	enabled = true,
 
 	opts = {
@@ -86,8 +87,9 @@ return {
 				'score',
 				'sort_text',
 			},
-			implementation = "prefer_rust_with_warning"
-		}
+			-- implementation = "prefer_rust_with_warning",
+			implementation = "lua",
+		},
 	},
 	opts_extend = { "sources.default" }
 
