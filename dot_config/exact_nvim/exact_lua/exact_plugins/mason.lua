@@ -1,13 +1,14 @@
 return {
 	{
 		"mason-org/mason-lspconfig.nvim",
-		dependencies = { "saghen/blink.cmp",
+		dependencies = {
+			"saghen/blink.cmp",
 			{
 				"mason-org/mason.nvim",
 				opts = {
 					ensure_installed = {
 						"biome",
-						"pyright",
+						"basedpyright",
 						"stylua",
 						"shellcheck",
 						"shfmt",

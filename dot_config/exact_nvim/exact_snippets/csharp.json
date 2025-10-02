@@ -112,10 +112,7 @@
 	"Summary with value": {
 		"prefix": "sumval",
 		"description": "Add a summary and value field, often used for properties.",
-		"body": [
-			"/// <summary>$1.</summary>",
-			"/// <value>$2.</value>"
-		]
+		"body": ["/// <summary>$1.</summary>", "/// <value>$2.</value>"]
 	},
 	"Remarks": {
 		"prefix": "rem",
@@ -130,10 +127,7 @@
 	},
 	"Disable warning": {
 		"prefix": "dis",
-		"body": [
-			"#pragma warning disable $1",
-			"#pragma warning restore $1"
-		]
+		"body": ["#pragma warning disable $1", "#pragma warning restore $1"]
 	},
 	"Constructor instatiate doc string": {
 		"prefix": "initdoc",
@@ -141,12 +135,7 @@
 	},
 	"SQL lite database context": {
 		"prefix": "usql",
-		"body": [
-			"using (var context = _db.GetDbContext())",
-			"{",
-			"\t$1",
-			"}"
-		]
+		"body": ["using (var context = _db.GetDbContext())", "{", "\t$1", "}"]
 	},
 	"Inherit docs": {
 		"prefix": "indoc",
@@ -165,17 +154,13 @@
 		"body": [
 			"namespace $1;",
 			"",
-			"public class $2 : XunitContextBase, IDisposable",
+			"public class $2(ITestOutputHelper output) : XunitContextBase(output), IDisposable",
 			"{",
-			"\treadonly TestWebApplicationFactory<Program> _factory;",
-			"",
-			"\tpublic $2(ITestOutputHelper output) : base(output)",
-			"\t{",
-			"\t\t_factory = new();",
-			"\t}",
+			"\treadonly TestWebApplicationFactory<Program> _factory = new();",
 			"",
 			"\tpublic override void Dispose()",
 			"\t{",
+			"\t\tGC.SuppressFinalize(this);",
 			"\t\tbase.Dispose();",
 			"\t\t_factory.Dispose();",
 			"\t}",
@@ -189,12 +174,14 @@
 			"using Asp.Versioning;",
 			"using Microsoft.AspNetCore.Mvc;",
 			"",
+			"using static System.Net.Mime.MediaTypeNames;",
+			"",
 			"namespace $2.Controllers;",
 			"",
 			"[ApiController]",
 			"[ApiVersion(1)]",
 			"[Route(\"api/v{v:apiVersion}/$3\")]",
-			"public class ${1:$TM_FILENAME_BASE} : ControllerBase",
+			"public sealed class ${1:$TM_FILENAME_BASE} : ControllerBase",
 			"{",
 			"}"
 		]

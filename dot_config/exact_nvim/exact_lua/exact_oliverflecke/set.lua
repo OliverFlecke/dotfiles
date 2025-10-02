@@ -35,21 +35,21 @@ vim.opt.colorcolumn = { 80 }
 
 vim.g.mapleader = " "
 vim.opt.listchars = {
-	space = ' ',
-	tab = '» ',
-	trail = '-',
+	space = " ",
+	tab = "» ",
+	trail = "-",
 	-- eol = "↲",
 }
 vim.opt.list = true
 vim.opt.formatoptions = { n = true, j = true, t = true }
-vim.opt.wildignore = { '*.o', '*.a', '__pycache__', 'node_modules', 'bin/*', 'obj/*' }
+vim.opt.wildignore = { "*.o", "*.a", "__pycache__", "node_modules", "bin/*", "obj/*" }
 
 -- vim.opt.spelllang = "en-us"
 
 vim.filetype.add({
 	extension = {
-		ftl = 'html',
-		mjml = 'mjml',
+		ftl = "html",
+		mjml = "mjml",
 	},
 })
 
@@ -58,14 +58,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "sql",
 	callback = function()
 		vim.bo.commentstring = "-- %s"
-	end
+	end,
 })
 
--- Add borders to all floating preview windows
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-	opts = opts or {}
-	opts.border = opts.border or 'rounded'
-
-	return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
+-- -- Add borders to all floating preview windows
+-- local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+-- function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+-- 	opts = opts or {}
+-- 	opts.border = opts.border or 'rounded'
+--
+-- 	return orig_util_open_floating_preview(contents, syntax, opts, ...)
+-- end
