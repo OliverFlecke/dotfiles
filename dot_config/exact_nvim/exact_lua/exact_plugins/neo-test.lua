@@ -12,17 +12,73 @@ return {
 			"rouge8/neotest-rust",
 		},
 		keys = {
-			{ "<leader>tr",  function() require("neotest").run.run() end,                                   desc = "Run test" },
-			{ "<leader>tR",  function() require("neotest").run.run(vim.fn.expand("%")) end,                 desc = "Run all tests in file" },
-			{ "<leader>td",  function() require("neotest").run.run({ strategy = "dap", suite = true }) end, desc = "Debug nearest test" },
-			{ "<leader>tx",  function() require("neotest").run.stop() end,                                  desc = "Stop test" },
+			{
+				"<leader>tr",
+				function()
+					local neotest = require("neotest")
+					neotest.output_panel.open()
+					neotest.run.run()
+				end,
+				desc = "Run test",
+			},
+			{
+				"<leader>tR",
+				function()
+					require("neotest").run.run(vim.fn.expand("%"))
+				end,
+				desc = "Run all tests in file",
+			},
+			{
+				"<leader>td",
+				function()
+					require("neotest").run.run({ strategy = "dap", suite = true })
+				end,
+				desc = "Debug nearest test",
+			},
+			{
+				"<leader>tx",
+				function()
+					require("neotest").run.stop()
+				end,
+				desc = "Stop test",
+			},
 
-			{ "<leader>ts",  function() require("neotest").summary.toggle() end,                            desc = "Toggle test summary" },
-			{ "<leader>to",  function() require("neotest").output_panel.toggle() end,                       desc = "Toggle output panel" },
-			{ "<leader>tc",  function() require("neotest").output_panel.clear() end,                        desc = "Clear output panel" },
+			{
+				"<leader>ts",
+				function()
+					require("neotest").summary.toggle()
+				end,
+				desc = "Toggle test summary",
+			},
+			{
+				"<leader>to",
+				function()
+					require("neotest").output_panel.toggle()
+				end,
+				desc = "Toggle output panel",
+			},
+			{
+				"<leader>tc",
+				function()
+					require("neotest").output_panel.clear()
+				end,
+				desc = "Clear output panel",
+			},
 
-			{ "<leader>t[n", function() require("neotest").jump.prev({ status = "failed" }) end,            desc = "Jump to prev failed test" },
-			{ "<leader>t]n", function() require("neotest").jump.next({ status = "failed" }) end,            desc = "Jump to next failed test" },
+			{
+				"<leader>t[n",
+				function()
+					require("neotest").jump.prev({ status = "failed" })
+				end,
+				desc = "Jump to prev failed test",
+			},
+			{
+				"<leader>t]n",
+				function()
+					require("neotest").jump.next({ status = "failed" })
+				end,
+				desc = "Jump to next failed test",
+			},
 		},
 		config = function()
 			local config = {
@@ -58,10 +114,10 @@ return {
 				adapters = {
 					-- require("neotest-dotnet"),
 					require("neotest-vstest"),
-					require("neotest-rust") {
+					require("neotest-rust")({
 						args = { "--no-capture" },
 						dap_adapter = "lldb",
-					},
+					}),
 				},
 			}
 

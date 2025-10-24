@@ -1,24 +1,32 @@
 [tools]
-python = "latest"
+python = "3.13.7"
 node = "22"
 chezmoi = "2.61"
 pre-commit = "latest"
 go = "1.21"
 zellij = "latest"
 "asdf:neovim" = "ref:v0.11.0"
-pnpm = "10.12.4"
+pnpm = "10.13"
 gh = "2.69"
-neovim = "0.11.2"
+neovim = "0.11.4"
 lazygit = "latest"
 cmake = "latest"
 tokei = "latest"
 yazi = "latest"
 typst = "0.13.1"
 lua = "latest"
-dotnet = "latest"
+dotnet = "9.0"
 zoxide = "latest"
+cmctl = "latest"
+k9s = "latest"
+gallery-dl = "1.29"
+uv = "latest"
+direnv = "latest"
+spectral = "latest"
 
 [settings]
+not_found_auto_install = false
+idiomatic_version_file_enable_tools = ["python"]
 
 [settings.aqua]
 slsa = false

@@ -44,7 +44,7 @@ layout {
 			mode_session       "#[bg=#3d59a1] {name} #[bg=none,fg=#3d59a1]"
 			mode_move          "#[bg=#3d59a1] {name} #[bg=none,fg=#3d59a1]"
 			mode_prompt        "#[bg=#3d59a1] {name} #[bg=none,fg=#3d59a1]"
-			mode_tmux          "#[bg=#ffc387] {name} #[bg=none,fg=#ffc3873]"
+			mode_tmux          "#[bg=#3d59a1] {name} #[bg=none,fg=#3d59a1]"
 
 			datetime             "#[fg=#6C7086,bold] {format} "
 			datetime_format      "%A, %d %b %Y %H:%M"

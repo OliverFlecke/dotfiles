@@ -13,6 +13,14 @@
 			"});"
 		]
 	},
+	"Pure functional component": {
+		"prefix": "funcpure",
+		"body": [
+			"export default function ${1:$TM_FILENAME_BASE}() {",
+			"\treturn <>$0</>;",
+			"}"
+		]
+	},
 	"Functional component with props": {
 		"prefix": "funccomp",
 		"body": [
@@ -20,15 +28,7 @@
 			"",
 			"}",
 			"",
-			"export default function ${1:Component}({ }: Readonly<Props>) {",
-			"\treturn <>$0</>;",
-			"}"
-		]
-	},
-	"Pure functional component": {
-		"prefix": "funcpure",
-		"body": [
-			"export default function ${1:Component}() {",
+			"export default function ${1:$TM_FILENAME_BASE}({ }}: Readonly<Props>) {",
 			"\treturn <>$0</>;",
 			"}"
 		]

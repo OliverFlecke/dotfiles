@@ -21,7 +21,8 @@ clipboard-trim-trailing-spaces = true
  
 mouse-hide-while-typing = true
 
+font-size = 15
+
 # Keybindings
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
-
