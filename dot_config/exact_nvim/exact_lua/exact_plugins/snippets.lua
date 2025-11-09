@@ -6,9 +6,33 @@ return {
 		"rafamadriz/friendly-snippets",
 	},
 	keys = {
-		{ "<C-k>",   function() require("luasnip").expand({}) end, { silent = true }, mode = { "i" },      desc = "Snippet expand" },
-		{ "<C-S-l>", function() require("luasnip").jump(1) end,    { silent = true }, mode = { "i", "s" }, desc = "Snippet next" },
-		{ "<C-S-h>", function() require("luasnip").jump(-1) end,   { silent = true }, mode = { "i", "s" }, desc = "Snippet prev" },
+		{
+			"<C-k>",
+			function()
+				require("luasnip").expand({})
+			end,
+			{ silent = true },
+			mode = { "i" },
+			desc = "Snippet expand",
+		},
+		{
+			"<C-S-l>",
+			function()
+				require("luasnip").jump(1)
+			end,
+			{ silent = true },
+			mode = { "i", "s" },
+			desc = "Snippet next",
+		},
+		{
+			"<C-S-h>",
+			function()
+				require("luasnip").jump(-1)
+			end,
+			{ silent = true },
+			mode = { "i", "s" },
+			desc = "Snippet prev",
+		},
 		{
 			"<C-e>",
 			function()
@@ -25,5 +49,5 @@ return {
 	config = function()
 		require("luasnip")
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
-	end
+	end,
 }
