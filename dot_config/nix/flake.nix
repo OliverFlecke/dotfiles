@@ -16,21 +16,76 @@
 			programs.zsh.enable = true;
 			system.primaryUser = "oliver";
 
+			system.defaults = {
+				dock.autohide = true;
+				finder.FXPreferredViewStyle = "clmv";
+				loginwindow.GuestEnabled = false;
+				NSGlobalDomain.AppleICUForce24HourTime = true;
+				NSGlobalDomain.AppleInterfaceStyle = "Dark";
+				NSGlobalDomain.KeyRepeat = 2;
+			};
+
 			# List packages installed in system profile. To search by name, run:
 			# $ nix-env -qaP | grep wget
 			environment.systemPackages = [ 
+				pkgs.bat
+				pkgs.diff-so-fancy
+				pkgs.fzf
+				# pkgs.ghostty
 				pkgs.git
+				pkgs.glow
+				pkgs.httpie
+				pkgs.jq
+				pkgs.kustomize
+				pkgs.mise
 				pkgs.mkalias
+				pkgs.mosquitto
 				pkgs.neovim
+				pkgs.redis
+				pkgs.ripgrep
+				pkgs.sqlite
+				# pkgs.tilt
 				pkgs.tmux
 			];
 
 			homebrew = {
 				enable = true;
+				brews = [
+					"kubernetes-cli"
+					# "ffmpeg"
+					# "geckodriver"
+				];
 				casks = [
+					"firefox"
+					"fantastical"
+					"ghostty"
+					"google-chrome"
 					"iina"
+					# "key-codes"
+					# "keycastr"
+					"lulu"
+					"maccy"
+					"microsoft-azure-storage-explorer"
+					"ngrok"
+					"notion"
+					"onedrive"
+					"orbstack"
+					# "pearcleaner"
+					"postman"
+					"protonvpn"
+					"skim"
+					"slack"
+					"spotify"
+					"stats"
+					"transmission"
+					"visual-studio-code"
+					"vlc"
+					"whatsapp"
+					# "zen"
 				];
 				# onActivation.cleanup = "zap";
+				# onActivation.autoUpdate = true;
+				# onActivation.upgrade = true;
 			};
 
 			fonts.packages = with pkgs; [
@@ -80,7 +135,7 @@
 						enable = true;
 						enableRosetta = true;
 						user = "oliver";
-						# autoMigrate = true;
+						# mutableTaps = false;
 					};
 				}
 			];
