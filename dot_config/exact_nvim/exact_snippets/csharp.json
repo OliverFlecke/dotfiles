@@ -2,9 +2,10 @@
 	"API endpoint": {
 		"prefix": "apiget",
 		"body": [
-			"[HttpGet(\"$1\", Name = \"$2\")]",
+			"[HttpGet(\"$1\")]",
+			"[EndpointName(\"$2\")]",
 			"[Produces(Application.Json)]",
-			"[ProducesResponseType(StatusCodes.Status200OK)]",
+			"[ProducesResponseType<$3>(StatusCodes.Status200OK, Application.Json)]",
 			"public async Task<IActionResult> $2()",
 			"{",
 			"\treturn Ok();",
@@ -14,7 +15,8 @@
 	"API POST endpoint": {
 		"prefix": "apipost",
 		"body": [
-			"[HttpPost(\"$1\", Name = \"$2\")]",
+			"[HttpPost(\"$1\")]",
+			"[EndpointName(\"$2\")]",
 			"[Produces(Application.Json)]",
 			"[Consumes(Application.Json)]",
 			"[ProducesResponseType(StatusCodes.Status200OK)]",
@@ -26,24 +28,14 @@
 	},
 	"Create xunit fact": {
 		"prefix": "test",
-		"body": [
-			"[Test]",
-			"public async Task $1()",
-			"{",
-			"\t// Arrange",
-			"\t$2",
-			"\t// Act",
-			"\t$3",
-			"\t// Assert",
-			"}"
-		]
+		"body": ["[Test]", "public async Task $1()", "{", "}"]
 	},
 	"Prop with init": {
 		"prefix": "pi",
 		"body": "public required ${1:int} ${2:MyProperty} { get; init; }"
 	},
 	"Summary": {
-		"prefix": "summary",
+		"prefix": "docsum",
 		"description": "Add a summary",
 		"body": "/// <summary>$1.</summary>"
 	},
@@ -104,7 +96,6 @@
 	"API controller template": {
 		"prefix": "apicontroller",
 		"body": [
-			"using Asp.Versioning;",
 			"using Microsoft.AspNetCore.Mvc;",
 			"",
 			"using static System.Net.Mime.MediaTypeNames;",
@@ -112,8 +103,7 @@
 			"namespace $2.Controllers;",
 			"",
 			"[ApiController]",
-			"[ApiVersion(1)]",
-			"[Route(\"api/v{v:apiVersion}/$3\")]",
+			"[Route(\"api/v1/$3\")]",
 			"public sealed class ${1:$TM_FILENAME_BASE} : ControllerBase",
 			"{",
 			"}"

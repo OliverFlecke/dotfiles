@@ -1,7 +1,7 @@
 return {
-	'echasnovski/mini.surround',
+	"echasnovski/mini.surround",
 	version = false,
-	enabled = false,
+	enabled = true,
 	config = true,
 
 	-- Shortcuts:

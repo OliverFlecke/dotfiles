@@ -16,6 +16,7 @@ return {
 						"css-variables-language-server",
 						"harper-ls",
 						"roslyn",
+						"tsgo",
 						-- Typst LSP and formatter
 						"typstyle",
 						"tinymist",
@@ -29,7 +30,7 @@ return {
 		},
 		opts = {
 			ensure_installed = {
-				"ts_ls",
+				-- "ts_ls",
 				-- 'eslint',
 				"html",
 				"cssls",

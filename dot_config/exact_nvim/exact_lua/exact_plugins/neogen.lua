@@ -1,5 +1,6 @@
 return {
 	"danymat/neogen",
+	enabled = false,
 	version = "*",
 	opts = {
 		snippet_engine = "luasnip",
@@ -13,5 +14,5 @@ return {
 	},
 	keys = {
 		{ "<leader>nf", "<cmd>Neogen<CR>", desc = "Generate docs template" },
-	}
+	},
 }

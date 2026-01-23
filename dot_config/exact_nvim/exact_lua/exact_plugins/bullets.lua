@@ -1,4 +1,5 @@
 return {
-	'bullets-vim/bullets.vim',
-	config = function() end
+	"bullets-vim/bullets.vim",
+	enabled = false,
+	config = function() end,
 }

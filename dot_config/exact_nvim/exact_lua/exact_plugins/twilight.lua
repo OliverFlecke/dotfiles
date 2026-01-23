@@ -4,6 +4,6 @@ return {
 		context = 15,
 	},
 	keys = {
-		{ "<leader>ppt", vim.cmd.Twilight, desc = 'Toggle Twilight' },
+		{ "<leader>ppt", vim.cmd.Twilight, desc = "Toggle Twilight" },
 	},
 }

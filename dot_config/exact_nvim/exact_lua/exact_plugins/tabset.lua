@@ -7,7 +7,8 @@ return {
 		},
 		languages = {
 			yaml = {
-				expandtab = true
+				expandtab = true,
+				tabwidth = 2,
 			},
 			lua = {
 				tabwidth = 2,
@@ -26,8 +27,8 @@ return {
 				},
 				config = {
 					tabwidth = 2,
-				}
-			}
-		}
+				},
+			},
+		},
 	},
 }
