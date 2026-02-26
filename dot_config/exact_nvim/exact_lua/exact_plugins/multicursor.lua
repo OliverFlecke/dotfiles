@@ -6,13 +6,13 @@ return {
 	opts = {},
 	keys = {
 		-- Add or skip adding a new cursor by matching word/selection
-		{ "<D-d>",        function() require("multicursor-nvim").matchAddCursor(1) end,    mode, desc = "Add cursor at next match" },
-		{ "<D-S-d>",      function() require("multicursor-nvim").matchAddCursor(-1) end,   mode, desc = "Add cursor at prev match" },
-		{ "<D-k><D-d>",   function() require("multicursor-nvim").matchSkipCursor(1) end,   mode, desc = "Skip cursor at next match" },
-		{ "<D-k><D-S-d>", function() require("multicursor-nvim").matchSkipCursor(-1) end,  mode, desc = "Skip cursor at prev match" },
+		{ "<M-d>",        function() require("multicursor-nvim").matchAddCursor(1) end,    mode, desc = "Add cursor at next match" },
+		{ "<M-S-d>",      function() require("multicursor-nvim").matchAddCursor(-1) end,   mode, desc = "Add cursor at prev match" },
+		{ "<M-k><M-d>",   function() require("multicursor-nvim").matchSkipCursor(1) end,   mode, desc = "Skip cursor at next match" },
+		{ "<M-k><M-S-d>", function() require("multicursor-nvim").matchSkipCursor(-1) end,  mode, desc = "Skip cursor at prev match" },
 		-- Add cursor above or below the main cursor
-		{ "<D-M-k>",      function() require("multicursor-nvim").lineAddCursor(-1) end,    mode, desc = "Add cursor above" },
-		{ "<D-M-j>",      function() require("multicursor-nvim").lineAddCursor(1) end,     mode, desc = "Add cursor below" },
+		{ "<C-M-k>",      function() require("multicursor-nvim").lineAddCursor(-1) end,    mode, desc = "Add cursor above" },
+		{ "<C-M-j>",      function() require("multicursor-nvim").lineAddCursor(1) end,     mode, desc = "Add cursor below" },
 		{ "<D-M-S-k>",    function() require("multicursor-nvim").lineSkipCursor(-1) end,   mode, desc = "Add cursor above" },
 		{ "<D-M-S-j>",    function() require("multicursor-nvim").lineSkipCursor(1) end,    mode, desc = "Add cursor below" },
 

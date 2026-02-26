@@ -6,9 +6,9 @@
 			"[EndpointName(\"$2\")]",
 			"[Produces(Application.Json)]",
 			"[ProducesResponseType<$3>(StatusCodes.Status200OK, Application.Json)]",
-			"public async Task<IActionResult> $2()",
+			"public async Task<IResult> $2()",
 			"{",
-			"\treturn Ok();",
+			"\treturn Results.Ok();",
 			"}"
 		]
 	},
@@ -20,9 +20,9 @@
 			"[Produces(Application.Json)]",
 			"[Consumes(Application.Json)]",
 			"[ProducesResponseType(StatusCodes.Status200OK)]",
-			"public async Task<IActionResult> $2()",
+			"public async Task<IResult> $2()",
 			"{",
-			"\treturn Ok();",
+			"\treturn Results.Ok();",
 			"}"
 		]
 	},
