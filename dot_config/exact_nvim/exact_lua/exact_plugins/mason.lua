@@ -1,6 +1,7 @@
 return {
 	{
 		"mason-org/mason-lspconfig.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"saghen/blink.cmp",
 			{

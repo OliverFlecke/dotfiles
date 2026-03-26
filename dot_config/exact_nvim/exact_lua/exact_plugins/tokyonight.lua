@@ -7,7 +7,7 @@ return {
 		style = "night",
 		on_highlights = function(hl, _)
 			hl.ColorColumn = {
-				bg = "#16161e"
+				bg = "#16161e",
 			}
 		end,
 	},
@@ -15,5 +15,5 @@ return {
 	config = function(_, opts)
 		require("tokyonight").setup(opts)
 		vim.cmd("colorscheme tokyonight")
-	end
+	end,
 }

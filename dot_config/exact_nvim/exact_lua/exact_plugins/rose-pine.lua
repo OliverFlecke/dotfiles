@@ -3,7 +3,7 @@ return {
 	enabled = false,
 	name = "rose-pine",
 	opts = {
-		variant = "moon",
+		-- variant = "moon",
 		styles = {
 			italic = false,
 			-- transparency = true,

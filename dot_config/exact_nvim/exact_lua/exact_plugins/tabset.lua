@@ -7,6 +7,10 @@ return {
 		},
 		languages = {
 			yaml = {
+				filetypes = {
+					"yaml",
+					"yml",
+				},
 				expandtab = true,
 				tabwidth = 2,
 			},
