@@ -25,11 +25,7 @@ return {
 			preset = "default",
 			-- ['<Tab>'] = { 'accept', 'fallback' },
 			["<C-f>"] = { "select_and_accept" },
-			["<A-1>"] = {
-				function(cmp)
-					cmp.accept({ index = 1 })
-				end,
-			},
+			["<A-1>"] = { function(cmp) cmp.accept({ index = 1 }) end, },
 			["<A-2>"] = {
 				function(cmp)
 					cmp.accept({ index = 2 })
