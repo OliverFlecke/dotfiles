@@ -17,12 +17,16 @@ set({ "n", "x" }, "<D-M-S-j>", function() mc.lineSkipCursor(1) end, { desc = "Ad
 
 set({ "n", "x" }, "<leader>D", function() mc.matchAllAddCursors() end, { desc = "Add cursor at all matches" })
 
-set({ "n", "x" }, "<esc>", function()
-	if not mc.cursorsEnabled() then
-		mc.enableCursors()
-	elseif mc.hasCursors() then
-		mc.clearCursors()
-	else
-		-- Default <esc> handler.
-	end
-end, { desc = "Clear cursors if any" })
+-- Mappings defined in a keymap layer only apply when there are
+-- multiple cursors. This lets you have overlapping mappings.
+mc.addKeymapLayer(function(layerSet)
+	-- Enable and clear cursors using escape.
+	layerSet("n", "<esc>", function()
+		if not mc.cursorsEnabled() then
+			mc.enableCursors()
+		else
+			mc.clearCursors()
+		end
+	end)
+end)
+

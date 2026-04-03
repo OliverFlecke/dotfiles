@@ -2,7 +2,7 @@ vim.pack.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
-	{ src = "https://github.com/saghen/blink.cmp", verson = vim.version.range("1.x") },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
 	"https://github.com/rafamadriz/friendly-snippets",
 })
 
@@ -100,7 +100,8 @@ mason.setup({
 		"css-variables-language-server",
 		"harper-ls",
 		"roslyn",
-		"tsgo",
+		-- "tsgo",
+		"ts_ls",
 		"typstyle", -- Typst LSP and formatter
 		"tinymist",
 	},

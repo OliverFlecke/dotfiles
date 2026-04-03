@@ -15,5 +15,5 @@ require("twilight").setup({
 	context = 10,
 })
 
-vim.keymap.set("n", "<leader>ppt", vim.cmd.Twilight, { desc = "Toggle Twilight" })
+-- vim.keymap.set("n", "<leader>ppt", vim.cmd.Twilight, { desc = "Toggle Twilight" })
 vim.keymap.set("n", "<leader>zz", vim.cmd.ZenMode, { desc = "Zen mode" })

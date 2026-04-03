@@ -52,9 +52,6 @@ vim.opt.spelllang = "en-us"
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>W", ":%bd|e#<CR>")
--- vim.keymap.set("n", "<leader>", ":%bd<CR>")
-
 -- Move lines up and down
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
@@ -71,6 +68,10 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 
 vim.keymap.set("n", "<leader>|", "<cmd>vsplit<cr>")
 vim.keymap.set("n", "<leader>-", "<cmd>split<cr>")
+
+vim.keymap.set("n", "<leader>w", ":bd<CR>")
+vim.keymap.set("n", "<leader>W", ":%bd|e#<CR>")
+vim.keymap.set("n", "<leader>C", ":%bd<CR>")
 
 -- Deleting to void register
 -- vim.keymap.set("n", "<leader>d", "\"_d")
@@ -136,3 +137,18 @@ vim.api.nvim_create_autocmd("LspProgress", {
 		io.stdout:flush()
 	end,
 })
+
+-- vim.api.nvim_create_autocmd("LspProgress", {
+-- 	callback = function(ev)
+-- 		vim.print(ev.data)
+-- 		local value = ev.data.params.value
+-- 		vim.api.nvim_echo({ { value.message or "done" } }, false, {
+-- 			id = "lsp." .. ev.data.client_id,
+-- 			kind = "progress",
+-- 			source = "vim.lsp",
+-- 			title = value.title,
+-- 			status = value.kind ~= "end" and "running" or "success",
+-- 			percent = value.percentage,
+-- 		})
+-- 	end,
+-- })
