@@ -25,51 +25,33 @@ return {
 			preset = "default",
 			-- ['<Tab>'] = { 'accept', 'fallback' },
 			["<C-f>"] = { "select_and_accept" },
-			["<A-1>"] = { function(cmp) cmp.accept({ index = 1 }) end, },
+			["<A-1>"] = { function(cmp) cmp.accept({ index = 1 }) end },
 			["<A-2>"] = {
-				function(cmp)
-					cmp.accept({ index = 2 })
-				end,
+				function(cmp) cmp.accept({ index = 2 }) end,
 			},
 			["<A-3>"] = {
-				function(cmp)
-					cmp.accept({ index = 3 })
-				end,
+				function(cmp) cmp.accept({ index = 3 }) end,
 			},
 			["<A-4>"] = {
-				function(cmp)
-					cmp.accept({ index = 4 })
-				end,
+				function(cmp) cmp.accept({ index = 4 }) end,
 			},
 			["<A-5>"] = {
-				function(cmp)
-					cmp.accept({ index = 5 })
-				end,
+				function(cmp) cmp.accept({ index = 5 }) end,
 			},
 			["<A-6>"] = {
-				function(cmp)
-					cmp.accept({ index = 6 })
-				end,
+				function(cmp) cmp.accept({ index = 6 }) end,
 			},
 			["<A-7>"] = {
-				function(cmp)
-					cmp.accept({ index = 7 })
-				end,
+				function(cmp) cmp.accept({ index = 7 }) end,
 			},
 			["<A-8>"] = {
-				function(cmp)
-					cmp.accept({ index = 8 })
-				end,
+				function(cmp) cmp.accept({ index = 8 }) end,
 			},
 			["<A-9>"] = {
-				function(cmp)
-					cmp.accept({ index = 9 })
-				end,
+				function(cmp) cmp.accept({ index = 9 }) end,
 			},
 			["<A-0>"] = {
-				function(cmp)
-					cmp.accept({ index = 10 })
-				end,
+				function(cmp) cmp.accept({ index = 10 }) end,
 			},
 		},
 		appearance = {
@@ -87,7 +69,7 @@ return {
 					columns = {
 						{ "item_idx" },
 						{ "kind_icon" },
-						{ "label",      "label_description", gap = 1 },
+						{ "label", "label_description", gap = 1 },
 						{ "source_name" },
 						-- { 'kind' }
 					},
@@ -109,7 +91,11 @@ return {
 		sources = {
 			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 			per_filetype = {
-				sql = { "snippets", "dadbod", "buffer" },
+				sql = {
+					"snippets",
+					--"dadbod",
+					"buffer",
+				},
 			},
 			providers = {
 				lazydev = {
@@ -118,7 +104,7 @@ return {
 					-- make lazydev completions top priority (see `:h blink.cmp`)
 					score_offset = 100,
 				},
-				dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+				-- dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 			},
 		},
 		fuzzy = {

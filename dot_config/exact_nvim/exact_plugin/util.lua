@@ -1,6 +1,5 @@
 vim.pack.add({
 	"https://github.com/windwp/nvim-autopairs",
-	"https://github.com/windwp/nvim-ts-autotag",
 	"https://github.com/fotiadism/tabset.nvim",
 	"https://github.com/andrewferrier/wrapping.nvim",
 	"https://github.com/arnamak/stay-centered.nvim",
@@ -15,10 +14,7 @@ vim.keymap.set(
 
 vim.api.nvim_create_autocmd("InsertEnter", {
 	once = true,
-	callback = function()
-		require("nvim-autopairs").setup()
-		require("nvim-ts-autotag").setup()
-	end,
+	callback = function() require("nvim-autopairs").setup() end,
 })
 
 require("wrapping").setup()
