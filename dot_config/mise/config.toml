@@ -1,0 +1,59 @@
+[tools]
+python = "3.13.7"
+node = "24"
+chezmoi = "2.61"
+pre-commit = "latest"
+go = "1.21"
+pnpm = "11.10"
+gh = "2.82.1"
+neovim = "0.12.3"
+lazygit = "0.60"
+cmake = "latest"
+tokei = "latest"
+yazi = "latest"
+typst = "0.14.2"
+lua = "latest"
+# dotnet = "9.0"
+zoxide = "latest"
+cmctl = "latest"
+k9s = "latest"
+gallery-dl = "1.29"
+uv = "latest"
+direnv = "latest"
+spectral = "latest"
+azure-cli = "2"
+flux2 = "2.7"
+act = "0.2.89"
+ffmpeg = "latest"
+yq = "latest"
+npm = "11"
+dotnet = "10.0.300"
+lazydocker = "latest"
+fzf = "latest"
+tmux = "latest"
+tree-sitter = "latest"
+"github:openfga/openfga" = "latest"
+"github:openfga/cli" = "latest"
+caddy = "latest"
+"github:pamburus/hl" = "latest"
+opencode = "1.17"
+biome = "2.4"
+linkerd = "latest"
+bun = "latest"
+k3d = "latest"
+"github:neovim/neovim" = "0.12.2"
+pi = "latest"
+claude-code = "latest"
+rtk = "0.43"
+hk = "latest"
+yamllint = "latest"
+
+[settings]
+not_found_auto_install = false
+idiomatic_version_file_enable_tools = ["python"]
+
+[settings.aqua]
+slsa = false
+
+[settings.python]
+compile = false
