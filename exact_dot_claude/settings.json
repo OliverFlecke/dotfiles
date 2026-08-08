@@ -1,0 +1,24 @@
+{
+	"attribution": {
+		"commit": "",
+		"pr": ""
+	},
+	"hooks": {
+		"SessionStart": [
+			{
+				"matcher": "*",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bash '/Users/oliver/.claude/hooks/herdr-agent-state.sh' session",
+						"timeout": 10
+					}
+				]
+			}
+		]
+	},
+	"theme": "auto",
+	"enabledPlugins": {
+		"rust-analyzer-lsp@claude-plugins-official": true
+	}
+}

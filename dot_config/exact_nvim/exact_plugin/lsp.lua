@@ -92,6 +92,15 @@ blink.setup({
 -- 	config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
 -- 	lspconfig[server].setup(config)
 -- end
+vim.lsp.config("rust_analyzer", {
+	settings = {
+		["rust-analyzer"] = {
+			check = {
+				command = "clippy",
+			},
+		},
+	},
+})
 
 mason.setup({
 	ensure_installed = {

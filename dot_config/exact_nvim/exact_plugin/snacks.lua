@@ -5,6 +5,17 @@ require("snacks").setup({
 		sources = {
 			files = {
 				hidden = true,
+				exclude = { "*.lock" },
+			},
+			grep = {
+				args = {
+					"--glob",
+					"!pnpm-lock.yaml",
+					"--glob",
+					"!package-lock.json",
+					"--glob",
+					"!yarn.lock",
+				},
 			},
 		},
 	},

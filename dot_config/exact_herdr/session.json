@@ -1,0 +1,331 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w6",
+      "custom_name": null,
+      "identity_cwd": "/Users/oliver/projects/repo-template",
+      "public_pane_numbers": {
+        "26": 26,
+        "1": 1,
+        "4": 14,
+        "24": 25
+      },
+      "next_public_pane_number": 27,
+      "public_tab_numbers": [
+        1,
+        4,
+        10
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": "main",
+          "layout": {
+            "Pane": 1
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/oliver/projects/repo-template",
+              "label": "main"
+            }
+          },
+          "zoomed": false,
+          "focused": 1,
+          "root_pane": 1
+        },
+        {
+          "custom_name": "frontend",
+          "layout": {
+            "Pane": 4
+          },
+          "panes": {
+            "4": {
+              "cwd": "/Users/oliver/projects/repo-template/.claude/worktrees/admin-org/frontend"
+            }
+          },
+          "zoomed": false,
+          "focused": 4,
+          "root_pane": 4
+        },
+        {
+          "custom_name": "api",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 24
+              },
+              "second": {
+                "Pane": 26
+              }
+            }
+          },
+          "panes": {
+            "26": {
+              "cwd": "/Users/oliver/projects/repo-template",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "ae7816a2-3d15-4454-bc4a-547660fe94d7"
+              }
+            },
+            "24": {
+              "cwd": "/Users/oliver/projects/repo-template"
+            }
+          },
+          "zoomed": false,
+          "focused": 26,
+          "root_pane": 24
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w7",
+      "custom_name": "config",
+      "identity_cwd": "/Users/oliver/.config",
+      "public_pane_numbers": {
+        "5": 1,
+        "6": 4
+      },
+      "next_public_pane_number": 19,
+      "public_tab_numbers": [
+        1,
+        3
+      ],
+      "next_public_tab_number": 4,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 5
+          },
+          "panes": {
+            "5": {
+              "cwd": "/Users/oliver/.config"
+            }
+          },
+          "zoomed": false,
+          "focused": 5,
+          "root_pane": 5
+        },
+        {
+          "custom_name": "harper",
+          "layout": {
+            "Pane": 6
+          },
+          "panes": {
+            "6": {
+              "cwd": "/Users/oliver/.config"
+            }
+          },
+          "zoomed": false,
+          "focused": 6,
+          "root_pane": 6
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w9",
+      "custom_name": null,
+      "identity_cwd": "/Users/oliver/projects/mqtt",
+      "public_pane_numbers": {
+        "8": 3,
+        "10": 6,
+        "9": 5,
+        "11": 9,
+        "12": 10,
+        "7": 2,
+        "13": 11
+      },
+      "next_public_pane_number": 12,
+      "public_tab_numbers": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "next_public_tab_number": 6,
+      "tabs": [
+        {
+          "custom_name": "mqtt",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.25,
+              "first": {
+                "Pane": 7
+              },
+              "second": {
+                "Pane": 8
+              }
+            }
+          },
+          "panes": {
+            "7": {
+              "cwd": "/Users/oliver/projects/mqtt"
+            },
+            "8": {
+              "cwd": "/Users/oliver/projects/mqtt"
+            }
+          },
+          "zoomed": false,
+          "focused": 8,
+          "root_pane": 7
+        },
+        {
+          "custom_name": "finance",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 9
+              },
+              "second": {
+                "Pane": 10
+              }
+            }
+          },
+          "panes": {
+            "9": {
+              "cwd": "/Users/oliver/projects/finance-tools/frontend"
+            },
+            "10": {
+              "cwd": "/Users/oliver/projects/finance-tools"
+            }
+          },
+          "zoomed": false,
+          "focused": 9,
+          "root_pane": 9
+        },
+        {
+          "custom_name": "balut",
+          "layout": {
+            "Pane": 11
+          },
+          "panes": {
+            "11": {
+              "cwd": "/Users/oliver/projects/balut"
+            }
+          },
+          "zoomed": false,
+          "focused": 11,
+          "root_pane": 11
+        },
+        {
+          "custom_name": "flare",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 12
+              },
+              "second": {
+                "Pane": 13
+              }
+            }
+          },
+          "panes": {
+            "12": {
+              "cwd": "/Users/oliver/projects/learning/NVFlare/examples/hello-world/hello-tabular-stats"
+            },
+            "13": {
+              "cwd": "/Users/oliver"
+            }
+          },
+          "zoomed": true,
+          "focused": 12,
+          "root_pane": 12
+        }
+      ],
+      "active_tab": 3
+    },
+    {
+      "id": "wB",
+      "custom_name": null,
+      "identity_cwd": "/Users/oliver/projects/apps/LocationTracker",
+      "public_pane_numbers": {
+        "25": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 25
+          },
+          "panes": {
+            "25": {
+              "cwd": "/Users/oliver/projects/apps/LocationTracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 25,
+          "root_pane": 25
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wC",
+      "custom_name": null,
+      "identity_cwd": "/Users/oliver/projects",
+      "public_pane_numbers": {
+        "54": 1,
+        "55": 2
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 54
+          },
+          "panes": {
+            "54": {
+              "cwd": "/Users/oliver/projects"
+            }
+          },
+          "zoomed": false,
+          "focused": 54,
+          "root_pane": 54
+        },
+        {
+          "custom_name": "finance-tools",
+          "layout": {
+            "Pane": 55
+          },
+          "panes": {
+            "55": {
+              "cwd": "/Users/oliver/projects/finance-tools"
+            }
+          },
+          "zoomed": false,
+          "focused": 55,
+          "root_pane": 55
+        }
+      ],
+      "active_tab": 1
+    }
+  ],
+  "active": 1,
+  "selected": 1,
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}
