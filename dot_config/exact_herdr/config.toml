@@ -60,7 +60,7 @@ onboarding = false
 	# reload_config = "prefix+shift+r"
 	# open_notification_target = "prefix+o"
 	# workspace_picker = "prefix+w"
-	# goto = "prefix+g"
+	goto = "prefix+/"
 	# new_workspace = "prefix+shift+n"
 	# new_worktree = "prefix+shift+g"
 	# open_worktree = ""    # optional, unset by default
@@ -111,16 +111,30 @@ onboarding = false
 	# type = "popup" opens a session-modal terminal without changing the tab layout.
 	# Popup width and height accept terminal cells or percentages such as "80%".
 	# On Windows, command strings run through cmd.exe /d /c.
-	[[keys.command]]
-		command = "diffnav --watch --watch-cmd \"git diff HEAD\" --watch-interval 5s"
-		key = "prefix+d"
-		type = "popup"
+	# [[keys.command]]
+	# 	command = "sh -c 'diffnav --watch'"
+	# 	description = "Open diffnav"
+	# 	key = "prefix+d"
+	# 	type = "pane"
 
 	[[keys.command]]
 		command = "lazygit"
+		description = "Open lazygit"
 		height = "95%"
 		width = "95%"
 		key = "prefix+g"
+		type = "popup"
+	[[keys.command]]
+		command = "gh dash"
+		description = "Open gh dash"
+		key = "prefix+p"
+		type = "pane"
+	[[keys.command]]
+		command = "lazydocker"
+		description = "Open lazydocker"
+		height = "95%"
+		width = "95%"
+		key = "prefix+shift+D"
 		type = "popup"
 
 
