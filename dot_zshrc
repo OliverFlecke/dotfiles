@@ -61,7 +61,7 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::dotnet
 zinit snippet OMZP::dotenv
-zinit snippet OMZP::docker
+# zinit snippet OMZP::docker
 zinit snippet OMZP::docker-compose
 zinit snippet OMZP::rust
 zinit snippet OMZP::command-not-found
@@ -90,14 +90,15 @@ alias z=zellij
 alias lg=lazygit
 alias ld=lazydocker
 
-# Docker aliases
 alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\""
 
-path+=(~/.rustup/toolchains/stable-aarch64-apple-darwin/bin)
-path+=(/opt/homebrew/opt/postgresql@16/bin)
-export PATH
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+else
+  eval "$(/home/oliver/.local/bin/mise activate zsh)"
+fi
 
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+# These will likely fail on a new machine. Run `mise install` and source this file again.
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.toml)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

@@ -1,6 +1,6 @@
 [user]
 	name = Oliver Fleckenstein
-	email = oliverfl@live.dk
+	email = oliver@flecke.xyz
 	useConfigOnly = true
 [core]
 	editor = nvim
@@ -8,7 +8,7 @@
 	attributesfile = ~/.gitattributes
 	excludesFile = ~/.gitignore
 	eol = lf
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
 
 	# Usefull to monitor changes in a repo, but should be set on a repository level
 	# fsmonitor = true
