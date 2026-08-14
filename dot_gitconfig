@@ -32,14 +32,17 @@
 	# diffFilter = diff-so-fancy --patch [difftool "default-difftool"]
 	; cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = default-mergetool
-	conflictstyle = zdiff3
+	; tool = nvimdiff
+	tool = vscode
+	conflictStyle = zdiff3
+[mergetool "nvimdiff"]
+	layout = "LOCAL,BASE,REMOTE / MERGED"
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 [rebase]
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
-[mergetool "default-mergetool"]
-	cmd = code --wait $MERGED
 [hub]
 	protocol = https
 [credential]
@@ -55,6 +58,7 @@
 	followTags = true
 [pull]
 	rebase = true
+	ff = only
 [fetch]
 	prune = true
 	pruneTags = true
@@ -70,15 +74,16 @@
 [rerere]
 	enable = true
 	autoupdate = true
-[interactive]
-	diffFilter = diff-so-fancy --patch
+; [interactive]
+; 	diffFilter = diff-so-fancy --patch
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
 [color "diff"]
-	meta = 11
+	context = white dim
+	meta = 11 bold
 	frag = magenta bold
 	func = 146 bold
 	commit = yellow bold
@@ -141,3 +146,20 @@
 	fame = !python -m gitfame
 [advice]
 	addEmptyPathspec = false
+[hook "hk-commit-msg"]
+	command = test \"${HK:-1}\" = \"0\" || ~/.local/share/mise/installs/hk/1.51.0/hk run commit-msg --from-hook
+	event = commit-msg
+[hook "hk-pre-commit"]
+	command = test \"${HK:-1}\" = \"0\" || ~/.local/share/mise/installs/hk/1.51.0/hk run pre-commit --from-hook --staged
+	event = pre-commit
+[hook "hk-pre-push"]
+	command = test \"${HK:-1}\" = \"0\" || ~/.local/share/mise/installs/hk/1.51.0/hk run pre-push --from-hook
+	event = pre-push
+[hook "hk-prepare-commit-msg"]
+	command = test \"${HK:-1}\" = \"0\" || ~/.local/share/mise/installs/hk/1.51.0/hk run prepare-commit-msg --from-hook
+	event = prepare-commit-msg
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	tabs = 4

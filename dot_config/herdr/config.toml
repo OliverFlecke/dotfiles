@@ -128,6 +128,11 @@ onboarding = false
 		command = "gh dash"
 		description = "Open gh dash"
 		key = "prefix+p"
+		type = "popup"
+	[[keys.command]]
+		command = "gh enhance"
+		description = "Open gh enhance"
+		key = "prefix+a"
 		type = "pane"
 	[[keys.command]]
 		command = "lazydocker"

@@ -238,7 +238,6 @@ url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61
 [tools.chezmoi."platforms.linux-x64-baseline"]
 checksum = "sha256:d6513141e656c10a00adc0debb3353f88502f508c53e3c37f815b42506baff28"
 url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61.0_linux-glibc_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/239806483"
 
 [tools.chezmoi."platforms.linux-x64-musl"]
 checksum = "sha256:94bf8630738654fcb0fe372df476db35ac0b831cb7195f3f669c7b7c03add4eb"
@@ -247,7 +246,6 @@ url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61
 [tools.chezmoi."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:94bf8630738654fcb0fe372df476db35ac0b831cb7195f3f669c7b7c03add4eb"
 url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61.0_linux-musl_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/239806485"
 
 [tools.chezmoi."platforms.macos-arm64"]
 checksum = "sha256:66fb27087bce6cf3f4588df165b93ab2fc3f5433f31cab16903ad0992de350a9"
@@ -260,7 +258,6 @@ url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61
 [tools.chezmoi."platforms.macos-x64-baseline"]
 checksum = "sha256:e8c083fb0f8d7417ba07e238148ba74cc537bb6a796d695844dce009b97f168e"
 url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61.0_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/239806480"
 
 [tools.chezmoi."platforms.windows-x64"]
 checksum = "sha256:43435fdfabeabaea43281b7db9abedfaa6813337d2258f5b7090385b1474f40c"
@@ -269,55 +266,38 @@ url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61
 [tools.chezmoi."platforms.windows-x64-baseline"]
 checksum = "sha256:43435fdfabeabaea43281b7db9abedfaa6813337d2258f5b7090385b1474f40c"
 url = "https://github.com/twpayne/chezmoi/releases/download/v2.61.0/chezmoi_2.61.0_windows_amd64.zip"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/239806443"
 
 [[tools.claude]]
-version = "2.1.223"
+version = "2.1.227"
 backend = "aqua:anthropics/claude-code"
 
 [tools.claude."platforms.linux-arm64"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-arm64/claude"
 
 [tools.claude."platforms.linux-arm64-musl"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-arm64/claude"
 
 [tools.claude."platforms.linux-x64"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-x64/claude"
 
 [tools.claude."platforms.linux-x64-baseline"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-x64/claude"
 
 [tools.claude."platforms.linux-x64-musl"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-x64/claude"
 
 [tools.claude."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/linux-x64/claude"
 
 [tools.claude."platforms.macos-arm64"]
-checksum = "blake3:0b53a36aa63b02af2e05b8fe8149e4c1ead7df528d93ceba94820cb72aa65057"
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.223/darwin-arm64/claude"
+checksum = "blake3:5b46a0145ae4df43bbeb553791b9cb860b61ee1113724b1b43d5b9923708c40a"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/darwin-arm64/claude"
 
 [tools.claude."platforms.macos-x64"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/darwin-x64/claude"
 
 [tools.claude."platforms.macos-x64-baseline"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".tar.gz"
-
-[tools.claude."platforms.windows-x64"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".zip"
-
-[tools.claude."platforms.windows-x64-baseline"]
-checksum = "sha256:bde87a9ca03aab749f749c56abecbe15e427fe4a9fe51df8548ad7a3ac664d69"
-url = ".zip"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.227/darwin-x64/claude"
 
 [[tools.claude-code]]
 version = "2.1.207"
@@ -1475,20 +1455,24 @@ url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x8
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
 
 [[tools.hk]]
-version = "1.51.0"
+version = "1.55.0"
 backend = "aqua:jdx/hk"
 
 [tools.hk."platforms.linux-arm64"]
-checksum = "sha256:6dc84f63ba365544d36a3436360b69c04fcad50dc29758c826de5a7e363c9809"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:64c44aa0f26e995f7d9c44cc9c5116e20052bcefc821daf17ce3df265bb0b2d6"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-aarch64-unknown-linux-gnu.tar.gz"
 
 [tools.hk."platforms.linux-arm64-musl"]
-checksum = "sha256:e367ad005cd42172431e3df9f14774401b1620f82f09e508c9cf6ee164deeda6"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:21eccba81a4b9ac73431d876d8ed5add16a01df360f6d3d576279903254599f6"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.hk."platforms.linux-x64"]
-checksum = "sha256:6ef59a3a06c10141181853bfcbe82bdb939c5a65efe05c762f98a06896b4cc25"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:efd6ed276ae8a26cc95fcb8c83051d9a3fd05e124d38170c0f057a716e9de94d"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+
+[tools.hk."platforms.linux-x64-baseline"]
+checksum = "sha256:efd6ed276ae8a26cc95fcb8c83051d9a3fd05e124d38170c0f057a716e9de94d"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-unknown-linux-gnu.tar.gz"
 
 [tools.hk."platforms.linux-x64-baseline"]
 checksum = "sha256:6ef59a3a06c10141181853bfcbe82bdb939c5a65efe05c762f98a06896b4cc25"
@@ -1496,8 +1480,12 @@ url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-x86_64-unknown-lin
 url_api = "https://api.github.com/repos/jdx/hk/releases/assets/476588091"
 
 [tools.hk."platforms.linux-x64-musl"]
-checksum = "sha256:cced510878bc6b78107b438bbbeff1b4b451623ff965ba81d72345d229c1318f"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:f00e04f536bec16bbc8c7cf8696f834d6ad80ddbcc1e653e3110d12ee4de2b42"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.hk."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:f00e04f536bec16bbc8c7cf8696f834d6ad80ddbcc1e653e3110d12ee4de2b42"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.hk."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:cced510878bc6b78107b438bbbeff1b4b451623ff965ba81d72345d229c1318f"
@@ -1505,12 +1493,16 @@ url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-x86_64-unknown-lin
 url_api = "https://api.github.com/repos/jdx/hk/releases/assets/476588095"
 
 [tools.hk."platforms.macos-arm64"]
-checksum = "sha256:1f19137c63bc3be45c58badd4aa0e14b2718669df93c8f4c1d05b74e5ab6acef"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:a995ff68402bcf6c16ab054e4c45db592213bcd661c9b92003d4a62f2d56d4b1"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-aarch64-apple-darwin.tar.gz"
 
 [tools.hk."platforms.windows-x64"]
-checksum = "sha256:0a583f8980c19bb4b95e64c3785bc824177ff51600e994309851c79e2f23b2ac"
-url = "https://github.com/jdx/hk/releases/download/v1.51.0/hk-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:402b3c9c5f9a5b3cb8ab6229d0f6d169b122fc3db1e39fc2fa53421a1aa24fc5"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-pc-windows-msvc.zip"
+
+[tools.hk."platforms.windows-x64-baseline"]
+checksum = "sha256:402b3c9c5f9a5b3cb8ab6229d0f6d169b122fc3db1e39fc2fa53421a1aa24fc5"
+url = "https://github.com/jdx/hk/releases/download/v1.55.0/hk-x86_64-pc-windows-msvc.zip"
 
 [tools.hk."platforms.windows-x64-baseline"]
 checksum = "sha256:0a583f8980c19bb4b95e64c3785bc824177ff51600e994309851c79e2f23b2ac"
@@ -2277,6 +2269,54 @@ checksum = "sha256:19ab713e908d476afbf2b662f72cf6d85c5de6ed44a1b28815ecfbea37b20
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260728/cpython-3.14.6+20260728-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
+[[tools.ripgrep]]
+version = "15.2.0"
+backend = "aqua:BurntSushi/ripgrep"
+
+[tools.ripgrep."platforms.linux-arm64"]
+checksum = "sha256:a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz"
+
+[tools.ripgrep."platforms.linux-arm64-musl"]
+checksum = "sha256:800b1e7206afe799dfb5a6901f23147cfaabe0e52210538100f61e86e1740915"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-musl.tar.gz"
+
+[tools.ripgrep."platforms.linux-x64"]
+checksum = "sha256:33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.ripgrep."platforms.linux-x64-baseline"]
+checksum = "sha256:33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.ripgrep."platforms.linux-x64-musl"]
+checksum = "sha256:33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.ripgrep."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.ripgrep."platforms.macos-arm64"]
+checksum = "sha256:3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz"
+
+[tools.ripgrep."platforms.macos-x64"]
+checksum = "sha256:af7825fcc69a2afc7a7aea55fc9af90e26421d8f20fe59df32e233c0b8a231c1"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-apple-darwin.tar.gz"
+
+[tools.ripgrep."platforms.macos-x64-baseline"]
+checksum = "sha256:af7825fcc69a2afc7a7aea55fc9af90e26421d8f20fe59df32e233c0b8a231c1"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-apple-darwin.tar.gz"
+
+[tools.ripgrep."platforms.windows-x64"]
+checksum = "sha256:71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
+
+[tools.ripgrep."platforms.windows-x64-baseline"]
+checksum = "sha256:71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
+
 [[tools.rtk]]
 version = "0.43.0"
 backend = "github:rtk-ai/rtk"
@@ -2777,10 +2817,65 @@ url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/328462549"
 checksum = "sha256:85c8c1b035c3e7cd10c503f1f00334b6edae18c9fd6b64a06b98d82449e20bf8"
 url = "https://github.com/mikefarah/yq/releases/download/v4.50.1/yq_windows_amd64.exe"
 
-[tools.yq."platforms.windows-x64-baseline"]
-checksum = "sha256:85c8c1b035c3e7cd10c503f1f00334b6edae18c9fd6b64a06b98d82449e20bf8"
-url = "https://github.com/mikefarah/yq/releases/download/v4.50.1/yq_windows_amd64.exe"
-url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/328462554"
+[[tools.yt-dlp]]
+version = "2026.07.04"
+backend = "github:yt-dlp/yt-dlp"
+
+[tools.yt-dlp."platforms.linux-arm64"]
+checksum = "sha256:0554d39b22e039b4c0f70a492b9852870f281ed6a93eb75e78f150b32df76543"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux_aarch64.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665348"
+
+[tools.yt-dlp."platforms.linux-arm64-musl"]
+checksum = "sha256:0554d39b22e039b4c0f70a492b9852870f281ed6a93eb75e78f150b32df76543"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux_aarch64.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665348"
+
+[tools.yt-dlp."platforms.linux-x64"]
+checksum = "sha256:d7d2d09e900b5ae11821b5784b18cf064984a2bd88b1ca5c798d744bcbe3658b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665341"
+
+[tools.yt-dlp."platforms.linux-x64-baseline"]
+checksum = "sha256:d7d2d09e900b5ae11821b5784b18cf064984a2bd88b1ca5c798d744bcbe3658b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665341"
+
+[tools.yt-dlp."platforms.linux-x64-musl"]
+checksum = "sha256:d7d2d09e900b5ae11821b5784b18cf064984a2bd88b1ca5c798d744bcbe3658b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665341"
+
+[tools.yt-dlp."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:d7d2d09e900b5ae11821b5784b18cf064984a2bd88b1ca5c798d744bcbe3658b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665341"
+
+[tools.yt-dlp."platforms.macos-arm64"]
+checksum = "sha256:b0724470a0cf6dae5175a87eee05d6e75c5a0c10d2c3015166bd4d34e92b1b7b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665361"
+provenance = "github-attestations"
+
+[tools.yt-dlp."platforms.macos-x64"]
+checksum = "sha256:b0724470a0cf6dae5175a87eee05d6e75c5a0c10d2c3015166bd4d34e92b1b7b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665361"
+
+[tools.yt-dlp."platforms.macos-x64-baseline"]
+checksum = "sha256:b0724470a0cf6dae5175a87eee05d6e75c5a0c10d2c3015166bd4d34e92b1b7b"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665361"
+
+[tools.yt-dlp."platforms.windows-x64"]
+checksum = "sha256:90254845be5282b1f4d843a873abff04f569f857f64250f833fe152b21eec152"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_win.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665381"
+
+[tools.yt-dlp."platforms.windows-x64-baseline"]
+checksum = "sha256:90254845be5282b1f4d843a873abff04f569f857f64250f833fe152b21eec152"
+url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_win.zip"
+url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/466665381"
 
 [[tools.zoxide]]
 version = "0.9.9"

@@ -1,9 +1,11 @@
 export LC_ALL=en_US.UTF-8
-export EDITOR=neovim
+export EDITOR=nvim
 export GPG_TTY=$(tty)
 export COLORTERM=truecolor
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HK_CACHE=1
+export XDG_CONFIG_HOME="$HOME/.config"
 
 alias tre="tree -I 'bin|obj|node_modules|lib'"
 alias pubip="curl ifconfig.me"
 
-. "$HOME/.cargo/env"

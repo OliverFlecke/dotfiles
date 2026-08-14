@@ -17,8 +17,19 @@
 			}
 		]
 	},
-	"theme": "auto",
 	"enabledPlugins": {
-		"rust-analyzer-lsp@claude-plugins-official": true
-	}
+		"rust-analyzer-lsp@claude-plugins-official": true,
+		"swift-lsp@claude-plugins-official": true,
+		"code-review@claude-plugins-official": true,
+		"ponytail@ponytail": true
+	},
+	"extraKnownMarketplaces": {
+		"ponytail": {
+			"source": {
+				"source": "github",
+				"repo": "DietrichGebert/ponytail"
+			}
+		}
+	},
+	"theme": "auto"
 }

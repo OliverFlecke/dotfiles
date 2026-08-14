@@ -1,27 +1,33 @@
 # Configuration file for Ghostty.
 # See https://ghostty.org/docs/config/reference
 
+term=xterm-256color
 auto-update = download
 
+font-size = 14
 font-family = Hack Regular
-#font-family = Fira Code Retina
+# font-family = Berkeley Mono
+# font-family = Fira Code Retina
 # font-family = NeoSpleen Nerd Font
 
 # theme = light:rose-pine-dawn,dark:ayu
 theme = light:rose-pine-dawn,dark:tokyonight
 
-background-opacity = 1
-background-blur-radius = 15
+background-opacity = 0.90
+background-blur-radius = 16
+# background-blur = "macos-glass-clear"
 
 macos-option-as-alt = true
-macos-titlebar-style = tabs
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
 macos-icon = official
+macos-titlebar-style = tabs
+
+shell-integration = "zsh"
 
 clipboard-trim-trailing-spaces = true
- 
-mouse-hide-while-typing = true
 
-font-size = 15
+mouse-hide-while-typing = true
 
 # Keybindings
 keybind = cmd+d=unbind

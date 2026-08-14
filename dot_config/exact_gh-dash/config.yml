@@ -1,12 +1,17 @@
 prSections:
-  - title: My Repos
+  - title: All
     filters: is:open user:@me
+  - title: Ready
+    filters: is:open user:@me status:success
+  - title: Failing
+    filters: is:open user:@me !status:success
   - title: My PRs
     filters: is:open author:@me
   - title: Needs My Review
     filters: is:open review-requested:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
+
 issuesSections:
   - title: My Issues
     filters: is:open author:@me
@@ -14,9 +19,10 @@ issuesSections:
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
+
 notificationsSections:
   - title: Unread
-    filters: is:unread
+    filters: is:unread user:@me
   - title: Created
     filters: reason:author
   - title: Participating
@@ -83,8 +89,13 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
-keybindings: {}
-repoPaths: {}
+keybindings:
+  prs:
+    - key: u
+      name: update (rebase)
+      command: gh pr update-branch {{.PrNumber}} --rebase --repo {{.RepoName}}
+repoPaths:
+  :owner/:repo: ~/projects/:repo
 theme:
   ui:
     sectionsShowCount: true
@@ -92,7 +103,8 @@ theme:
       showSeparator: true
       compact: false
 pager:
-  diff: ""
+  diff: diffnav
+mergeMethod: squash
 confirmQuit: false
 showAuthorIcons: true
 smartFilteringAtLaunch: true

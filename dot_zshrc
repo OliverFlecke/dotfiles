@@ -77,13 +77,13 @@ alias ls='eza'
 alias tre='tree -I "bin|obj|wwwroot|node_modules|target|venv|__pycache__|out"'
 alias curltime="curl -w \"@$HOME/tools/.curl-format.txt\" -o NUL -s "
 alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
-alias copyip="curl -L ipecho.net/plain | clipcopy"
+alias copyip="curl -L ipecho.net/plain | c"
 alias today='date -u +"%Y-%m-%d"'
 alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
 
 alias vim=nvim
-alias c=clipcopy
+alias c=pbcopy
 alias k=kubectl
 alias t=tmux
 alias z=zellij
@@ -102,4 +102,15 @@ fi
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.toml)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(kubectl completion zsh)"
 
+# Must be done after `mise` has been activated
+zinit snippet OMZP::direnv
+
+# pnpm
+export PNPM_HOME="/Users/oliver/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

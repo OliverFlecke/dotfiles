@@ -14,8 +14,8 @@
 			nixpkgs.hostPlatform = "aarch64-darwin";
 			nix.settings.experimental-features = "nix-command flakes";
 			programs.zsh.enable = true;
+			
 			system.primaryUser = "oliver";
-
 			system.defaults = {
 				dock.autohide = true;
 				finder.FXPreferredViewStyle = "clmv";
@@ -25,9 +25,12 @@
 				NSGlobalDomain.KeyRepeat = 2;
 			};
 
+			security.pam.services.sudo_local.touchIdAuth = true;
+
 			# List packages installed in system profile. To search by name, run:
 			# $ nix-env -qaP | grep wget
 			environment.systemPackages = [ 
+				pkgs.aerospace
 				pkgs.bat
 				pkgs.diff-so-fancy
 				pkgs.fzf
@@ -45,7 +48,9 @@
 				pkgs.ripgrep
 				pkgs.sqlite
 				# pkgs.tilt
-				pkgs.tmux
+				# pkgs.tmux
+				pkgs.yq
+				pkgs.unibilium
 			];
 
 			homebrew = {
@@ -135,7 +140,6 @@
 						enable = true;
 						enableRosetta = true;
 						user = "oliver";
-						# mutableTaps = false;
 					};
 				}
 			];

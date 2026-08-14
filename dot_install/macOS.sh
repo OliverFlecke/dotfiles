@@ -9,3 +9,5 @@ $dir/macOS/fonts.sh
 $dir/macOS/get.sh
 
 brew install --cask nikitabobko/tap/aerospace
+brew install FelixKratz/formulae/sketchybar
+brew install FelixKratz/formulae/borders
