@@ -1,0 +1,7 @@
+gui:
+  border: rounded
+git:
+  autoFetch: false
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
