@@ -126,6 +126,8 @@ onboarding = false
 		type = "popup"
 	[[keys.command]]
 		command = "gh dash"
+		height = "100%"
+		width = "100%"
 		description = "Open gh dash"
 		key = "prefix+p"
 		type = "popup"

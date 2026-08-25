@@ -35,7 +35,6 @@
 	node = "24"
 	oh-my-posh = "latest"
 	opencode = "1.18"
-	pi = "latest"
 	pkl = "latest"
 	pnpm = "11.10"
 	pre-commit = "latest"
@@ -55,6 +54,7 @@
 	yq = "latest"
 	yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
 	zoxide = "latest"
+atuin = "latest"
 
 [settings]
 	not_found_auto_install = false
