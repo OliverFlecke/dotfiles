@@ -13,5 +13,4 @@ else
 fi
 
 # Install preferred shell
-# TODO: Consider adding support for `fish`
 $dir/zsh.sh

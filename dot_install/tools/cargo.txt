@@ -1,9 +1,0 @@
-fd-find
-bat
-ripgrep
-exa
-taplo-cli --locked --features lsp
-udeps
-expand
-bunyan
-rewrk
