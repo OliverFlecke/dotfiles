@@ -208,6 +208,40 @@ url = "https://github.com/biomejs/biome/releases/download/%40biomejs/biome%402.5
 url_api = "https://api.github.com/repos/biomejs/biome/releases/assets/484416083"
 provenance = "github-attestations"
 
+[[tools.btop]]
+version = "1.4.7"
+backend = "aqua:aristocratos/btop"
+
+[tools.btop."platforms.linux-arm64"]
+checksum = "sha256:6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963650"
+
+[tools.btop."platforms.linux-arm64-musl"]
+checksum = "sha256:6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963650"
+
+[tools.btop."platforms.linux-x64"]
+checksum = "sha256:5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963672"
+
+[tools.btop."platforms.linux-x64-baseline"]
+checksum = "sha256:5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963672"
+
+[tools.btop."platforms.linux-x64-musl"]
+checksum = "sha256:5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963672"
+
+[tools.btop."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963672"
+
 [[tools.bun]]
 version = "1.3.14"
 backend = "core:bun"
@@ -984,6 +1018,65 @@ checksum = "sha256:4c02537248b9852bbb33c8b866107fd51efe9a7753e1576d5ea99f92344d8
 url = "https://github.com/dlvhdr/diffnav/releases/download/v0.12.0/diffnav_Windows_x86_64.zip"
 url_api = "https://api.github.com/repos/dlvhdr/diffnav/releases/assets/488282401"
 
+[[tools."github:eza-community/eza"]]
+version = "0.23.5"
+backend = "github:eza-community/eza"
+
+[tools."github:eza-community/eza"."platforms.linux-arm64"]
+checksum = "sha256:40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228867"
+
+[tools."github:eza-community/eza"."platforms.linux-arm64-musl"]
+checksum = "sha256:40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228867"
+
+[tools."github:eza-community/eza"."platforms.linux-x64"]
+checksum = "sha256:35c70c5c43c29108075e58b893234c67ef585f0b53a7eaf8e9e7d4eec9f339b4"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228887"
+
+[tools."github:eza-community/eza"."platforms.linux-x64-baseline"]
+checksum = "sha256:35c70c5c43c29108075e58b893234c67ef585f0b53a7eaf8e9e7d4eec9f339b4"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228887"
+
+[tools."github:eza-community/eza"."platforms.linux-x64-musl"]
+checksum = "sha256:e06eebab74b73d6b7d51a796a353824b001bea82df077706382e100815d28904"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228890"
+
+[tools."github:eza-community/eza"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:e06eebab74b73d6b7d51a796a353824b001bea82df077706382e100815d28904"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228890"
+
+[tools."github:eza-community/eza"."platforms.macos-arm64"]
+checksum = "sha256:cbdae2ad79ae0ef1fd6a06f4644c90cef79a56353bc3bb7cf4663bb2831420f9"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/man-0.23.5.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228894"
+
+[tools."github:eza-community/eza"."platforms.macos-x64"]
+checksum = "sha256:cbdae2ad79ae0ef1fd6a06f4644c90cef79a56353bc3bb7cf4663bb2831420f9"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/man-0.23.5.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228894"
+
+[tools."github:eza-community/eza"."platforms.macos-x64-baseline"]
+checksum = "sha256:cbdae2ad79ae0ef1fd6a06f4644c90cef79a56353bc3bb7cf4663bb2831420f9"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/man-0.23.5.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228894"
+
+[tools."github:eza-community/eza"."platforms.windows-x64"]
+checksum = "sha256:c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228880"
+
+[tools."github:eza-community/eza"."platforms.windows-x64-baseline"]
+checksum = "sha256:c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228880"
+
 [[tools."github:openfga/cli"]]
 version = "0.7.19"
 backend = "github:openfga/cli"
@@ -1008,6 +1101,7 @@ url = "https://github.com/openfga/cli/releases/download/v0.7.19/fga.intoto.jsonl
 checksum = "sha256:21da629e0f9d29e97d60a11c860e763915c57c354beda25b6e350168c86f67be"
 url = "https://github.com/openfga/cli/releases/download/v0.7.19/fga_0.7.19_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/openfga/cli/releases/assets/475800156"
+provenance_verified = true
 
 [tools."github:openfga/cli"."platforms.linux-x64".provenance.slsa]
 url = "https://github.com/openfga/cli/releases/download/v0.7.19/fga.intoto.jsonl"
@@ -1090,6 +1184,7 @@ url = "https://github.com/openfga/openfga/releases/download/v1.18.1/openfga.into
 checksum = "sha256:a5b53556d47b80226190aa0087561ea114a2487f68cc2210dbfc1c11d21bcbe4"
 url = "https://github.com/openfga/openfga/releases/download/v1.18.1/openfga_1.18.1_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/openfga/openfga/releases/assets/461406648"
+provenance_verified = true
 
 [tools."github:openfga/openfga"."platforms.linux-x64".provenance.slsa]
 url = "https://github.com/openfga/openfga/releases/download/v1.18.1/openfga.intoto.jsonl"
@@ -1320,6 +1415,65 @@ url = "https://github.com/Automattic/harper/releases/download/v2.7.0/harper-cli-
 checksum = "sha256:6a0557d1390297850fe0a5dec610989bef7ddb1c464d19dc7bfc84a398cfc906"
 url = "https://github.com/Automattic/harper/releases/download/v2.7.0/harper-cli-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/Automattic/harper/releases/assets/493185530"
+
+[[tools.herdr]]
+version = "0.8.2"
+backend = "aqua:herdrdev/herdr"
+
+[tools.herdr."platforms.linux-arm64"]
+checksum = "sha256:f55610658e1c2e0d2aaef730b4b2ab885f7f8ba00285ab372bfb14f2e3d5b40d"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169113"
+
+[tools.herdr."platforms.linux-arm64-musl"]
+checksum = "sha256:f55610658e1c2e0d2aaef730b4b2ab885f7f8ba00285ab372bfb14f2e3d5b40d"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169113"
+
+[tools.herdr."platforms.linux-x64"]
+checksum = "sha256:976150a14d490c94b243ea2e1a7eb2dfb67f12e36b182db90936f6728e6aecf4"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169107"
+
+[tools.herdr."platforms.linux-x64-baseline"]
+checksum = "sha256:976150a14d490c94b243ea2e1a7eb2dfb67f12e36b182db90936f6728e6aecf4"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169107"
+
+[tools.herdr."platforms.linux-x64-musl"]
+checksum = "sha256:976150a14d490c94b243ea2e1a7eb2dfb67f12e36b182db90936f6728e6aecf4"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169107"
+
+[tools.herdr."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:976150a14d490c94b243ea2e1a7eb2dfb67f12e36b182db90936f6728e6aecf4"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169107"
+
+[tools.herdr."platforms.macos-arm64"]
+checksum = "sha256:a5d4f4d504d8b309c91f811050559300faba31258425f53c50852fc96f6ae574"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-macos-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169108"
+
+[tools.herdr."platforms.macos-x64"]
+checksum = "sha256:ab50262c8190cd7aa9056d249d255c08c328c3e8716de9cfa29db4f131b8e2c1"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169110"
+
+[tools.herdr."platforms.macos-x64-baseline"]
+checksum = "sha256:ab50262c8190cd7aa9056d249d255c08c328c3e8716de9cfa29db4f131b8e2c1"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169110"
+
+[tools.herdr."platforms.windows-x64"]
+checksum = "sha256:0ab3d0fe1434d55757997542b978c771d642987bb15a7130f4160f0db38821d5"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-windows-x86_64.zip"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169109"
+
+[tools.herdr."platforms.windows-x64-baseline"]
+checksum = "sha256:0ab3d0fe1434d55757997542b978c771d642987bb15a7130f4160f0db38821d5"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-windows-x86_64.zip"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/521169109"
 
 [[tools.hk]]
 version = "1.55.0"
@@ -2301,6 +2455,7 @@ url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-aar
 url_api = "https://api.github.com/repos/tamasfe/taplo/releases/assets/257322597"
 
 [tools.taplo."platforms.linux-x64"]
+checksum = "blake3:4871fab0e60275a1eb46e7190726e144f56c9a9527f59b0d1da5a042baead8e2"
 url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz"
 url_api = "https://api.github.com/repos/tamasfe/taplo/releases/assets/257322600"
 

@@ -5,6 +5,7 @@ local workspaces = {
 	{ name = "notes", key = "n" },
 	{ name = "chat", key = "c" },
 	{ name = "entertainment", key = "e" },
+	{ name = "music", key = "m" },
 }
 
 for _, ws in ipairs(workspaces) do

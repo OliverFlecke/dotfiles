@@ -11,7 +11,8 @@ font-family = Hack Regular
 # font-family = NeoSpleen Nerd Font
 
 # theme = light:rose-pine-dawn,dark:ayu
-theme = light:rose-pine-dawn,dark:tokyonight
+# theme = light:rose-pine-dawn,dark:tokyonight
+theme = TokyoNight
 
 background-opacity = 0.90
 background-blur-radius = 16
@@ -32,3 +33,4 @@ mouse-hide-while-typing = true
 # Keybindings
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
+# keybind = ctrl+v=paste

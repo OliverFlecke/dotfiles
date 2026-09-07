@@ -7,7 +7,6 @@
 	"github:openfga/openfga" = "latest"
 	"github:pamburus/hl" = "latest"
 	act = "0.2.89"
-	azure-cli = "2"
 	biome = "2"
 	bun = "latest"
 	caddy = "latest"
@@ -16,8 +15,6 @@
 	cmctl = "latest"
 	delta = "latest"
 	direnv = "latest"
-	dotnet = "10.0.300"
-	eza = "latest"
 	flux2 = "2.7"
 	fzf = "latest"
 	gh = "2.82.1"
@@ -30,7 +27,6 @@
 	lazydocker = "latest"
 	lazygit = "0.60"
 	linkerd = "latest"
-	lua = "latest"
 	neovim = "0.12.4"
 	node = "24"
 	oh-my-posh = "latest"
@@ -38,7 +34,6 @@
 	pkl = "latest"
 	pnpm = "11.10"
 	pre-commit = "latest"
-	python = "3.14.6"
 	ripgrep = "latest"
 	rtk = "0.43"
 	rust = "latest"
@@ -54,7 +49,10 @@
 	yq = "latest"
 	yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
 	zoxide = "latest"
-atuin = "latest"
+	atuin = "latest"
+	"github:eza-community/eza" = "latest"
+	btop = "latest"
+herdr = "latest"
 
 [settings]
 	not_found_auto_install = false

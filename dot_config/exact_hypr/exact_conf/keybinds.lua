@@ -31,15 +31,19 @@ hl.define_submap("wallpaper", function()
 	hl.bind("o", hl.dsp.exec_cmd("killall hpaper; hpaper start ~/wallpaper/other"))
 
 	hl.bind("n", hl.dsp.exec_cmd("hpaper next"))
+	hl.bind("SHIFT + n", hl.dsp.exec_cmd("hpaper prev"))
 	hl.bind("p", hl.dsp.exec_cmd("hpaper prev"))
 
 	hl.bind("escape", hl.dsp.submap("reset"))
 end)
 
--- Workspaces
-hl.workspace_rule({ workspace = "terminal" })
-hl.bind("ALT + t", hl.dsp.focus({ workspace = "terminal" }))
-hl.bind("ALT + b", hl.dsp.focus({ workspace = "2" }))
+-- macOS-style text editing keybindings
+-- hl.bind("SUPER, C", hl.dsp.sendshortcut({ mods = "CTRL", key = "INSERT" }))
+-- hl.bind("SUPER, V", hl.dsp.sendshortcut({ mods = "SHIFT", key = "INSERT" }))
+-- hl.bind("SUPER, X", hl.dsp.sendshortcut({ mods = "CTRL", key = "X" }))
+-- hl.bind("SUPER, A", hl.dsp.sendshortcut({ mods = "CTRL", key = "A" }))
+-- hl.bind("SUPER, Z", hl.dsp.sendshortcut({ mods = "CTRL", key = "Z" }))
+-- hl.bind("SUPER + SHIFT, Z", hl.dsp.sendshortcut({ mods = "CTRL", key = "Y" }))
 
 -- Apps
 hl.bind("SUPER + space", hl.dsp.exec_cmd("rofi -show drun -show-icons"))

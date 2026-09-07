@@ -82,7 +82,6 @@ alias today='date -u +"%Y-%m-%d"'
 alias pj='python3 -m json.tool'
 alias rmbo='rm -rf bin/; rm -rf obj/'
 
-alias vim=nvim
 alias c=pbcopy
 alias k=kubectl
 alias t=tmux
