@@ -163,3 +163,5 @@
 [delta]
 	navigate = true
 	tabs = 4
+[hook]
+	env = HK_CACHE=1
