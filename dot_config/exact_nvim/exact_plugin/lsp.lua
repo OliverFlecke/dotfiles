@@ -102,6 +102,16 @@ vim.lsp.config("rust_analyzer", {
 	},
 })
 
+vim.lsp.config("cssls", {
+	settings = {
+		css = {
+			lint = {
+				unknownAtRules = "ignore",
+			}
+		}
+	}
+})
+
 mason.setup({
 	ensure_installed = {
 		"biome",

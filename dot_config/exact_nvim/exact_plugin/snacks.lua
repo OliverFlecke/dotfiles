@@ -21,6 +21,6 @@ require("snacks").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>,", function() Snacks.Picker.buffers() end, { desc = "Buffers" })
-vim.keymap.set("n", "<leader>/", function() Snacks.Picker.grep() end, { desc = "Grep" })
-vim.keymap.set("n", "<leader>f", function() Snacks.Picker.files() end, { desc = "Files" })
+vim.keymap.set("n", "<leader>,", function() Snacks.picker.buffers() end, { desc = "Buffers" })
+vim.keymap.set("n", "<leader>/", function() Snacks.picker.grep() end, { desc = "Grep" })
+vim.keymap.set("n", "<leader>f", function() Snacks.picker.files() end, { desc = "Files" })

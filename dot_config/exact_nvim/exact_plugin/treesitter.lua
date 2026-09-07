@@ -51,6 +51,7 @@ local ensureInstalled = {
 	"go",
 	"dockerfile",
 	"gitignore",
+	"regex",
 }
 
 local alreadyInstalled = require("nvim-treesitter.config").get_installed()

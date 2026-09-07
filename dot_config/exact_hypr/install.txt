@@ -1,0 +1,3 @@
+# Trying to document all the required packages to install here for this setup.
+
+pacman -S hyprlock hyprpaper hpaper
