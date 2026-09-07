@@ -6,6 +6,7 @@
 	"spacing": 12,
 	"modules-left": [
 		"hyprland/workspaces",
+		"group/media",
 	],
 	"modules-center": [
 		"hyprland/window"
@@ -17,9 +18,33 @@
 		"cpu",
 		"memory",
 		"temperature",
+		"network",
 		"clock",
 		"custom/power"
 	],
+	"group/media": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/media-animation",
+			"custom/media-now-playing",
+			"custom/media-time",
+		],
+	},
+	"custom/media-animation": {
+		"exec": "~/.config/waybar/custom_modules/media/media-animation.sh",
+		"tooltip": false,
+	},
+	"custom/media-time": {
+		"exec": "~/.config/waybar/custom_modules/media/media-time.sh",
+		"tooltip": false,
+		"escape": true,
+		"interval": 1,
+	},
+	"custom/media-now-playing": {
+		"exec": "~/.config/waybar/custom_modules/media/media-now-playing.sh",
+		"escape": true,
+		"tooltip": false,
+	},
 	"wireplumber": {
 		"format": "{volume}% {icon}",
 		"format-muted": "",
@@ -67,6 +92,7 @@
 		 "disable-scroll": true,
 		 "all-outputs": true,
 		 "warp-on-scroll": false,
+		 "on-click": "activate",
 		 "format": "{icon}",
 		 "format-icons": {
 			 "terminal": "",
@@ -125,18 +151,6 @@
 		"format-disconnected": "Disconnected ⚠",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}"
 	},
-	// "custom/media": {
-	// 	"format": "{icon} {text}",
-	// 	"return-type": "json",
-	// 	"max-length": 40,
-	// 	"format-icons": {
-	// 		"spotify": "",
-	// 		"default": "🎜"
-	// 	},
-	// 	"escape": true,
-	// 	"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-	// 	// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-	// },
 	"custom/power": {
 		"format" : "⏻ ",
 		"tooltip": false,
