@@ -14,7 +14,7 @@ font-family = Hack Regular
 # theme = light:rose-pine-dawn,dark:tokyonight
 theme = TokyoNight
 
-background-opacity = 0.90
+background-opacity = 1
 background-blur-radius = 16
 # background-blur = "macos-glass-clear"
 
@@ -33,4 +33,3 @@ mouse-hide-while-typing = true
 # Keybindings
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
-# keybind = ctrl+v=paste

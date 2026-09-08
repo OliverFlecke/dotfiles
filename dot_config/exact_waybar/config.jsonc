@@ -1,4 +1,5 @@
 {
+	// Command to restart waybar after changes: killall -SIGUSR2 waybar
 	"layer": "top",
 	"position": "top",
 	"height": 40,
@@ -14,6 +15,7 @@
 	"modules-right": [
 		"wireplumber",
 		"battery",
+		"network",
 		"cpu",
 		"memory",
 		"temperature",
@@ -97,10 +99,13 @@
 		 "format": "{icon}",
 		 "format-icons": {
 			 "terminal": "",
+			 "github": "",
 			 "browser": "",
 			 "music": "",
 			 "chat": "",
-			 "3": "",
+			 "search": "",
+			 "entertainment": "󰟞",
+			 "notes": "󰂺",
 			 "urgent": "",
 			 "focused": "",
 			 "default": ""

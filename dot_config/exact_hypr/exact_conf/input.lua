@@ -2,8 +2,8 @@ hl.config({
 	input = {
 		kb_layout = "us",
 		kb_variant = "dvorak",
+		kb_options = "compose:lalt",
 		kb_model = "",
-		kb_options = "",
 		kb_rules = "",
 
 		follow_mouse = 1,

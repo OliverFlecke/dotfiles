@@ -1,6 +1,7 @@
 local workspaces = {
 	{ name = "browser", key = "b" },
 	{ name = "terminal", key = "t" },
+	{ name = "github", key = "g" },
 	{ name = "search", key = "s" },
 	{ name = "notes", key = "n" },
 	{ name = "chat", key = "c" },

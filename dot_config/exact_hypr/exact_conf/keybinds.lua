@@ -11,6 +11,14 @@ hl.bind(
 )
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("hyprctl dispatch dpms on"))
 
+-- Copy/paste
+hl.bind(
+	"SUPER + SHIFT + c",
+	hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy && sleep 0.1 && wtype -M ctrl v -m ctrl")
+)
+hl.bind("SUPER + v", hl.dsp.exec_cmd("wtype -k ctrl+v"))
+hl.bind("SUPER + c", hl.dsp.exec_cmd("wtype -k ctrl+c"))
+
 -- Movement
 hl.bind("ALT + j", hl.dsp.focus({ direction = "down" }))
 hl.bind("ALT + k", hl.dsp.focus({ direction = "up" }))
@@ -49,7 +57,7 @@ end)
 hl.bind("SUPER + space", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
 hl.bind("SUPER + SHIFT + space", hl.dsp.exec_cmd("rofi -show run"))
 
-hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
+-- hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
