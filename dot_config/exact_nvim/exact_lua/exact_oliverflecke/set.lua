@@ -74,6 +74,9 @@ vim.keymap.set("n", "<leader>w", ":bd<CR>")
 vim.keymap.set("n", "<leader>W", ":%bd|e#<CR>")
 vim.keymap.set("n", "<leader>C", ":%bd<CR>")
 
+vim.keymap.set("n", "<leader>cn", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<leader>cp", "<cmd>cprev<CR>")
+
 -- Deleting to void register
 -- vim.keymap.set("n", "<leader>d", "\"_d")
 -- vim.keymap.set("v", "<leader>d", "\"_d")

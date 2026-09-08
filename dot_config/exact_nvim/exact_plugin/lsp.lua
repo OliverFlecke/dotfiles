@@ -102,16 +102,6 @@ vim.lsp.config("rust_analyzer", {
 	},
 })
 
-vim.lsp.config("cssls", {
-	settings = {
-		css = {
-			lint = {
-				unknownAtRules = "ignore",
-			}
-		}
-	}
-})
-
 mason.setup({
 	ensure_installed = {
 		"biome",
@@ -124,7 +114,8 @@ mason.setup({
 		"harper-ls",
 		"roslyn",
 		-- "tsgo",
-		"ts_ls",
+		-- "ts_ls",
+		"tsc",
 		"typstyle", -- Typst LSP and formatter
 		"tinymist",
 	},

@@ -38,6 +38,15 @@ require("tabset").setup({
 		python = {
 			expandtab = true,
 		},
+		terraform = {
+			filetypes = {
+				"terraform",
+				"tf",
+				"tfvars",
+			},
+			expandtab = true,
+			tabwidth = 2,
+		},
 		{
 			filetypes = {
 				"html",

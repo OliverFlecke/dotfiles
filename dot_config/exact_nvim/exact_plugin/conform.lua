@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 				lua = { "stylua" },
 				json = { "biome", stop_after_first = true },
 				toml = { "taplo", stop_after_first = true },
+				terraform = { "terraform_fmt" },
 			},
 
 			format_on_save = function(bufnr)
