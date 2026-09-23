@@ -1,7 +1,7 @@
 hl.config({
 	general = {
 		gaps_in = 5,
-		gaps_out = 0,
+		gaps_out = 10,
 
 		border_size = 2,
 
@@ -54,5 +54,8 @@ hl.config({
 		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
 		disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
 		disable_splash_rendering = true,
+	},
+	xwayland = {
+		force_zero_scaling = true,
 	},
 })

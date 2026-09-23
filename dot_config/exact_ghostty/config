@@ -33,3 +33,5 @@ mouse-hide-while-typing = true
 # Keybindings
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
+keybind = ctrl+left=esc:b
+keybind = ctrl+right=esc:f

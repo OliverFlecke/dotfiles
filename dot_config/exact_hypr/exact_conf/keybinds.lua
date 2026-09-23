@@ -1,5 +1,5 @@
 local terminal = "ghostty"
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local menu = "hyprlauncher"
 
 hl.bind("SUPER + Q", hl.dsp.window.close())
@@ -37,10 +37,29 @@ hl.bind("SUPER + CTRL + w", hl.dsp.submap("wallpaper"))
 hl.define_submap("wallpaper", function()
 	hl.bind("w", hl.dsp.exec_cmd("killall hpaper; hpaper start ~/wallpaper/default"))
 	hl.bind("o", hl.dsp.exec_cmd("killall hpaper; hpaper start ~/wallpaper/other"))
+	hl.bind("a", hl.dsp.exec_cmd("killall hpaper; hpaper start ~/wallpaper/ai"))
 
 	hl.bind("n", hl.dsp.exec_cmd("hpaper next"))
 	hl.bind("SHIFT + n", hl.dsp.exec_cmd("hpaper prev"))
 	hl.bind("p", hl.dsp.exec_cmd("hpaper prev"))
+
+	hl.bind("h", function()
+		if hl.get_config("decoration.active_opacity") == 1 then
+			hl.config({
+				decoration = {
+					active_opacity = 0.9,
+					inactive_opacity = 0.8,
+				},
+			})
+		else
+			hl.config({
+				decoration = {
+					active_opacity = 1,
+					inactive_opacity = 1,
+				},
+			})
+		end
+	end)
 
 	hl.bind("escape", hl.dsp.submap("reset"))
 end)
@@ -57,7 +76,7 @@ end)
 hl.bind("SUPER + space", hl.dsp.exec_cmd("rofi -show drun -show-icons"))
 hl.bind("SUPER + SHIFT + space", hl.dsp.exec_cmd("rofi -show run"))
 
--- hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + P", hl.dsp.window.pseudo())

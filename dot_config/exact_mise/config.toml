@@ -18,7 +18,6 @@
 	cmctl = "latest"
 	delta = "latest"
 	direnv = "latest"
-	eza = "latest"
 	flux2 = "2.7"
 	fzf = "latest"
 	gh = "2.82.1"

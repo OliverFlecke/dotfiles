@@ -1,5 +1,6 @@
 vim.pack.add({
 	"https://github.com/windwp/nvim-autopairs",
+	"https://github.com/windwp/nvim-ts-autotag",
 	"https://github.com/fotiadism/tabset.nvim",
 	"https://github.com/andrewferrier/wrapping.nvim",
 	"https://github.com/arnamak/stay-centered.nvim",
@@ -17,6 +18,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 	callback = function() require("nvim-autopairs").setup() end,
 })
 
+require("nvim-ts-autotag").setup()
 require("wrapping").setup()
 require("tabset").setup({
 	defaults = {
