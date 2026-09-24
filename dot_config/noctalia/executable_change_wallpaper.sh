@@ -3,7 +3,7 @@
 # Change Noctalia wallpaper directory
 # Usage: noctalia-set-wallpaper-dir "/path/to/wallpapers"
 
-CONFIG_FILE="$HOME/.config/noctalia/config.toml"
+CONFIG_FILE="$HOME/.config/noctalia/wallpaper.toml"
 
 if [ -z "$1" ]; then
     echo "Usage: $0 /path/to/wallpapers"

@@ -1,87 +1,11 @@
 config_version = 14
 
-[include]
-	files = ["widgets.toml"]
-
-[bar.default]
-	background_opacity = 0.5
-	capsule = true
-	capsule_border = "outline"
-	capsule_fill = "surface"
-	center = ["clock", "date"]
-	contact_shadow = true
-	font_family = "JetBrainsMono Nerd Font Mono"
-	radius = 80
-
 [calendar]
 	enabled = true
-
-[control_center.calendar]
-	show_week_numbers = true
-
-[dock]
-	active_monitor_only = true
-	auto_hide = true
-	background_opacity = 0.5
-	enabled = true
-	icon_size = 32
-	item_spacing = 0
-	pinned = [
-		"com.mitchellh.ghostty",
-		"chrome-mjoklplbddabcmpepnokjaffbmgbkkgg-Default",
-		"spotify",
-		"chromium",
-	]
-	position = "left"
-	radius = 80
-	radius_top_left = 16
-	radius_top_right = 16
-	reserve_space = false
-	show_instance_count = false
-
-[hot_corners.top_left]
-	action = "launcher"
-
 [location]
 	auto_locate = true
-
-[lockscreen_widgets]
-	enabled = false
-	schema_version = 2
-	widget_order = ["lockscreen-login-box@DP-1"]
-
-	[lockscreen_widgets.grid]
-		cell_size = 16
-		major_interval = 4
-		visible = true
-
-	[lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-		box_height = 196.0
-		box_width = 810.0
-		cx = 1280.0
-		cy = 1258.0
-		output = "DP-1"
-		placement_height = 1440.0
-		placement_width = 2560.0
-		rotation = 0.0
-		type = "login_box"
-
-		[lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-			background_color = "surface_variant"
-			background_opacity = 0.88
-			background_radius = 12.0
-			center_password_text = false
-			input_opacity = 1.0
-			input_radius = 6.0
-			layout = "regular"
-			show_caps_lock = true
-			show_keyboard_layout = true
-			show_login_button = true
-			show_media = true
-			show_session_buttons = true
-			show_unlock_hint = true
-			show_weather = true
-
+[control_center.calendar]
+	show_week_numbers = true
 [nightlight]
 	enabled = true
 
@@ -97,7 +21,7 @@ config_version = 14
 	wallpaper_scheme = "m3-content"
 
 [wallpaper]
-	directory = "/home/oliver/wallpaper/default"
+	directory = "/home/oliver/wallpaper/other"
 	enabled = true
 	fill_mode = "fit"
 

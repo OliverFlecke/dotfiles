@@ -1,0 +1,19 @@
+[dock]
+	active_monitor_only = true
+	auto_hide = true
+	background_opacity = 0.5
+	enabled = true
+	icon_size = 32
+	item_spacing = 0
+	position = "left"
+	radius = 80
+	radius_top_left = 16
+	radius_top_right = 16
+	reserve_space = false
+	show_instance_count = false
+	pinned = [
+		"com.mitchellh.ghostty",
+		"chrome-mjoklplbddabcmpepnokjaffbmgbkkgg-Default",
+		"spotify",
+		"chromium",
+	]

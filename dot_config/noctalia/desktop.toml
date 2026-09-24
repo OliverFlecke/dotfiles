@@ -1,0 +1,124 @@
+[desktop_widgets]
+	enabled = true
+
+	[desktop_widgets.grid]
+		cell_size = 8
+		major_interval = 4
+		visible = true
+
+	[desktop_widgets.widget.date]
+		type = "clock"
+		box_height = 80.0
+		box_width = 160.0
+		cx = 96.0
+		cy = 80.0
+		output = "DP-1"
+		rotation = 0.0
+
+		[desktop_widgets.widget.date.settings]
+			background = true
+			background_opacity = 0.5
+			center_text = false
+			circle = true
+			clock_style = "digital"
+			color = "on_surface"
+			font_family = "JetBrainsMono Nerd Font Mono"
+			format = "{:%h:%m}"
+			shadow = true
+
+	[desktop_widgets.widget.clock]
+		type = "clock"
+		box_height = 80.0
+		box_width = 128.0
+		cx = 80.0
+		cy = 168
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+
+		[desktop_widgets.widget.clock.settings]
+			background_opacity = 0.5
+			center_text = false
+			font_family = "JetBrainsMono Nerd Font Mono"
+
+	[desktop_widgets.widget.desktop-widget-0000000000000003]
+		box_height = 0.0
+		box_width = 0.0
+		cx = 1280.0
+		cy = 720.0
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+		type = "fancy_audio_visualizer"
+
+		[desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+			background = false
+			visualization_mode = "bars"
+
+	[desktop_widgets.widget.calendar]
+		type = "calendar"
+		box_height = 0.0
+		box_width = 0.0
+		cx = 2352.0
+		cy = 256.0
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+
+		[desktop_widgets.widget.calendar.settings]
+			background = true
+			background_opacity = 0.5
+			show_events = false
+			show_week_numbers = false
+
+	[desktop_widgets.widget.weather]
+		type = "weather"
+		box_height = 0.0
+		box_width = 0.0
+		cx = 2432.0
+		cy = 560.0
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+
+		[desktop_widgets.widget.weather.settings]
+			show_forecast = true
+			background_opacity = 0.5
+
+	[desktop_widgets.widget.cpu]
+		type = "sysmon"
+		box_height = 0.0
+		box_width = 0.0
+		cx = 2460.0
+		cy = 1380.0
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+
+		[desktop_widgets.widget.cpu.settings]
+			background = false
+			shadow = false
+			stat = "cpu_usage"
+			stat2 = "cpu_temp"
+
+	[desktop_widgets.widget.ram]
+		box_height = 128.0
+		box_width = 200.0
+		cx = 2260.0
+		cy = 1380.0
+		output = "DP-1"
+		placement_height = 1440.0
+		placement_width = 2560.0
+		rotation = 0.0
+		type = "sysmon"
+
+		[desktop_widgets.widget.ram.settings]
+			background = false
+			shadow = false
+			stat = "ram_pct"
+			stat2 = "gpu_vram"

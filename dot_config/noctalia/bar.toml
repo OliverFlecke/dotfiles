@@ -1,0 +1,9 @@
+[bar.default]
+	background_opacity = 0.5
+	capsule = true
+	capsule_border = "outline"
+	capsule_fill = "surface"
+	center = ["clock", "date"]
+	contact_shadow = true
+	font_family = "JetBrainsMono Nerd Font Mono"
+	radius = 80
