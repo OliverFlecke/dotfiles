@@ -4,7 +4,7 @@ config_version = 14
 	files = ["widgets.toml"]
 
 [bar.default]
-	background_opacity = 1
+	background_opacity = 0.5
 	capsule = true
 	capsule_border = "outline"
 	capsule_fill = "surface"
