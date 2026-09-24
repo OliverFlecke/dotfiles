@@ -14,11 +14,23 @@ for _, ws in ipairs(workspaces) do
 		workspace = "name:" .. ws.name,
 	})
 	hl.bind("ALT + " .. ws.key, hl.dsp.focus({ workspace = "name:" .. ws.name }))
-	hl.bind("ALT + SHIFT + " .. ws.key, hl.dsp.window.move({ workspace = "name:" .. ws.name }))
+	hl.bind(
+		"ALT + SHIFT + " .. ws.key,
+		hl.dsp.window.move({
+			workspace = "name:" .. ws.name,
+			follow = false,
+		})
+	)
 end
 
 for i = 1, 10 do
 	local key = i % 10
 	hl.bind("ALT + " .. key, hl.dsp.focus({ workspace = i }))
-	hl.bind("ALT + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+	hl.bind(
+		"ALT + SHIFT + " .. key,
+		hl.dsp.window.move({
+			workspace = i,
+			follow = false,
+		})
+	)
 end

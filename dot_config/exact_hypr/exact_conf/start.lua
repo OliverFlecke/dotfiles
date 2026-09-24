@@ -1,10 +1,8 @@
 hl.on("hyprland.start", function()
 	hl.exec_cmd("nm-applet")
-	hl.exec_cmd("hyprpaper & hpaper start ~/wallpaper/default")
-	hl.exec_cmd("hyprlock")
 	hl.exec_cmd("hypridle")
+	hl.exec_cmd("noctalia")
 	hl.exec_cmd("mako")
-	hl.exec_cmd("waybar")
 	hl.exec_cmd("playerctld daemon")
 	hl.exec_cmd("hyprsunset")
 
