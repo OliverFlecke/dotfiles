@@ -919,6 +919,7 @@ checksum = "sha256:d16dc23a4e27155a59cdc35251eccd7fa30ed46482c51af1c33e71b14d790
 url = "https://github.com/anthropics/claude-code/releases/download/v2.1.278/claude-darwin-arm64.tar.gz"
 url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/573850762"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools."github:anthropics/claude-code"."platforms.macos-x64"]
 checksum = "sha256:d5fa59ea628b85b0a9d4b2c8aa59a20a9b9714a0b08c938b2d04de1f00c07bb2"
@@ -1167,6 +1168,7 @@ checksum = "sha256:d0c1b9a4a9df7ddafc7fb2d059c5a4a53af4906b0eea706652669759295fe
 url = "https://github.com/openfga/cli/releases/download/v0.8.0/fga_0.8.0_darwin_arm64.tar.gz"
 url_api = "https://api.github.com/repos/openfga/cli/releases/assets/572791903"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools."github:openfga/cli"."platforms.macos-x64"]
 checksum = "sha256:5d5ce83bd3b05c9b7c9b947b58ca9658ccdd00f27ad194b3289c401fd4c0b7ba"
@@ -1238,6 +1240,7 @@ checksum = "sha256:74fbf407b2878a636a4d37968f10bff733cc5accd419779de513d6e75e60f
 url = "https://github.com/openfga/openfga/releases/download/v1.20.0/openfga_1.20.0_darwin_arm64.tar.gz"
 url_api = "https://api.github.com/repos/openfga/openfga/releases/assets/551267598"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools."github:openfga/openfga"."platforms.macos-x64"]
 checksum = "sha256:7b7ed211d02cb44c0a9849215068515e20cf29c2ecce96d1dcefe2f10d8b203f"
@@ -2951,6 +2954,7 @@ checksum = "sha256:07e54b0865303c864006925913bce2604f8ee8cc6f18699bac9c309f9328a
 url = "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos.zip"
 url_api = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/assets/521488891"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools.yt-dlp."platforms.macos-x64"]
 checksum = "sha256:07e54b0865303c864006925913bce2604f8ee8cc6f18699bac9c309f9328a6d8"
