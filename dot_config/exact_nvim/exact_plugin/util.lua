@@ -4,7 +4,10 @@ vim.pack.add({
 	"https://github.com/fotiadism/tabset.nvim",
 	"https://github.com/andrewferrier/wrapping.nvim",
 	"https://github.com/arnamak/stay-centered.nvim",
+	"https://github.com/windwp/nvim-ts-autotag",
 })
+
+require("nvim-ts-autotag").setup({})
 
 vim.keymap.set(
 	{ "n", "v" },
