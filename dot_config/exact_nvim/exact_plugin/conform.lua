@@ -15,6 +15,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 				toml = { "taplo", stop_after_first = true },
 				terraform = { "terraform_fmt" },
 				python = { "ruff" },
+				sql = { "sqlfluff" },
 			},
 
 			format_on_save = function(bufnr)
