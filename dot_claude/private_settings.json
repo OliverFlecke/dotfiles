@@ -7,7 +7,7 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "*",
+        "matcher": "^(startup|resume|clear|compact|fork)$",
         "hooks": [
           {
             "type": "command",
@@ -15,14 +15,15 @@
             "timeout": 10
           }
         ]
-      },
+      }
+    ],
+    "PreToolUse": [
       {
-        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/home/oliver/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10
+            "command": "rtk hook claude"
           }
         ]
       }
@@ -44,5 +45,7 @@
     }
   },
   "feedbackDrafts": "off",
-  "theme": "auto"
+  "theme": "auto",
+  "autoUpdates": false,
+  "model": "sonnet"
 }

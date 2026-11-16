@@ -5,6 +5,7 @@ vim.pack.add({
 	"https://github.com/andrewferrier/wrapping.nvim",
 	"https://github.com/arnamak/stay-centered.nvim",
 	"https://github.com/windwp/nvim-ts-autotag",
+	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
 
 require("nvim-ts-autotag").setup({})

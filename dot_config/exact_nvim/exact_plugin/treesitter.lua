@@ -52,6 +52,8 @@ local ensureInstalled = {
 	"dockerfile",
 	"gitignore",
 	"regex",
+	"kotlin",
+	"groovy",
 }
 
 local alreadyInstalled = require("nvim-treesitter.config").get_installed()

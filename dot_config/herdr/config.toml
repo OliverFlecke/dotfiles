@@ -143,6 +143,13 @@ onboarding = false
 		width = "100%"
 		key = "prefix+shift+D"
 		type = "popup"
+	[[keys.command]]
+		command = "sh -c 'tuicr -w'"
+		description = "Review working-tree changes with tuicr"
+		height = "100%"
+		width = "100%"
+		key = "prefix+r"
+		type = "popup"
 
 
 		# Legacy indexed shortcut config is still parsed for compatibility.

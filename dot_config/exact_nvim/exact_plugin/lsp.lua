@@ -102,6 +102,15 @@ vim.lsp.config("rust_analyzer", {
 	},
 })
 
+-- Installed via `brew install JetBrains/utils/kotlin-lsp`, not Mason: the
+-- Mason registry's download pin is to a build no longer on JetBrains' CDN.
+-- Homebrew exposes the binary as `kotlin-lsp`, not the `intellij-server`
+-- name nvim-lspconfig's default assumes.
+vim.lsp.config("kotlin_lsp", {
+	cmd = { "kotlin-lsp", "--stdio" },
+})
+vim.lsp.enable("kotlin_lsp")
+
 mason.setup({
 	ensure_installed = {
 		"biome",
