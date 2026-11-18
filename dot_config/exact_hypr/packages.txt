@@ -10,7 +10,6 @@ firefox
 ghostty
 gnome-themes-extra
 grub
-hpaper
 hyprland
 hyprlauncher
 hyprlock
