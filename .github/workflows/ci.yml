@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install chezmoi
+        run: sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"
+      - name: Dry-run apply (catches template and naming errors)
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          chezmoi apply --source . --destination "$(mktemp -d)" --dry-run --force
+      - name: Shellcheck install scripts
+        run: find exact_dot_install -name '*.sh' -print0 | xargs -0 shellcheck -e SC1007
+      - name: Syntax-check zsh
+        run: |
+          sudo apt-get install -y zsh
+          zsh -n dot_zshrc dot_zshenv
+      - name: Lint TOML
+        uses: docker://tamasfe/taplo:0.10.0
+        with:
+          args: check

@@ -50,11 +50,6 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
 # Snippets
 zinit snippet OMZP::gh
 zinit snippet OMZP::kubectl
@@ -64,7 +59,6 @@ zinit snippet OMZP::dotenv
 # zinit snippet OMZP::docker
 zinit snippet OMZP::docker-compose
 zinit snippet OMZP::rust
-zinit snippet OMZP::command-not-found
 
 # load completions
 fpath=(~/.zsh/completions $fpath)
@@ -81,12 +75,9 @@ alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias copyip="curl -L ipecho.net/plain | c"
 alias today='date -u +"%Y-%m-%d"'
 alias pj='python3 -m json.tool'
-alias rmbo='rm -rf bin/; rm -rf obj/'
 
 alias c=pbcopy
 alias k=kubectl
-alias t=tmux
-alias z=zellij
 alias lg=lazygit
 alias ld=lazydocker
 
@@ -95,7 +86,7 @@ alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.St
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/mise activate zsh)"
 else
-  eval "$(/home/oliver/.local/bin/mise activate zsh)"
+  eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
 # These will likely fail on a new machine. Run `mise install` and source this file again.
@@ -105,7 +96,6 @@ command -v zoxide &> /dev/null && eval "$(zoxide init --cmd cd zsh)"
 command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
 command -v atuin &> /dev/null && eval "$(atuin init zsh)"
 
-autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 if command -v aws_completer >/dev/null 2>&1; then
   complete -C aws_completer aws
@@ -119,7 +109,7 @@ fi
 zinit snippet OMZP::direnv
 
 # pnpm
-export PNPM_HOME="/Users/oliver/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

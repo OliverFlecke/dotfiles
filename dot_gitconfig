@@ -28,9 +28,6 @@
 	colorMoved = plain
 	mnemonicPrefix = true
 	renames = true
-[interative]
-	# diffFilter = diff-so-fancy --patch [difftool "default-difftool"]
-	; cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	; tool = nvimdiff
 	tool = vscode
@@ -43,8 +40,6 @@
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
-[hub]
-	protocol = https
 [credential]
 	helper = cache
 [commit]
@@ -74,8 +69,6 @@
 [rerere]
 	enable = true
 	autoupdate = true
-; [interactive]
-; 	diffFilter = diff-so-fancy --patch
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -108,9 +101,7 @@
 
 	dl	 = diff HEAD^ HEAD
 	di	 = "diff --word-diff=color --minimal --word-diff-regex='([0-9@A-Za-z]+|[^0-9@A-Za-z()]+|[()])'"
-	pp	 = "!func(){ git pull && git push; };"
-	pom  = pull origin master
-	pomp = "!func(){ git pull origin master && git push; };"
+	pp	 = "!git pull && git push"
 	cmpp = "!func(){ git add -u && git commit -m $1 && git pull && git push; }; func"
 
 	# Set the upstream of the current branch
