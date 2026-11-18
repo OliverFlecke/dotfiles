@@ -5,7 +5,7 @@ exclude = List("node_modules", "pnpm-lock.yaml", "dist", "build")
 
 local frontend = new Group {
 	dir = "frontend"
-	workspace_indicator = "pnpm.yaml"
+	workspace_indicator = "pnpm-workspace.yaml"
 	steps {
 		["biome"] = (Builtins.biome)
 		// ["stylelint"] = (Builtins.stylelint)

@@ -1,34 +1,22 @@
 #!/usr/bin/env sh
 
 # Usage: ./zsh.sh
-
-# Install the zsh shell and set it as the default shell, along with `oh-my-zsh` and 
-# powerline10k with custom shell. All configuration files are already part of this repo
-# and should be automatically copied over.
-
-# Note: If running on Linux, only machines with `apt` is currently supported, and it is 
-# expected that `apt update` has been run relatively recently. 
-
+#
+# Install zsh and make it the default shell. Plugins are managed by zinit from
+# `~/.zshrc` (bootstrapped on first shell start), and the prompt by oh-my-posh.
+#
+# Note: Linux support requires `apt`, and `apt update` should have been run recently.
 
 if [ "$(uname)" = "Linux" ]; then
   echo 'Installing zsh for linux...'
   apt install zsh -y
-elif [ "$(uname)" = "darwin" ]; then 
-  echo 'Install zsh for macOS'
+elif [ "$(uname)" = "Darwin" ]; then
+  echo 'Installing zsh for macOS'
   brew install zsh
 fi
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing oh-my-zsh"
-  CHSH=yes RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
-  # mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
-fi
-
-POWERLINE_PATH=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "Path: $POWERLINE_PATH"
-
-if [ -d "$POWERLINE_PATH" ]; then
-  git -C $POWERLINE_PATH pull
-else 
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $POWERLINE_PATH
+zsh_path=$(command -v zsh)
+if [ "$SHELL" != "$zsh_path" ]; then
+  echo "Setting default shell to $zsh_path"
+  chsh -s "$zsh_path"
 fi

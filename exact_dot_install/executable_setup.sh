@@ -6,11 +6,11 @@ dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 platform=$(uname)
 
 # Update/install the respective package manager
-if [ $platform = "Linux" ]; then
+if [ "$platform" = "Linux" ]; then
   apt update
 else
-  $dir/brew.sh
+  "$dir/brew.sh"
 fi
 
 # Install preferred shell
-$dir/zsh.sh
+"$dir/zsh.sh"

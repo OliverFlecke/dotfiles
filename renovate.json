@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommits"],
+  "lockFileMaintenance": { "enabled": true, "schedule": ["before 6am on monday"] },
+  "mise": {
+    "managerFilePatterns": ["/(^|/)dot_config/exact_mise/config\\.toml$/"]
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "hk pkl package version (config.pkl)",
+      "managerFilePatterns": ["/(^|/)dot_config/hk/config\\.pkl$/"],
+      "matchStrings": ["jdx/hk/releases/download/v(?<currentValue>[\\d.]+)/hk@"],
+      "depNameTemplate": "jdx/hk",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Group GitHub Actions bumps",
+      "matchManagers": ["github-actions"],
+      "groupName": "github actions"
+    }
+  ]
+}

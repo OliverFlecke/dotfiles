@@ -44,7 +44,6 @@
 	yazi = "latest"
 	yq = "latest"
 	zoxide = "latest"
-eza = "latest"
 
 [settings]
 	not_found_auto_install = false
