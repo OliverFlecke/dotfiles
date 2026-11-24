@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 				json = { "biome", stop_after_first = true },
 				toml = { "taplo", stop_after_first = true },
 				terraform = { "terraform_fmt" },
-				python = { "ruff" },
+				python = { "ruff_fix", "ruff_format" },
 				sql = { "sqlfluff" },
 			},
 
