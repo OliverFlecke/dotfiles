@@ -27,7 +27,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-local lspconfig = require("lspconfig")
 local blink = require("blink.cmp")
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
@@ -112,40 +111,51 @@ vim.lsp.config("kotlin_lsp", {
 vim.lsp.enable("kotlin_lsp")
 
 mason.setup({
-	ensure_installed = {
-		"biome",
-		"basedpyright",
-		"stylua",
-		"shellcheck",
-		"shfmt",
-		"css-lsp",
-		"css-variables-language-server",
-		"harper-ls",
-		"roslyn",
-		-- "tsgo",
-		-- "ts_ls",
-		"tsc",
-		"typstyle", -- Typst LSP and formatter
-		"tinymist",
-	},
 	registries = {
 		"github:Crashdummyy/mason-registry",
 		"github:mason-org/mason-registry",
 	},
 })
+mason_lspconfig.setup()
 
-mason_lspconfig.setup({
-	automatic_enable = true,
-	ensure_installed = {
-		"html",
-		"cssls",
-		"biome",
-	},
-	handlers = {
-		function(server)
-			lspconfig[server].setup({
-				capabilities = blink.get_lsp_capabilties(),
-			})
-		end,
-	},
-})
+local packages = {
+	-- language servers
+	"biome",
+	"css-lsp",
+	"css-variables-language-server",
+	"harper-ls",
+	"roslyn",
+	"emmet-language-server",
+	"gh-actions-language-server",
+	"harper-ls",
+	"json-lsp",
+	"html-lsp",
+	"lua-language-server",
+	"pkl-lsp",
+	"ruff",
+	"rust-analyzer",
+	"taplo",
+	"ty",
+	"typescript-language-server",
+	"tsc",
+	"yaml-language-server",
+
+	-- formatters and linters
+	"kdlfmt",
+	"ktfmt",
+	"shellcheck",
+	"shfmt",
+	"stylua",
+	"typstyle", -- Typst LSP and formatter
+	"yamllint",
+}
+
+local registry = require("mason-registry")
+registry.refresh(vim.schedule_wrap(function()
+	for _, name in ipairs(packages) do
+		local pkg = registry.get_package(name)
+		if not pkg:is_installed() and not pkg:is_installing() then
+			pkg:install()
+		end
+	end
+end))

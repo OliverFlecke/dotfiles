@@ -4,6 +4,7 @@
     "commit": "",
     "pr": ""
   },
+  "model": "sonnet",
   "hooks": {
     "SessionStart": [
       {
@@ -46,6 +47,5 @@
   },
   "feedbackDrafts": "off",
   "theme": "auto",
-  "autoUpdates": false,
-  "model": "sonnet"
+  "autoUpdates": false
 }

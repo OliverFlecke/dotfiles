@@ -83,11 +83,7 @@ alias ld=lazydocker
 
 alias docker-ps-simple="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\""
 
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/mise activate zsh)"
-else
-  eval "$($HOME/.local/bin/mise activate zsh)"
-fi
+eval "$($HOME/.local/bin/mise activate zsh)"
 
 # These will likely fail on a new machine. Run `mise install` and source this file again.
 command -v oh-my-posh &> /dev/null && eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.toml)"
